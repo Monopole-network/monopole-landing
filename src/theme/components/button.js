@@ -24,9 +24,12 @@ export const buttonStyles = {
         },
       },
       baseStyle: {
-        borderRadius: "15px",
+        borderRadius: "16px",
         _focus: {
           boxShadow: "none",
+        },
+        _active: {
+          background: "#03CB88",
         },
       },
     },
