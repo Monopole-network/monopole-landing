@@ -7,13 +7,16 @@ import {
   Flex,
   Text,
   useColorMode,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 import { MonopoleIconText, MonopoleIcon } from "../Icons/Icons";
+import { Wallet } from "../Wallet/Wallet";
 
 export default function Nav() {
   const { colorMode, toggleColorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
       px="40px"
@@ -24,7 +27,7 @@ export default function Nav() {
       zIndex="2"
       backdropFilter="blur(25px)"
     >
-    {/*todo: navbar*/}
+      {/*todo: navbar*/}
       <Flex height="100%" alignItems="center" justifyContent="space-between">
         <Flex alignItems="center">
           <Flex display={{ sm: "none", md: "none", lg: "block" }}>
@@ -78,14 +81,6 @@ export default function Nav() {
                   display={{ sm: "none", md: "block", lg: "block" }}
                 >
                   <Text fontSize="14px" fontWeight="700">
-                    Roadmap
-                  </Text>
-                </Button>
-                <Button
-                  variant="ghost"
-                  display={{ sm: "none", md: "block", lg: "block" }}
-                >
-                  <Text fontSize="14px" fontWeight="700">
                     Team
                   </Text>
                 </Button>
@@ -110,7 +105,11 @@ export default function Nav() {
               borderTop="2px solid"
               borderRight="2px solid"
               background="transparent"
+              onClick={() => {
+                onOpen();
+              }}
             >
+              <Wallet isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
               <Text fontSize="14px" fontWeight="700">
                 Connect Wallet
               </Text>
