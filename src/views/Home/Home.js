@@ -35,18 +35,23 @@ import conciergeIcon from "../../assets/svg/concierge.svg";
 import insuranceIcon from "../../assets/svg/insurance.svg";
 
 function Home() {
-  const cardColor = useColorModeValue("transparent", "transparent");
-  const cardBlurColor = useColorModeValue("blur(200px)", "blur(200px)");
+  const cardColor = useColorModeValue("white", "royal");
   const counterColor = useColorModeValue("white", "royal");
   const bannerColor = useColorModeValue("transparent", "#0D0941");
   const bannerBlurColor = useColorModeValue("blur(50px)", "0");
   return (
     <>
       <Grid templateColumns={{ md: "1fr", lg: "1fr 1fr" }}>
-        <Box px="20%" mt="25%" height="70%" width="100%" zIndex="1">
+        <Box
+          px={{ sm: "10%", md: "10%", lg: "15%" }}
+          mt={{ sm: "30%", md: "25%", lg: "25%" }}
+          height="70%"
+          width="100%"
+          zIndex="1"
+        >
           <Text
             lineHeight="58px"
-            fontSize={{ sm: "44px", md: "54px" }}
+            fontSize={{ sm: "34px", md: "44px" }}
             fontWeight="300"
             fontFamily="Montserrat"
           >
@@ -54,7 +59,7 @@ function Home() {
           </Text>
           <Text
             lineHeight="58px"
-            fontSize={{ sm: "44px", md: "54px" }}
+            fontSize={{ sm: "34px", md: "44px" }}
             fontWeight="700"
             fontFamily="Montserrat"
           >
@@ -62,7 +67,7 @@ function Home() {
           </Text>
           <Text
             lineHeight="58px"
-            fontSize={{ sm: "44px", md: "54px" }}
+            fontSize={{ sm: "34px", md: "44px" }}
             fontWeight="900"
             fontFamily="Montserrat"
           >
@@ -75,14 +80,11 @@ function Home() {
           <Flex flexDirection="row" justifyContent="space-between" gap="5%">
             <Button
               borderRadius="16px"
-              width="95%"
+              width="100%"
               minWidth="160px"
               height="64px"
               background="#8235FF"
               color="white"
-              _hover={{
-                boxShadow: "inset 0 0 15px #03CB88",
-              }}
               _active={{
                 background: "#03CB88",
               }}
@@ -91,13 +93,11 @@ function Home() {
             </Button>
             <Button
               borderRadius="16px"
-              width="95%"
+              width="100%"
               height="64px"
               opacity="0.75"
+              minWidth="100px"
               border="2px solid #FFFFFF"
-              _hover={{
-                boxShadow: "inset 0 0 15px #03CB88",
-              }}
               _active={{
                 background: "#03CB88",
               }}
@@ -108,8 +108,8 @@ function Home() {
         </Box>
         <Box
           mr={{ sm: "0%", md: "0", lg: "15%" }}
-          px={{ sm: "15%", md: "15%", lg: "16%" }}
-          mt={{ sm: "30%", md: "25%", lg: "17.5%" }}
+          px={{ sm: "5%", md: "15%", lg: "16%" }}
+          mt={{ sm: "40%", md: "25%", lg: "17.5%" }}
           mb={{ sm: "0", md: "0", lg: "-10%" }}
           ml={{ sm: "0", md: "0", lg: "-5%" }}
           zIndex="1"
@@ -117,10 +117,9 @@ function Home() {
           <Box
             background={cardColor}
             borderRadius="24px"
-            backdropFilter={cardBlurColor}
             height="534px"
             width="100%"
-            minWidth={{ sm: "330px", md: "400px", lg: "400px" }}
+            minWidth={{ sm: "322px", md: "400px", lg: "400px" }}
           >
             <Flex
               flexDirection="column"
@@ -150,8 +149,8 @@ function Home() {
                   alignItems="center"
                 >
                   <Box
-                    width="72px"
-                    height="72px"
+                    width="70px"
+                    height="70px"
                     background={counterColor}
                     borderRadius="16px"
                   >
@@ -181,8 +180,8 @@ function Home() {
                   alignItems="center"
                 >
                   <Box
-                    width="72px"
-                    height="72px"
+                    width="70px"
+                    height="70px"
                     background={counterColor}
                     borderRadius="16px"
                   >
@@ -212,8 +211,8 @@ function Home() {
                   alignItems="center"
                 >
                   <Box
-                    width="72px"
-                    height="72px"
+                    width="70px"
+                    height="70px"
                     background={counterColor}
                     borderRadius="16px"
                   >
@@ -243,8 +242,8 @@ function Home() {
                   alignItems="center"
                 >
                   <Box
-                    width="72px"
-                    height="72px"
+                    width="70px"
+                    height="70px"
                     background={counterColor}
                     borderRadius="16px"
                   >
@@ -295,9 +294,6 @@ function Home() {
                 height="44px"
                 background="#03CB88"
                 color="white"
-                _hover={{
-                  boxShadow: "inset 0 0 15px #8235FF",
-                }}
                 _active={{
                   background: "#8235FF",
                 }}
@@ -312,7 +308,7 @@ function Home() {
         display={{ sm: "block", md: "block", lg: "block" }}
         src={dualLine}
         width={{ sm: "100%", md: "100%", lg: "72%" }}
-        height="966px"
+        width={{ sm: "100%", md: "100%", lg: "72%" }}
         position="absolute"
         top={{ sm: "600px", md: "700px", lg: "0" }}
         right={{ sm: "10%", md: "10%", lg: "0px" }}
@@ -323,8 +319,6 @@ function Home() {
         justifyContent="center"
         textAlign="center"
         alignItems="center"
-        background={bannerColor}
-        backdropFilter={bannerBlurColor}
         width="100%"
         height="108px"
         mt="137px"
@@ -337,6 +331,7 @@ function Home() {
         <PayPalIcon height="65px" width="65px" zIndex="1" />
       </Flex>
       <Flex
+        id="wismnpl"
         flexDirection="column"
         justifyContent="center"
         textAlign="center"
@@ -358,10 +353,10 @@ function Home() {
         <Text
           mt="4px"
           mb="60px"
-          fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
+          fontSize={{ sm: "20px", md: "30px", lg: "40px" }}
           fontWeight="700"
           fontFamily="Montserrat"
-          px="25%"
+          px={{ sm: "0%", md: "20%", lg: "20%" }}
           zIndex="1"
         >
           We’ve built a global ecosystem to use your crypto in your daily life.
@@ -381,7 +376,7 @@ function Home() {
                 <Flex
                   direction="column"
                   align="center"
-                  width="262px"
+                  width="80%"
                   height="350px"
                 >
                   <Image src={financeIcon} w="110px" h="110px" mb="26px" />
@@ -413,7 +408,7 @@ function Home() {
                 <Flex
                   direction="column"
                   align="center"
-                  width="262px"
+                  width="80%"
                   height="350px"
                 >
                   <Image src={investIcon} w="110px" h="110px" mb="26px" />
@@ -447,7 +442,7 @@ function Home() {
                 <Flex
                   direction="column"
                   align="center"
-                  width="262px"
+                  width="80%"
                   height="350px"
                 >
                   <Image src={conciergeIcon} w="110px" h="110px" mb="26px" />
@@ -480,7 +475,7 @@ function Home() {
                 <Flex
                   direction="column"
                   align="center"
-                  width="262px"
+                  width="80%"
                   height="350px"
                 >
                   <Image src={insuranceIcon} w="110px" h="110px" mb="26px" />
@@ -492,10 +487,13 @@ function Home() {
                       fontWeight="700"
                       fontFamily="Montserrat"
                     >
-                      Insurance
+                      Insurance policies
                     </Text>
                     <Text lineHeight="24px" fontSize="16px" fontWeight="400">
-                      text a venir
+                      Whether it is blockchain or for your daily uses, will
+                      allow you to be both insured and insurer at the same time.
+                      It covers all your needs, is accessible and secure. It
+                      will revolutionise traditional insurance.
                     </Text>
                   </Flex>
                 </Flex>
@@ -507,8 +505,8 @@ function Home() {
       <Flex flexDirection="column" width="100%" mt="30px" px="10%">
         <Flex
           flexDirection="column"
-          pl={{ sm: "0", md: "7%", lg: "11%", xl: "6%" }}
-          pr="50%"
+          pl={{ sm: "0%", md: "7%", lg: "11%", xl: "6%" }}
+          pr={{ sm: "20%", md: "40%", lg: "50%" }}
           zIndex="1"
         >
           <Text
@@ -710,13 +708,14 @@ function Home() {
           mt="100px"
         />
       </Flex>
-      <Flex flexDirection="column" width="100%" mt="130px" zIndex="1">
+      <Flex flexDirection="column" width="100%" mt="130px" zIndex="1" mb="280px">
         <Flex
           flexDirection="column"
           zIndex="1"
           justifyContent="center"
           textAlign="center"
           alignItems="center"
+          px="10%"
         >
           <Text fontSize="16px" fontWeight="700" width="180px">
             Want to know more ?
@@ -745,6 +744,7 @@ function Home() {
             height="64px"
             background="#03CB88"
             color="white"
+            minWidth="160px"
             _active={{
               background: "#8235FF",
             }}
@@ -765,17 +765,15 @@ function Home() {
       <Flex
         flexDirection="column"
         width="100%"
-        mt="230px"
         mb="100px"
         zIndex="1"
         justifyContent="center"
         textAlign="center"
         alignItems="center"
-        px="15%"
+        px={{ sm: "5%", md: "10%", lg: "15%" }}
       >
         <Text
-          lineHeight="88px"
-          fontSize="60px"
+          fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
           fontWeight="700"
           fontFamily="Montserrat"
           zIndex="1"
