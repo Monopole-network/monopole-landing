@@ -12,6 +12,9 @@ import Footer from "../components/Footer/index.js";
 import theme from "../theme/theme.js";
 
 import Home from "../views/Home/Home.js";
+import PrivacyPolicy from "../views/Pages/PrivacyPolicy.js";
+import Legal from "../views/Pages/Legal.js";
+import TermsOfUse from "../views/Pages/TermsOfUse.js";
 
 export default function Layout() {
   return (
@@ -19,6 +22,9 @@ export default function Layout() {
       <UserNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/legal" element={<Legal />} />
+        <Route path="/terms-of-use" element={<TermsOfUse />} />
       </Routes>
       <Footer />
     </ChakraProvider>
