@@ -6,7 +6,8 @@ import "@fontsource/montserrat";
 // chakra imports
 import { ChakraProvider } from "@chakra-ui/react";
 // core components
-import UserNavbar from "../components/Navbar/Navbar.js";
+import UserNavbar from "../components/Navbar/index.js";
+import Footer from "../components/Footer/index.js";
 
 import theme from "../theme/theme.js";
 
@@ -17,8 +18,9 @@ export default function Layout() {
     <ChakraProvider theme={theme} resetCss={false} w="100%">
       <UserNavbar />
       <Routes>
-        <Route path="/" element={<Home />} key="0" />
+        <Route path="/" element={<Home />} />
       </Routes>
+      <Footer />
     </ChakraProvider>
   );
 }
