@@ -9,13 +9,21 @@ import {
   ModalCloseButton,
   ModalBody,
   ModalFooter,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
-export function Wallet(props) {
+export function WalletModal(props) {
+  const modalColor = useColorModeValue("white", "royal");
   return (
-    <Modal onClose={props.onClose} size="xl" isOpen={props.isOpen} >
+    <Modal
+      onClose={props.onClose}
+      size="xl"
+      isOpen={props.isOpen}
+      motionPreset="slideInBottom"
+      scrollBehavior="outside"
+    >
       <ModalOverlay />
-      <ModalContent borderRadius="25px">
+      <ModalContent borderRadius="25px" background={modalColor}>
         <ModalHeader>Wallet</ModalHeader>
         <ModalCloseButton />
         <ModalBody>test</ModalBody>
