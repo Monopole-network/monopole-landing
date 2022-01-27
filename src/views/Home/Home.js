@@ -1,31 +1,59 @@
 import React from "react";
 // Chakra imports
 import {
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+  Avatar,
   Box,
   Button,
   Divider,
   Grid,
+  SimpleGrid,
   Flex,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
   Text,
   Image,
   Progress,
+  Link,
   useColorModeValue,
 } from "@chakra-ui/react";
 
+import { Chrono } from "react-chrono";
+
 import { Separator } from "../../components/Separator/Separator";
+import { Team, Advisors } from "../../components/Team/index.js";
+import { Faq } from "../../components/Faq/index.js";
+import { Roadmap } from "../../components/Roadmap/index.js";
+import { Newsletter } from "../../components/Newsletter/index.js";
 
 import {
   VisaIcon,
   PayPalIcon,
   MastercardIcon,
-  SimplicityIcon,
   SupportIcon,
   LegalIcon,
   SecurityIcon,
   EthicsIcon,
   AccessibilityIcon,
+  SimplicityIcon,
+  DividerSVG,
 } from "../../components/Icons/Icons";
 
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+
+import bgCircle from "../../assets/img/bgCircle.png";
+import chartMain from "../../assets/img/chartMain.png";
+import payInCrypto from "../../assets/img/payInCrypto.png";
+import nftInvest from "../../assets/img/nftInvest.png";
+import topLevelSupport from "../../assets/img/topLevelSupport.png";
+import saveTime from "../../assets/img/saveTime.png";
 import centralDot from "../../assets/img/centralDot.png";
 import shadowDot from "../../assets/img/shadowDot.png";
 import dualLine from "../../assets/img/dualLine.png";
@@ -33,15 +61,15 @@ import financeIcon from "../../assets/svg/finance.svg";
 import investIcon from "../../assets/svg/invest.svg";
 import conciergeIcon from "../../assets/svg/concierge.svg";
 import insuranceIcon from "../../assets/svg/insurance.svg";
+import faqIcon from "../../assets/img/faq.png";
 
 function Home() {
   const cardColor = useColorModeValue("white", "royal");
   const counterColor = useColorModeValue("white", "royal");
-  const bannerColor = useColorModeValue("transparent", "#0D0941");
-  const bannerBlurColor = useColorModeValue("blur(50px)", "0");
+
   return (
     <>
-      <Grid templateColumns={{ md: "1fr", lg: "1fr 1fr" }}>
+      <Grid mt="-88px" templateColumns={{ md: "1fr", lg: "1fr 1fr" }}>
         <Box
           px={{ sm: "10%", md: "10%", lg: "15%" }}
           mt={{ sm: "30%", md: "25%", lg: "25%" }}
@@ -308,7 +336,6 @@ function Home() {
         display={{ sm: "block", md: "block", lg: "block" }}
         src={dualLine}
         width={{ sm: "100%", md: "100%", lg: "72%" }}
-        width={{ sm: "100%", md: "100%", lg: "72%" }}
         position="absolute"
         top={{ sm: "600px", md: "700px", lg: "0" }}
         right={{ sm: "10%", md: "10%", lg: "0px" }}
@@ -331,7 +358,7 @@ function Home() {
         <PayPalIcon height="65px" width="65px" zIndex="1" />
       </Flex>
       <Flex
-        id="wismnpl"
+        id="WhatIsMonopole"
         flexDirection="column"
         justifyContent="center"
         textAlign="center"
@@ -708,7 +735,13 @@ function Home() {
           mt="100px"
         />
       </Flex>
-      <Flex flexDirection="column" width="100%" mt="130px" zIndex="1" mb="280px">
+      <Flex
+        flexDirection="column"
+        width="100%"
+        mt="130px"
+        zIndex="1"
+        mb="280px"
+      >
         <Flex
           flexDirection="column"
           zIndex="1"
@@ -763,9 +796,9 @@ function Home() {
         </Flex>
       </Flex>
       <Flex
+        id="LitePaper"
         flexDirection="column"
         width="100%"
-        mb="100px"
         zIndex="1"
         justifyContent="center"
         textAlign="center"
@@ -781,6 +814,701 @@ function Home() {
           Discover the freedom to choose, invest, manage and use your crypto, in
           your daily life!
         </Text>
+      </Flex>
+      <SimpleGrid
+        mt="280px"
+        columns={{
+          sm: "1",
+          md: "1",
+          lg: "1",
+          xl: "2",
+        }}
+      >
+        <Flex
+          flexDirection="column"
+          zIndex="1"
+          mt="10%"
+          pl={{ sm: "10%", md: "15%", lg: "20%" }}
+          pr={{ sm: "10%", md: "10%", lg: "10%" }}
+        >
+          <Text
+            fontSize="16px"
+            fontWeight="700"
+            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
+            bgClip="text"
+            width="75px"
+          >
+            Save time
+          </Text>
+          <Text
+            mt="4px"
+            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            lineHeight="54px"
+          >
+            A unique, intuitive platform, available everywhere
+          </Text>
+          <Text
+            mt="16px"
+            fontSize="16px"
+            fontWeight="400"
+            fontFamily="Montserrat"
+          >
+            A unique, intuitive platform, available everywhere, that offers you
+            full visibility on acquisitions and assets recognized in your
+            country thanks to an international presence. From your home, in just
+            a few clicks, you can diversify your portfolio in a decentralized
+            manner and optimize your returns.
+          </Text>
+        </Flex>
+        <Flex zIndex="0" pt={{ sm: "50px", md: "50px", lg: "50px", xl: "0px" }}>
+          <Image src={saveTime} right="0px" position="absolute" zIndex="0" />
+        </Flex>
+      </SimpleGrid>
+      <SimpleGrid
+        mt={{ sm: "75%", md: "80%", lg: "500px", xl: "280px" }}
+        columns={{
+          sm: "1",
+          md: "1",
+          lg: "1",
+          xl: "2",
+        }}
+      >
+        <Flex
+          zIndex="0"
+          pt={{ sm: "350px", md: "350px", lg: "400px", xl: "0" }}
+        >
+          <Image
+            src={topLevelSupport}
+            left="0px"
+            position="absolute"
+            zIndex="0"
+          />
+        </Flex>
+        <Flex
+          flexDirection="column"
+          zIndex="1"
+          mt={{ sm: "-350px", md: "-350px", lg: "-300px", xl: "110px" }}
+          pl={{ sm: "10%", md: "15%", lg: "10%" }}
+          pr={{ sm: "10%", md: "10%", lg: "20%" }}
+        >
+          <Text
+            fontSize="16px"
+            fontWeight="700"
+            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
+            bgClip="text"
+            width="128px"
+          >
+            Top level support
+          </Text>
+          <Text
+            mt="4px"
+            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            lineHeight="54px"
+          >
+            Benefit from experienced, human and reactive support
+          </Text>
+          <Text
+            mt="16px"
+            fontSize="16px"
+            fontWeight="400"
+            fontFamily="Montserrat"
+          >
+            You are surrounded and advised by an expert and available team.
+            Monopole changes your daily life by finding, selecting and verifying
+            investments and by offering you full visibility and control of its
+            investments.
+          </Text>
+        </Flex>
+      </SimpleGrid>
+      <SimpleGrid
+        mt={{ sm: "350px", md: "500px", lg: "500px", xl: "280px" }}
+        columns={{
+          sm: "1",
+          md: "1",
+          lg: "1",
+          xl: "2",
+        }}
+      >
+        <Flex
+          flexDirection="column"
+          zIndex="1"
+          mt={{ sm: "0%", md: "0%", lg: "0%", xl: "160px" }}
+          pl={{ sm: "10%", md: "15%", lg: "20%" }}
+          pr={{ sm: "10%", md: "10%", lg: "10%" }}
+        >
+          <Text
+            fontSize="16px"
+            fontWeight="700"
+            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
+            bgClip="text"
+            width="220px"
+          >
+            Verified investments & NFT’s
+          </Text>
+          <Text
+            mt="4px"
+            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            lineHeight="54px"
+          >
+            Enjoy verified investments and make them grow with NFT
+          </Text>
+          <Text
+            mt="16px"
+            fontSize="16px"
+            fontWeight="400"
+            fontFamily="Montserrat"
+          >
+            You buy a real asset or share and receive it in NFTs.
+          </Text>
+        </Flex>
+        <Flex zIndex="0" pt={{ sm: "50px", md: "50px", lg: "50px", xl: "0px" }}>
+          <Image src={nftInvest} right="0px" position="absolute" zIndex="0" />
+        </Flex>
+      </SimpleGrid>
+      <SimpleGrid
+        mt={{ sm: "75%", md: "80%", lg: "500px", xl: "280px" }}
+        columns={{
+          sm: "1",
+          md: "1",
+          lg: "1",
+          xl: "2",
+        }}
+      >
+        <Flex
+          zIndex="0"
+          pt={{ sm: "350px", md: "350px", lg: "400px", xl: "0" }}
+        >
+          <Image src={payInCrypto} left="0px" position="absolute" zIndex="0" />
+        </Flex>
+        <Flex
+          flexDirection="column"
+          zIndex="1"
+          mt={{ sm: "-350px", md: "-350px", lg: "-300px", xl: "150px" }}
+          pl={{ sm: "10%", md: "15%", lg: "10%" }}
+          pr={{ sm: "10%", md: "10%", lg: "20%" }}
+        >
+          <Text
+            fontSize="16px"
+            fontWeight="700"
+            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
+            bgClip="text"
+            width="128px"
+          >
+            Pay in crypto
+          </Text>
+          <Text
+            mt="4px"
+            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            lineHeight="54px"
+          >
+            Access everything you need, pay in crypto
+          </Text>
+          <Text
+            mt="16px"
+            fontSize="16px"
+            fontWeight="400"
+            fontFamily="Montserrat"
+          >
+            Local and international crypto friendly player partners that allow
+            you to access verified services to use your crypto for all your
+            needs.
+          </Text>
+        </Flex>
+      </SimpleGrid>
+      <SimpleGrid
+        id="MnplToken"
+        mt={{ sm: "80%", md: "70%", lg: "60%", xl: "30%" }}
+        columns={{
+          sm: "1",
+          md: "1",
+          lg: "1",
+          xl: "2",
+        }}
+      >
+        <Flex flexDirection="column">
+          <Text
+            mb="50px"
+            pl={{ sm: "10%", md: "15%", lg: "20%" }}
+            pr={{ sm: "10%", md: "15%", lg: "20%" }}
+            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            lineHeight="54px"
+          >
+            Funding allocation
+          </Text>
+          <Flex
+            zIndex="0"
+            justifyContent="center"
+            textAlign="center"
+            alignItems="center"
+            w="100%"
+          >
+            <Image src={chartMain} left="0px" zIndex="0" />
+          </Flex>
+        </Flex>
+        <Flex
+          flexDirection="column"
+          zIndex="1"
+          pl={{ sm: "10%", md: "15%", lg: "10%" }}
+          pr={{ sm: "10%", md: "10%", lg: "20%" }}
+        >
+          <Text
+            mt="24px"
+            fontSize="21px"
+            fontWeight="400"
+            fontFamily="Montserrat"
+            lineHeight="25.6px"
+            mb="50px"
+          >
+            Token allocation
+          </Text>
+          <Flex
+            flexDirection="column"
+            zIndex="1"
+            w="100%"
+            justifyContent="center"
+            h="100%"
+          >
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Contingency: 10 %
+            </Text>
+            <Progress
+              value={10}
+              w="100%"
+              h="6px"
+              colorScheme="orange"
+              borderRadius="10px"
+              bg="transparent"
+              mb="20px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Partner / Investor: 5 %
+            </Text>
+            <Progress
+              value={5}
+              w="100%"
+              h="6px"
+              colorScheme="green"
+              borderRadius="10px"
+              bg="transparent"
+              mb="20px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Legal & Regulation: 25 %
+            </Text>
+            <Progress
+              value={25}
+              w="100%"
+              h="6px"
+              colorScheme="blue"
+              borderRadius="10px"
+              bg="transparent"
+              mb="20px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Business development: 5 %
+            </Text>
+            <Progress
+              value={5}
+              w="100%"
+              h="6px"
+              colorScheme="red"
+              borderRadius="10px"
+              bg="transparent"
+              mb="20px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Operational: 35 %
+            </Text>
+            <Progress
+              value={35}
+              w="100%"
+              h="6px"
+              colorScheme="purple"
+              borderRadius="10px"
+              bg="transparent"
+              mb="20px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Product development: 10 %
+            </Text>
+            <Progress
+              value={10}
+              w="100%"
+              h="6px"
+              colorScheme="gray"
+              borderRadius="10px"
+              bg="transparent"
+              mb="20px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Marketing: 5 %
+            </Text>
+            <Progress
+              value={10}
+              w="100%"
+              h="6px"
+              colorScheme="teal"
+              borderRadius="10px"
+              bg="transparent"
+              mb="20px"
+            />
+          </Flex>
+        </Flex>
+      </SimpleGrid>
+      <Flex flexDirection="column" zIndex="0" w="100%" mt="100px">
+        <DividerSVG w="100%" h="100%" zIndex="0" />
+      </Flex>
+      <Flex flexDirection="column" w="100%" pt="20px" background="white">
+        <Flex
+          zIndex="0"
+          justifyContent="center"
+          textAlign="center"
+          alignItems="center"
+          flexDirection="column"
+          w="100%"
+        >
+          <Text
+            lineHeight="54px"
+            fontSize={{ sm: "34px", md: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            color="black"
+          >
+            Roadmap
+          </Text>
+          <Flex
+            mt="100px"
+            w="100%"
+            px={{ sm: "0%", md: "10%", lg: "20%" }}
+            mb="100px"
+            color="black"
+          >
+            <Chrono
+              items={Roadmap}
+              mode="HORIZONTAL"
+              borderLessCards={true}
+              slideShow={true}
+              slideItemDuration={3000}
+              lineWidth="4"
+              cardWidth="300"
+              theme={{
+                primary: "#03CB88",
+                secondary: "#03CB88",
+                titleColor: "black",
+                color: "black",
+              }}
+            >
+              {Object.keys(Roadmap).map((id) => {
+                return (
+                  <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+                    {Roadmap[id].text}
+                  </Text>
+                );
+              })}
+            </Chrono>
+          </Flex>
+          <Text
+            id="Team"
+            lineHeight="54px"
+            fontSize={{ sm: "34px", md: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            color="black"
+            mb="65px"
+          >
+            Real people behind
+          </Text>
+          <Grid
+            w="100%"
+            px={{ sm: "5%", md: "10%", lg: "15%" }}
+            templateColumns={{
+              sm: "1fr 1fr",
+              md: "1fr 1fr 1fr",
+              lg: "1fr 1fr 1fr 1fr 1fr",
+            }}
+            mb="65px"
+            gap={{ sm: "20px", md: "30px" }}
+          >
+            {Object.keys(Team).map((id) => {
+              return (
+                <Box maxW="sm">
+                  <Flex
+                    justifyContent="center"
+                    textAlign="center"
+                    alignItems="center"
+                    flexDirection="column"
+                  >
+                    <Link href={Team[id].link} isExternal>
+                      <Avatar
+                        border="0"
+                        size="128px"
+                        name={Team[id].name}
+                        src={Team[id].img}
+                        mb="20px"
+                      />
+                      <Text
+                        lineHeight="24px"
+                        fontSize="16px"
+                        fontWeight="700"
+                        color="black"
+                      >
+                        {Team[id].name}
+                      </Text>
+                      <Text
+                        lineHeight="21px"
+                        fontSize="14px"
+                        fontWeight="700"
+                        color="black"
+                      >
+                        {Team[id].rank}
+                      </Text>
+                    </Link>
+                    <Flex gap="10px" flexDirection="row">
+                      {Team[id].twitter && (
+                        <Link href={Team[id].twitter} isExternal>
+                          <FaTwitter color="black" />
+                        </Link>
+                      )}
+                      {Team[id].linkedin && (
+                        <Link href={Team[id].linkedin} isExternal>
+                          <FaLinkedin color="black" />
+                        </Link>
+                      )}
+                      {Team[id].instagram && (
+                        <Link href={Team[id].instagram} isExternal>
+                          <FaInstagram color="black" />
+                        </Link>
+                      )}
+                    </Flex>
+                  </Flex>
+                </Box>
+              );
+            })}
+          </Grid>
+          <Text
+            lineHeight="54px"
+            fontSize={{ sm: "34px", md: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            color="black"
+            mb="65px"
+          >
+            Advisors
+          </Text>
+          <Grid
+            w="100%"
+            templateColumns={{
+              sm: "1fr 1fr",
+              md: "1fr 1fr 1fr",
+              lg: "1fr 1fr 1fr 1fr 1fr",
+            }}
+            mb="70px"
+            gap={{ sm: "20px", md: "30px" }}
+            px={{ sm: "5%", md: "10%", lg: "15%" }}
+          >
+            {Object.keys(Advisors).map((id) => {
+              return (
+                <Box maxW="sm">
+                  <Flex
+                    justifyContent="center"
+                    textAlign="center"
+                    alignItems="center"
+                    flexDirection="column"
+                  >
+                    <Link href={Advisors[id].link} isExternal>
+                      <Avatar
+                        border="0"
+                        size="128px"
+                        name={Advisors[id].name}
+                        src={Advisors[id].img}
+                        mb="20px"
+                      />
+                      <Text
+                        lineHeight="24px"
+                        fontSize="16px"
+                        fontWeight="700"
+                        color="black"
+                      >
+                        {Advisors[id].name}
+                      </Text>
+                      <Text
+                        lineHeight="21px"
+                        fontSize="14px"
+                        fontWeight="700"
+                        color="black"
+                      >
+                        {Advisors[id].rank}
+                      </Text>
+                    </Link>
+                    <Flex gap="10px" flexDirection="row">
+                      {Advisors[id].twitter && (
+                        <Link href={Advisors[id].twitter} isExternal>
+                          <FaTwitter color="black" />
+                        </Link>
+                      )}
+                      {Advisors[id].linkedin && (
+                        <Link href={Advisors[id].linkedin} isExternal>
+                          <FaLinkedin color="black" />
+                        </Link>
+                      )}
+                      {Advisors[id].instagram && (
+                        <Link href={Advisors[id].instagram} isExternal>
+                          <FaInstagram color="black" />
+                        </Link>
+                      )}
+                    </Flex>
+                  </Flex>
+                </Box>
+              );
+            })}
+          </Grid>
+        </Flex>
+      </Flex>
+      <SimpleGrid
+        id="Faq"
+        mt="85px"
+        columns={{
+          sm: "1",
+          md: "1",
+          lg: "1",
+          xl: "2",
+        }}
+      >
+        <Flex
+          flexDirection="column"
+          zIndex="1"
+          mt="10%"
+          px={{ sm: "5%", md: "10%", lg: "12%" }}
+        >
+          <Text
+            fontSize="16px"
+            fontWeight="700"
+            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
+            bgClip="text"
+            width="180px"
+          >
+            We speak your language
+          </Text>
+          <Text
+            mb="30px"
+            mt="4px"
+            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            lineHeight="54px"
+          >
+            Frequently asked questions
+          </Text>
+          <Tabs variant="soft-rounded" colorScheme="gray">
+            <TabList gap="25px" mb="30px">
+              {Object.keys(Faq).map((id) => {
+                return <Tab>{Faq[id].category}</Tab>;
+              })}
+            </TabList>
+            <TabPanels>
+              {Object.keys(Faq).map((id) => {
+                return (
+                  <TabPanel>
+                    <Accordion allowToggle defaultIndex={[0]}>
+                      {Object.keys(Faq[id].questions).map((index) => {
+                        return (
+                          <AccordionItem
+                            mb="20px"
+                            borderTop="0"
+                            borderBottom="1px"
+                            pb="20px"
+                          >
+                            <AccordionButton
+                              _hover={{ background: "transaprent" }}
+                            >
+                              <Box flex="1" textAlign="left">
+                                {Faq[id].questions[index].question}
+                              </Box>
+                              <AccordionIcon />
+                            </AccordionButton>
+                            <AccordionPanel pb={4}>
+                              {Faq[id].questions[index].response}
+                            </AccordionPanel>
+                          </AccordionItem>
+                        );
+                      })}
+                    </Accordion>
+                  </TabPanel>
+                );
+              })}
+            </TabPanels>
+          </Tabs>
+        </Flex>
+        <Flex
+          zIndex="0"
+          pt={{ sm: "50px", md: "50px", lg: "50px", xl: "0px" }}
+          display={{ sm: "none", md: "none", lg: "none", xl: "block" }}
+        >
+          <Image src={faqIcon} right="0px" position="absolute" zIndex="0" />
+        </Flex>
+      </SimpleGrid>
+      <Flex
+        flexDirection="column"
+        width="100%"
+        height="491px"
+        mt="250px"
+        backgroundImage={bgCircle}
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+      >
+        <Flex
+          flexDirection="column"
+          justifyContent="center"
+          textAlign="center"
+          alignItems="center"
+          px="10%"
+          pt="100px"
+          color="black"
+        >
+          <Text
+            fontSize="16px"
+            fontWeight="700"
+            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
+            bgClip="text"
+            width="85px"
+          >
+            Stay tuned
+          </Text>
+          <Text
+            mt="8px"
+            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+          >
+            Never miss a news
+          </Text>
+          <Text
+            mt="20px"
+            mb="20px"
+            fontSize="18px"
+            fontWeight="400"
+            maxW="600px"
+          >
+            Don’t hesitate to subscribe to latest news about MONOPOLE as well as
+            crucial financial knowledge to become successful investor globally
+          </Text>
+          <Newsletter
+            color="#0C0E47"
+            borderColor="#000131"
+            buttonColor="#8235FF"
+            mailChimpURL="https://network.us20.list-manage.com/subscribe/post?u=2b2c4e861a24bb799b68bcf93&id=aebe886589"
+          />
+        </Flex>
       </Flex>
     </>
   );
