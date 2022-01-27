@@ -18,7 +18,7 @@ ReactDOM.render(
   <HashRouter>
     <Web3ReactProvider getLibrary={getLibrary}>
       <Routes>
-        <Route path="/" element={<Layout />} />
+        <Route path="*" element={<Layout />} />
       </Routes>
     </Web3ReactProvider>
   </HashRouter>,
