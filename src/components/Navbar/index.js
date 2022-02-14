@@ -1,31 +1,69 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
   ButtonGroup,
   Divider,
+  Image,
   Flex,
+  Menu,
+  MenuList,
+  MenuItem,
+  MenuButton,
+  Icon,
   Text,
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
-import { useNavigate } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-import { MonopoleIconText, MonopoleIcon } from "../Icons/Icons";
-import { WalletModal } from "../WalletModal/WalletModal";
+import { FaWallet, FaAngleUp, FaAngleDown } from "react-icons/fa";
 
-export default function Nav() {
+import { MonopoleIconText, MonopoleIcon } from "../Icons/Icons";
+import { WalletModal } from "../WalletModal";
+
+export default function Navbar(props) {
+  const {
+    switchNetworkWallet,
+    usernameWallet,
+    accountWallet,
+    networkWallet,
+    supportedNetworksWallet,
+    connectorsWallet,
+    activeWallet,
+    errorWallet,
+    loadingWallet,
+    connectWallet,
+    disconnectWallet,
+  } = props;
+
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
 
   return (
     <>
+      <WalletModal
+        switchNetworkWallet={switchNetworkWallet}
+        usernameWallet={usernameWallet}
+        accountWallet={accountWallet}
+        networkWallet={networkWallet}
+        supportedNetworksWallet={supportedNetworksWallet}
+        connectorsWallet={connectorsWallet}
+        activeWallet={activeWallet}
+        errorWallet={errorWallet}
+        loadingWallet={loadingWallet}
+        connectWallet={connectWallet}
+        disconnectWallet={disconnectWallet}
+        isOpen={isOpen}
+        onClose={onClose}
+        onOpen={onOpen}
+      />
       <Box top="0px" left="0px" right="0px" height="88px"></Box>
       <Box
-        px="40px"
+        px={{ sm: "20px", md: "30px", lg: "40px" }}
         position="fixed"
         left="0px"
         right="0px"
@@ -91,7 +129,7 @@ export default function Nav() {
                       display={{ sm: "none", md: "block", lg: "block" }}
                       _hover={{ background: "transparent" }}
                       borderRadius="25px"
-                      _active={{ background: "#03CB88" }}
+                      _active={{ background: "transparent" }}
                     >
                       <Text fontSize="14px" fontWeight="700">
                         What is Monopole
@@ -110,7 +148,7 @@ export default function Nav() {
                       display={{ sm: "none", md: "block", lg: "block" }}
                       _hover={{ background: "transparent" }}
                       borderRadius="25px"
-                      _active={{ background: "#03CB88" }}
+                      _active={{ background: "transparent" }}
                     >
                       <Text fontSize="14px" fontWeight="700">
                         Our token
@@ -129,7 +167,7 @@ export default function Nav() {
                       display={{ sm: "none", md: "none", lg: "block" }}
                       _hover={{ background: "transparent" }}
                       borderRadius="25px"
-                      _active={{ background: "#03CB88" }}
+                      _active={{ background: "transparent" }}
                     >
                       <Text fontSize="14px" fontWeight="700">
                         Lite paper
@@ -148,7 +186,7 @@ export default function Nav() {
                       display={{ sm: "none", md: "block", lg: "block" }}
                       _hover={{ background: "transparent" }}
                       borderRadius="25px"
-                      _active={{ background: "#03CB88" }}
+                      _active={{ background: "transparent" }}
                     >
                       <Text fontSize="14px" fontWeight="700">
                         Team
@@ -167,7 +205,7 @@ export default function Nav() {
                       display={{ sm: "none", md: "none", lg: "block" }}
                       _hover={{ background: "transparent" }}
                       borderRadius="25px"
-                      _active={{ background: "#03CB88" }}
+                      _active={{ background: "transparent" }}
                     >
                       <Text fontSize="14px" fontWeight="700">
                         FAQ
@@ -178,34 +216,88 @@ export default function Nav() {
               </ButtonGroup>
             </Flex>
           </Flex>
-          <Flex alignItems="center">
-            {/*todo: connect wallet*/}
-            <ButtonGroup isAttached>
-              <Button
-                borderRadius="50px"
-                borderLeft="2px solid"
-                borderTop="2px solid"
-                borderRight="2px solid"
-                background="transparent"
-                onClick={() => {
-                  onOpen();
-                }}
-              >
-                <WalletModal isOpen={isOpen} onClose={onClose} onOpen={onOpen} />
-                <Text fontSize="14px" fontWeight="700">
+          <Flex alignItems="center" border="2px solid" borderRadius="50px">
+            <Button
+              borderRadius="50px"
+              background="transparent"
+              onClick={() => {
+                onOpen();
+              }}
+              _hover={{ background: "transparent" }}
+              _active={{ background: "transparent" }}
+            >
+              {activeWallet ? (
+                <Flex flexDirection="row" alignItems="center">
+                  <Icon h="16px" w="16px" as={FaWallet} mr="10px" />
+                  {usernameWallet ? (
+                    <Text fontSize="14px" fontWeight="700" mt="3px">
+                      {usernameWallet}
+                    </Text>
+                  ) : (
+                    <Text fontSize="14px" fontWeight="700" mt="3px">
+                      {accountWallet.substring(0, 6)}...
+                      {accountWallet.substring(accountWallet.length - 4)}
+                    </Text>
+                  )}
+                </Flex>
+              ) : (
+                <Text fontSize="14px" fontWeight="700" mt="3px">
                   Connect Wallet
                 </Text>
-              </Button>
-              <Button
-                background="transparent"
-                onClick={toggleColorMode}
-                borderRight="2px solid"
-                borderBottom="2px solid"
-                borderRadius="50px"
-              >
-                {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-              </Button>
-            </ButtonGroup>
+              )}
+            </Button>
+            {networkWallet && (
+              <Menu>
+                <MenuButton>
+                  <Button background="transparent" borderRadius="50px">
+                    <Image
+                      mr="5px"
+                      h="20px"
+                      w="20px"
+                      src={supportedNetworksWallet[networkWallet].logo}
+                    />
+                    <Flex flexDirection="column">
+                      <Icon h="12px" w="12px" as={FaAngleUp} />
+                      <Icon h="12px" w="12px" as={FaAngleDown} />
+                    </Flex>
+                  </Button>
+                </MenuButton>
+                <MenuList borderRadius="20px" alignItems="center">
+                  <Flex flexDirection="column">
+                    {Object.keys(supportedNetworksWallet).map((networkId) => {
+                      return (
+                        <MenuItem
+                          borderRadius="20px"
+                          onClick={() => {
+                            switchNetworkWallet(networkId);
+                          }}
+                        >
+                          <Image
+                            mr="10px"
+                            h="25px"
+                            w="25px"
+                            color="white"
+                            src={supportedNetworksWallet[networkId].logo}
+                          />
+                          <Text fontSize="md">
+                            {supportedNetworksWallet[networkId].name}
+                          </Text>
+                        </MenuItem>
+                      );
+                    })}
+                  </Flex>
+                </MenuList>
+              </Menu>
+            )}
+            <Button
+              background="transparent"
+              onClick={toggleColorMode}
+              borderRadius="50px"
+              _hover={{ background: "transparent" }}
+              _active={{ background: "transparent" }}
+            >
+              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+            </Button>
           </Flex>
         </Flex>
       </Box>
