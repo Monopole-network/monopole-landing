@@ -25,18 +25,18 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-import { Chrono } from "react-chrono";
+//import { Chrono } from "react-chrono";
 
 import { Separator } from "../../components/Separator";
 import { Team, Advisors } from "../../components/Team";
 import { Faq } from "../../components/Faq";
-import { Roadmap } from "../../components/Roadmap";
+//import { Roadmap } from "../../components/Roadmap";
 import { Newsletter } from "../../components/Newsletter";
 
 import {
-  VisaIcon,
-  PayPalIcon,
-  MastercardIcon,
+//  VisaIcon,
+//  PayPalIcon,
+//  MastercardIcon,
   SupportIcon,
   LegalIcon,
   SecurityIcon,

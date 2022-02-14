@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 // Chakra imports
-import { Text, Flex, CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
+import { Flex, CircularProgress, CircularProgressLabel } from "@chakra-ui/react";
 
 import { Viewer, Worker } from "@react-pdf-viewer/core";
 
