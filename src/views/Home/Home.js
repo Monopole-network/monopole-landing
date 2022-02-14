@@ -27,11 +27,11 @@ import {
 
 import { Chrono } from "react-chrono";
 
-import { Separator } from "../../components/Separator/Separator";
-import { Team, Advisors } from "../../components/Team/index.js";
-import { Faq } from "../../components/Faq/index.js";
-import { Roadmap } from "../../components/Roadmap/index.js";
-import { Newsletter } from "../../components/Newsletter/index.js";
+import { Separator } from "../../components/Separator";
+import { Team, Advisors } from "../../components/Team";
+import { Faq } from "../../components/Faq";
+import { Roadmap } from "../../components/Roadmap";
+import { Newsletter } from "../../components/Newsletter";
 
 import {
   VisaIcon,
@@ -353,9 +353,9 @@ function Home() {
         pt="5px"
         zIndex="1"
       >
-        <VisaIcon height="65px" width="65px" zIndex="1" />
+        {/*<VisaIcon height="65px" width="65px" zIndex="1" />
         <MastercardIcon height="65px" width="65px" zIndex="1" />
-        <PayPalIcon height="65px" width="65px" zIndex="1" />
+        <PayPalIcon height="65px" width="65px" zIndex="1" />*/}
       </Flex>
       <Flex
         id="WhatIsMonopole"
@@ -1177,6 +1177,7 @@ function Home() {
           flexDirection="column"
           w="100%"
         >
+        {/*
           <Text
             lineHeight="54px"
             fontSize={{ sm: "34px", md: "44px" }}
@@ -1217,6 +1218,7 @@ function Home() {
               })}
             </Chrono>
           </Flex>
+        */}
           <Text
             id="Team"
             lineHeight="54px"
