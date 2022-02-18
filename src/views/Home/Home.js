@@ -1235,8 +1235,8 @@ function Home() {
             px={{ sm: "5%", md: "10%", lg: "15%" }}
             templateColumns={{
               sm: "1fr 1fr",
-              md: "1fr 1fr 1fr",
-              lg: "1fr 1fr 1fr 1fr 1fr",
+              md: "1fr 1fr 1fr 1fr",
+              lg: "1fr 1fr 1fr 1fr",
             }}
             mb="65px"
             gap={{ sm: "20px", md: "30px" }}
