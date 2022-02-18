@@ -1311,8 +1311,8 @@ function Home() {
             w="100%"
             templateColumns={{
               sm: "1fr 1fr",
-              md: "1fr 1fr 1fr",
-              lg: "1fr 1fr 1fr 1fr 1fr",
+              md: "1fr 1fr 1fr 1fr",
+              lg: "1fr 1fr 1fr 1fr",
             }}
             mb="70px"
             gap={{ sm: "20px", md: "30px" }}
