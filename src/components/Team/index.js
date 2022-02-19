@@ -15,7 +15,7 @@ import hugo from "../../assets/img/team/hugo.png";
 import erman from "../../assets/img/team/erman.png";
 
 import felix from "../../assets/img/advisors/felix.png";
-import elon from "../../assets/img/advisors/elon.png";
+import 
 import adrien from "../../assets/img/advisors/adrien.png";
 import anissa from "../../assets/img/advisors/anissa.png";
 import wilhem from "../../assets/img/advisors/wilhem.png";
@@ -85,7 +85,7 @@ const Team = {
     link: "https://www.linkedin.com/in/pierre-giannone-48665411a/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/pierre-giannone-48665411a/",
-    instagram: "",
+    instagram: "https://www.instagram.com/pierregiannone/",
   },
   7: {
     name: "Kristina Gudim",
@@ -99,7 +99,7 @@ const Team = {
   8: {
     name: "Yanis Perrillat",
     img: yanis,
-    rank: "Manager Finance",
+    rank: "Finance",
     link: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
@@ -117,7 +117,7 @@ const Team = {
   10: {
     name: "Samuel Adonai",
     img: samuel,
-    rank: "Area Manager Sport & Health",
+    rank: "Manager Sport & Health",
     link: "https://www.linkedin.com/in/samuel-adonai-72895a184/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/samuel-adonai-72895a184/",
@@ -126,7 +126,7 @@ const Team = {
   11: {
     name: "Thomas Brebion",
     img: thomas,
-    rank: "Area Manager Sport & Health",
+    rank: "Manager Sport & Health",
     link: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
@@ -172,27 +172,27 @@ const Advisors = {
     instagram: "",
   },
   1: {
-    name: "Elon Barchechat",
-    img: elon,
-    rank: "Business Developer",
+    name: "...",
+    img: ,
+    rank: "",
     link: "",
     twitter: "",
     linkedin: "",
     instagram: "",
   },
   2: {
-    name: "Adrien Vezie",
-    img: adrien,
-    rank: "Finance Advisor",
-    link: "https://www.linkedin.com/in/adrien-v%C3%A9zie-406a66116/",
+    name: "",
+    img: ,
+    rank: "",
+    link: "",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/adrien-v%C3%A9zie-406a66116/",
+    linkedin: "",
     instagram: "",
   },
   3: {
     name: "Anissa Ouadah",
     img: anissa,
-    rank: "Legal Advisor",
+    rank: "Legal Advisor FR",
     link: "https://www.linkedin.com/in/anissa-ouadah-480ba855/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/anissa-ouadah-480ba855/",
@@ -220,9 +220,9 @@ const Advisors = {
     name: "Alexandre Chkirate",
     img: alexandre,
     rank: "Communication Advisor",
-    link: "",
-    twitter: "",
-    linkedin: "",
+    link: "https://www.linkedin.com/in/achkirate/",
+    twitter: "https://twitter.com/Crypto4GoodFr",
+    linkedin: "https://www.linkedin.com/in/achkirate/",
     instagram: "",
   },
   7: {
