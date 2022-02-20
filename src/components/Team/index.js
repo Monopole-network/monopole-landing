@@ -4,15 +4,17 @@ import gaelle from "../../assets/img/team/gaelle.png";
 import rudy from "../../assets/img/team/rudy.png";
 import kristina from "../../assets/img/team/kristina.png";
 import pierre from "../../assets/img/team/pierre.png";
-import lea from "../../assets/img/team/lea.png";
+import sarah from "../../assets/img/team/sarah.png";
 import yanis from "../../assets/img/team/yanis.png";
-import hugo from "../../assets/img/team/hugo.png";
+import lea from "../../assets/img/team/lea.png";
 import thibault from "../../assets/img/team/thibault.png";
-import maxime from "../../assets/img/team/maxime.png";
+import hugo from "../../assets/img/team/hugo.png";
 import robin from "../../assets/img/team/robin.png";
 import samuel from "../../assets/img/team/samuel.png";
 import thomas from "../../assets/img/team/thomas.png";
 import erman from "../../assets/img/team/erman.png";
+import maxime from "../../assets/img/team/maxime.png";
+import martin from "../../assets/img/team/martin.png";
 
 import pedro from "../../assets/img/advisors/pedro.png";
 import anissa from "../../assets/img/advisors/anissa.png";
@@ -22,6 +24,8 @@ import pablo from "../../assets/img/advisors/pablo.png";
 import julien from "../../assets/img/advisors/julien.png";
 import alexandre from "../../assets/img/advisors/alexandre.png";
 import florian from "../../assets/img/advisors/florian.png";
+import felix from "../../assets/img/advisors/felix.png";
+
 
 const Team = {
   0: {
@@ -59,7 +63,6 @@ const Team = {
     twitter: "",
     linkedin: "https://www.linkedin.com/in/rudy-revolife-56028914a/",
     instagram: "",
-
   },
   4: {
     name: "Kristina Gudim",
@@ -80,12 +83,12 @@ const Team = {
     instagram: "https://www.instagram.com/pierregiannone/",
   },
   6: {
-    name: "Léa Despinasse",
-    img: lea,
-    rank: "Sport & Health Manager",
-    link: "https://www.linkedin.com/in/l%C3%A9a-despinasse-992b73113/",
+    name: "Sarah Moinet",
+    img: sarah,
+    rank: "CMO",
+    link: "https://www.linkedin.com/in/moinet-sarah/",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/l%C3%A9a-despinasse-992b73113/",
+    linkedin: "https://www.linkedin.com/in/moinet-sarah/",
     instagram: "",
   },
   7: {
@@ -98,13 +101,13 @@ const Team = {
     instagram: "",
   },
   8: {
-    name: "Hugo Legname",
-    img: hugo,
-    rank: "Real Estate Manager / Immorentier",
-    link: "https://www.instagram.com/immorentier/",
+    name: "Léa Despinasse",
+    img: léa,
+    rank: "Sport & Health Manager",
+    link: "",
     twitter: "",
-    linkedin: "",
-    instagram: "https://www.instagram.com/ugo_lgme/",
+    linkedin: "https://www.linkedin.com/in/l%C3%A9a-despinasse-992b73113/",
+    instagram: "",
   },
   9: {
     name: "Thibault Pitolin",
@@ -116,13 +119,13 @@ const Team = {
     instagram: "https://www.instagram.com/tybo.pn/",
   },
   10: {
-    name: "Maxime Parra",
-    img: maxime,
-    rank: "Community Manager",
-    link: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
+    name: "Hugo Legname",
+    img: hugo,
+    rank: "Real Estate Manager / Immorentier",
+    link: "https://www.instagram.com/immorentier/",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
-    instagram: "",
+    linkedin: "",
+    instagram: "https://www.instagram.com/ugo_lgme/",
   },
   11: {
     name: "Robin Barchechat",
@@ -158,6 +161,24 @@ const Team = {
     link: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
+    instagram: "",
+  },
+  15: {
+    name: "Maxime Parra",
+    img: maxime,
+    rank: "Community Manager",
+    link: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
+    instagram: "",
+  },
+  16: {
+    name: "Martin Gudim",
+    img: 
+    rank: "3D Design",
+    link: "https://www.linkedin.com/in/martin-gudim-designer-072520150/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/martin-gudim-designer-072520150/",
     instagram: "",
   },
 };
@@ -234,6 +255,14 @@ const Advisors = {
     twitter: "",
     linkedin: "https://www.linkedin.com/in/florianpouvreau/",
     instagram: "https://www.instagram.com/florianpouvreau/",
+  8: {
+    name: "Felix Escalona",
+    img: felix,
+    rank: "Architect LaTam/Spain",
+    link: "",
+    twitter: "",
+    linkedin: "",
+    instagram: "",
   },
 };
 export { Advisors, Team };
