@@ -217,7 +217,7 @@ export default function Navbar(props) {
             </Flex>
           </Flex>
           <Flex alignItems="center" border="2px solid" borderRadius="50px">
-            <Button
+            {/*<Button
               borderRadius="50px"
               background="transparent"
               onClick={() => {
@@ -289,6 +289,7 @@ export default function Navbar(props) {
                 </MenuList>
               </Menu>
             )}
+            */}
             <Button
               background="transparent"
               onClick={toggleColorMode}

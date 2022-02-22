@@ -6,7 +6,6 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Avatar,
   Box,
   Button,
   Divider,
@@ -34,38 +33,88 @@ import { Faq } from "../../components/Faq";
 import { Newsletter } from "../../components/Newsletter";
 
 import {
-//  VisaIcon,
-//  PayPalIcon,
-//  MastercardIcon,
+  //  VisaIcon,
+  //  PayPalIcon,
+  //  MastercardIcon,
   SupportIcon,
   LegalIcon,
   SecurityIcon,
   EthicsIcon,
   AccessibilityIcon,
   SimplicityIcon,
+  SupportGradIcon,
+  LegalGradIcon,
+  SecurityGradIcon,
+  EthicsGradIcon,
+  AccessibilityGradIcon,
+  SimplicityGradIcon,
   DividerSVG,
 } from "../../components/Icons/Icons";
 
 import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 import bgCircle from "../../assets/img/bgCircle.png";
-import chartMain from "../../assets/img/chartMain.png";
-import payInCrypto from "../../assets/img/payInCrypto.png";
-import nftInvest from "../../assets/img/nftInvest.png";
-import topLevelSupport from "../../assets/img/topLevelSupport.png";
-import saveTime from "../../assets/img/saveTime.png";
+import chartMainD from "../../assets/img/chartMainD.png";
+import chartMainW from "../../assets/img/chartMainW.png";
+
+import payInCryptoW from "../../assets/img/payInCryptoW.png";
+import nftInvestW from "../../assets/img/nftInvestW.png";
+import topLevelSupportW from "../../assets/img/topLevelSupportW.png";
+import saveTimeW from "../../assets/img/saveTimeW.png";
+
+import payInCryptoD from "../../assets/img/payInCryptoD.png";
+import nftInvestD from "../../assets/img/nftInvestD.png";
+import topLevelSupportD from "../../assets/img/topLevelSupportD.png";
+import saveTimeD from "../../assets/img/saveTimeD.png";
+
 import centralDot from "../../assets/img/centralDot.png";
 import shadowDot from "../../assets/img/shadowDot.png";
 import dualLine from "../../assets/img/dualLine.png";
-import financeIcon from "../../assets/svg/finance.svg";
-import investIcon from "../../assets/svg/invest.svg";
-import conciergeIcon from "../../assets/svg/concierge.svg";
-import insuranceIcon from "../../assets/svg/insurance.svg";
-import faqIcon from "../../assets/img/faq.png";
+import financeDIcon from "../../assets/svg/finance.svg";
+import investDIcon from "../../assets/svg/invest.svg";
+import conciergeDIcon from "../../assets/svg/concierge.svg";
+import insuranceDIcon from "../../assets/svg/insurance.svg";
+import financeWIcon from "../../assets/svg/financeW.svg";
+import investWIcon from "../../assets/svg/investW.svg";
+import conciergeWIcon from "../../assets/svg/conciergeW.svg";
+import insuranceWIcon from "../../assets/svg/insuranceW.svg";
+
+import faqD from "../../assets/img/faqD.png";
+import faqW from "../../assets/img/faq.svg";
 
 function Home() {
   const cardColor = useColorModeValue("white", "royal");
   const counterColor = useColorModeValue("white", "royal");
+  const faqIcon = useColorModeValue(faqD, faqW);
+  const chartMain = useColorModeValue(chartMainW, chartMainD);
+
+  const payInCrypto = useColorModeValue(payInCryptoW, payInCryptoD);
+  const nftInvest = useColorModeValue(nftInvestW, nftInvestD);
+  const topLevelSupport = useColorModeValue(topLevelSupportW, topLevelSupportD);
+  const saveTime = useColorModeValue(saveTimeW, saveTimeD);
+
+  const Support = useColorModeValue(SupportGradIcon, SupportIcon);
+
+  const Legal = useColorModeValue(LegalGradIcon, LegalIcon);
+
+  const Security = useColorModeValue(SecurityGradIcon, SecurityIcon);
+
+  const Ethics = useColorModeValue(EthicsGradIcon, EthicsIcon);
+
+  const Accessibility = useColorModeValue(
+    AccessibilityGradIcon,
+    AccessibilityIcon
+  );
+
+  const Simplicity = useColorModeValue(SimplicityGradIcon, SimplicityIcon);
+
+  const financeIcon = useColorModeValue(financeWIcon, financeDIcon);
+
+  const investIcon = useColorModeValue(investWIcon, investDIcon);
+
+  const conciergeIcon = useColorModeValue(conciergeWIcon, conciergeDIcon);
+
+  const insuranceIcon = useColorModeValue(insuranceWIcon, insuranceDIcon);
 
   return (
     <>
@@ -162,10 +211,10 @@ function Home() {
                 fontFamily="Montserrat"
                 py="40px"
               >
-                Pre-sale is live now
+                Pre-sale
               </Text>
 
-              <Grid
+              {/*<Grid
                 templateColumns="1fr 1fr 1fr 1fr"
                 gap={{ sm: "10px", md: "20px", lg: "30px" }}
                 mb="40px"
@@ -294,16 +343,17 @@ function Home() {
                     secondes
                   </Text>
                 </Flex>
-              </Grid>
-              <Separator width="80%" />
+              </Grid>*/}
+              <Separator width="80%" mt="10%" />
               <Text
+                mt="10%"
                 lineHeight="25.6px"
                 fontSize="21px"
                 fontWeight="700"
                 fontFamily="Montserrat"
                 py="40px"
               >
-                Pre-sale
+                Coming soon
               </Text>
               <Progress
                 colorScheme="green"
@@ -321,10 +371,12 @@ function Home() {
                 width="50%"
                 height="44px"
                 background="#03CB88"
+                isDisabled={true}
                 color="white"
                 _active={{
                   background: "#8235FF",
                 }}
+                disabeled={true}
               >
                 Purchase tokens
               </Button>
@@ -567,7 +619,7 @@ function Home() {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <SimplicityIcon w="64px" h="64px" mb="30px" />
+                <Simplicity w="64px" h="64px" mb="30px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -594,7 +646,7 @@ function Home() {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <SupportIcon w="64px" h="64px" mb="26px" />
+                <Support w="64px" h="64px" mb="26px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -622,7 +674,7 @@ function Home() {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <LegalIcon w="64px" h="64px" mb="26px" />
+                <Legal w="64px" h="64px" mb="26px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -649,7 +701,7 @@ function Home() {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <SecurityIcon w="64px" h="64px" mb="30px" />
+                <Security w="64px" h="64px" mb="30px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -678,7 +730,7 @@ function Home() {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <EthicsIcon w="64px" h="64px" mb="26px" />
+                <Ethics w="64px" h="64px" mb="26px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -705,7 +757,7 @@ function Home() {
           <Flex mb="50px">
             <Flex direction="column" align="center" w="100%">
               <Flex direction="column" width="262px" height="350px">
-                <AccessibilityIcon w="64px" h="64px" mb="26px" />
+                <Accessibility w="64px" h="64px" mb="26px" />
                 <Flex direction="column">
                   <Text
                     mb="20px"
@@ -1177,7 +1229,7 @@ function Home() {
           flexDirection="column"
           w="100%"
         >
-        {/*
+          {/*
           <Text
             lineHeight="54px"
             fontSize={{ sm: "34px", md: "44px" }}
@@ -1251,8 +1303,8 @@ function Home() {
                     flexDirection="column"
                   >
                     <Link href={Team[id].link} isExternal>
-                      <Avatar
-                        border="0"
+                      <Image
+                        borderRadius="full"
                         size="128px"
                         name={Team[id].name}
                         src={Team[id].img}
@@ -1271,6 +1323,7 @@ function Home() {
                         fontSize="14px"
                         fontWeight="700"
                         color="black"
+                        maxW="128px"
                       >
                         {Team[id].rank}
                       </Text>
@@ -1328,8 +1381,8 @@ function Home() {
                     flexDirection="column"
                   >
                     <Link href={Advisors[id].link} isExternal>
-                      <Avatar
-                        border="0"
+                      <Image
+                        borderRadius="full"
                         size="128px"
                         name={Advisors[id].name}
                         src={Advisors[id].img}
@@ -1348,6 +1401,7 @@ function Home() {
                         fontSize="14px"
                         fontWeight="700"
                         color="black"
+                        maxW="128px"
                       >
                         {Advisors[id].rank}
                       </Text>
