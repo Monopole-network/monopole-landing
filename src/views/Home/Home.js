@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 // Chakra imports
 import {
   Accordion,
@@ -23,20 +23,20 @@ import {
   Progress,
   Link,
   useColorModeValue,
-} from "@chakra-ui/react";
+} from '@chakra-ui/react';
 
 //import { Chrono } from "react-chrono";
 
-import { Separator } from "../../components/Separator";
-import { Team, Advisors } from "../../components/Team";
-import { Faq } from "../../components/Faq";
+import { Separator } from '../../components/Separator';
+import { Team, Advisors } from '../../components/Team';
+import { Faq } from '../../components/Faq';
 //import { Roadmap } from "../../components/Roadmap";
-import { Newsletter } from "../../components/Newsletter";
+import { Newsletter } from '../../components/Newsletter';
 
 import {
-//  VisaIcon,
-//  PayPalIcon,
-//  MastercardIcon,
+  //  VisaIcon,
+  //  PayPalIcon,
+  //  MastercardIcon,
   SupportIcon,
   LegalIcon,
   SecurityIcon,
@@ -44,90 +44,96 @@ import {
   AccessibilityIcon,
   SimplicityIcon,
   DividerSVG,
-} from "../../components/Icons/Icons";
+} from '../../components/Icons/Icons';
 
-import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 
-import bgCircle from "../../assets/img/bgCircle.png";
-import chartMain from "../../assets/img/chartMain.png";
-import payInCrypto from "../../assets/img/payInCrypto.png";
-import nftInvest from "../../assets/img/nftInvest.png";
-import topLevelSupport from "../../assets/img/topLevelSupport.png";
-import saveTime from "../../assets/img/saveTime.png";
-import centralDot from "../../assets/img/centralDot.png";
-import shadowDot from "../../assets/img/shadowDot.png";
-import dualLine from "../../assets/img/dualLine.png";
-import financeIcon from "../../assets/svg/finance.svg";
-import investIcon from "../../assets/svg/invest.svg";
-import conciergeIcon from "../../assets/svg/concierge.svg";
-import insuranceIcon from "../../assets/svg/insurance.svg";
-import faqIcon from "../../assets/img/faq.png";
+import bgCircle from '../../assets/img/bgCircle.png';
+import chartMain from '../../assets/img/chartMain.png';
+import payInCrypto from '../../assets/img/payInCrypto.png';
+import nftInvest from '../../assets/img/nftInvest.png';
+import topLevelSupport from '../../assets/img/topLevelSupport.png';
+import saveTime from '../../assets/img/saveTime.png';
+import centralDot from '../../assets/img/centralDot.png';
+import shadowDot from '../../assets/img/shadowDot.png';
+import dualLine from '../../assets/img/dualLine.png';
+import financeIcon from '../../assets/svg/finance.svg';
+import investIcon from '../../assets/svg/invest.svg';
+import conciergeIcon from '../../assets/svg/concierge.svg';
+import insuranceIcon from '../../assets/svg/insurance.svg';
+import faqIcon from '../../assets/img/faq.png';
 
 function Home() {
-  const cardColor = useColorModeValue("white", "royal");
-  const counterColor = useColorModeValue("white", "royal");
+  const cardColor = useColorModeValue('white', 'royal');
+  const counterColor = useColorModeValue('white', 'royal');
 
   return (
     <>
-      <Grid mt="-88px" templateColumns={{ md: "1fr", lg: "1fr 1fr" }}>
+      <Grid mt='-88px' templateColumns={{ md: '1fr', lg: '1fr 1fr' }}>
         <Box
-          px={{ sm: "10%", md: "10%", lg: "15%" }}
-          mt={{ sm: "30%", md: "25%", lg: "25%" }}
-          height="70%"
-          width="100%"
-          zIndex="1"
+          px={{ sm: '10%', md: '10%', lg: '15%' }}
+          mt={{ sm: '30%', md: '25%', lg: '25%' }}
+          height='70%'
+          width='100%'
+          zIndex='1'
         >
           <Text
-            lineHeight="58px"
-            fontSize={{ sm: "34px", md: "44px" }}
-            fontWeight="300"
-            fontFamily="Montserrat"
+            lineHeight='58px'
+            fontSize={{ sm: '34px', md: '44px' }}
+            fontWeight='300'
+            fontFamily='Montserrat'
           >
             Everywhere.
           </Text>
           <Text
-            lineHeight="58px"
-            fontSize={{ sm: "34px", md: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
+            lineHeight='58px'
+            fontSize={{ sm: '34px', md: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
           >
             Everyday.
           </Text>
           <Text
-            lineHeight="58px"
-            fontSize={{ sm: "34px", md: "44px" }}
-            fontWeight="900"
-            fontFamily="Montserrat"
+            lineHeight='58px'
+            fontSize={{ sm: '34px', md: '44px' }}
+            fontWeight='900'
+            fontFamily='Montserrat'
           >
             Everyone.
           </Text>
-          <Text fontSize={{ sm: "18px", md: "21px" }} py="40px">
+          <Text fontSize={{ sm: '18px', md: '21px' }} py='40px'>
             Want to use your crypto for daily life? To buy a car, invest in real
             estate or your next trip ?
           </Text>
-          <Flex flexDirection="row" justifyContent="space-between" gap="5%">
+          <Flex
+            flexDirection={{ sm: 'column', md: 'row', xl: 'row' }}
+            justifyContent='space-between'
+            gap='5%'
+          >
             <Button
-              borderRadius="16px"
-              width="100%"
-              minWidth="160px"
-              height="64px"
-              background="#8235FF"
-              color="white"
+              borderRadius='16px'
+              width='100%'
+              minWidth='160px'
+              height='64px'
+              bg='#8235FF'
+              color='white'
               _active={{
-                background: "#03CB88",
+                bg: '#03CB88',
+                borderColor: '#bec3c9',
               }}
+              marginBottom={{ sm: '20px', md: '0' }}
             >
               Discover our project
             </Button>
             <Button
-              borderRadius="16px"
-              width="100%"
-              height="64px"
-              opacity="0.75"
-              minWidth="100px"
-              border="2px solid #FFFFFF"
+              borderRadius='16px'
+              width='100%'
+              height='64px'
+              opacity='0.75'
+              minWidth='100px'
+              border='2px solid #FFFFFF'
               _active={{
-                background: "#03CB88",
+                background: '#03CB88',
               }}
             >
               Lite paper
@@ -135,195 +141,195 @@ function Home() {
           </Flex>
         </Box>
         <Box
-          mr={{ sm: "0%", md: "0", lg: "15%" }}
-          px={{ sm: "5%", md: "15%", lg: "16%" }}
-          mt={{ sm: "40%", md: "25%", lg: "17.5%" }}
-          mb={{ sm: "0", md: "0", lg: "-10%" }}
-          ml={{ sm: "0", md: "0", lg: "-5%" }}
-          zIndex="1"
+          mr={{ sm: '0%', md: '0', lg: '15%' }}
+          px={{ sm: '5%', md: '15%', lg: '16%' }}
+          mt={{ sm: '40%', md: '25%', lg: '17.5%' }}
+          mb={{ sm: '0', md: '0', lg: '-10%' }}
+          ml={{ sm: '0', md: '0', lg: '-5%' }}
+          zIndex='1'
         >
           <Box
             background={cardColor}
-            borderRadius="24px"
-            height="534px"
-            width="100%"
-            minWidth={{ sm: "322px", md: "400px", lg: "400px" }}
+            borderRadius='24px'
+            height='534px'
+            width='100%'
+            minWidth={{ sm: '322px', md: '400px', lg: '400px' }}
           >
             <Flex
-              flexDirection="column"
-              justifyContent="center"
-              textAlign="center"
-              alignItems="center"
+              flexDirection='column'
+              justifyContent='center'
+              textAlign='center'
+              alignItems='center'
             >
               <Text
-                lineHeight="25.6px"
-                fontSize="21px"
-                fontWeight="700"
-                fontFamily="Montserrat"
-                py="40px"
+                lineHeight='25.6px'
+                fontSize='21px'
+                fontWeight='700'
+                fontFamily='Montserrat'
+                py='40px'
               >
                 Pre-sale is live now
               </Text>
 
               <Grid
-                templateColumns="1fr 1fr 1fr 1fr"
-                gap={{ sm: "10px", md: "20px", lg: "30px" }}
-                mb="40px"
+                templateColumns='1fr 1fr 1fr 1fr'
+                gap={{ sm: '10px', md: '20px', lg: '30px' }}
+                mb='40px'
               >
                 <Flex
-                  flexDirection="column"
-                  justifyContent="center"
-                  textAlign="center"
-                  alignItems="center"
+                  flexDirection='column'
+                  justifyContent='center'
+                  textAlign='center'
+                  alignItems='center'
                 >
                   <Box
-                    width="70px"
-                    height="70px"
+                    width='70px'
+                    height='70px'
                     background={counterColor}
-                    borderRadius="16px"
+                    borderRadius='16px'
                   >
                     <Text
-                      lineHeight="32px"
-                      fontSize="32px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
-                      py="25%"
+                      lineHeight='32px'
+                      fontSize='32px'
+                      fontWeight='700'
+                      fontFamily='Montserrat'
+                      py='25%'
                     >
                       29
                     </Text>
                   </Box>
                   <Text
-                    lineHeight="18.23px"
-                    fontSize="14px"
-                    fontWeight="400"
-                    py="10px"
+                    lineHeight='18.23px'
+                    fontSize='14px'
+                    fontWeight='400'
+                    py='10px'
                   >
                     day
                   </Text>
                 </Flex>
                 <Flex
-                  flexDirection="column"
-                  justifyContent="center"
-                  textAlign="center"
-                  alignItems="center"
+                  flexDirection='column'
+                  justifyContent='center'
+                  textAlign='center'
+                  alignItems='center'
                 >
                   <Box
-                    width="70px"
-                    height="70px"
+                    width='70px'
+                    height='70px'
                     background={counterColor}
-                    borderRadius="16px"
+                    borderRadius='16px'
                   >
                     <Text
-                      lineHeight="32px"
-                      fontSize="32px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
-                      py="25%"
+                      lineHeight='32px'
+                      fontSize='32px'
+                      fontWeight='700'
+                      fontFamily='Montserrat'
+                      py='25%'
                     >
                       10
                     </Text>
                   </Box>
                   <Text
-                    lineHeight="18.23px"
-                    fontSize="14px"
-                    fontWeight="400"
-                    py="10px"
+                    lineHeight='18.23px'
+                    fontSize='14px'
+                    fontWeight='400'
+                    py='10px'
                   >
                     hours
                   </Text>
                 </Flex>
                 <Flex
-                  flexDirection="column"
-                  justifyContent="center"
-                  textAlign="center"
-                  alignItems="center"
+                  flexDirection='column'
+                  justifyContent='center'
+                  textAlign='center'
+                  alignItems='center'
                 >
                   <Box
-                    width="70px"
-                    height="70px"
+                    width='70px'
+                    height='70px'
                     background={counterColor}
-                    borderRadius="16px"
+                    borderRadius='16px'
                   >
                     <Text
-                      lineHeight="32px"
-                      fontSize="32px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
-                      py="25%"
+                      lineHeight='32px'
+                      fontSize='32px'
+                      fontWeight='700'
+                      fontFamily='Montserrat'
+                      py='25%'
                     >
                       55
                     </Text>
                   </Box>
                   <Text
-                    lineHeight="18.23px"
-                    fontSize="14px"
-                    fontWeight="400"
-                    py="10px"
+                    lineHeight='18.23px'
+                    fontSize='14px'
+                    fontWeight='400'
+                    py='10px'
                   >
                     minutes
                   </Text>
                 </Flex>
                 <Flex
-                  flexDirection="column"
-                  justifyContent="center"
-                  textAlign="center"
-                  alignItems="center"
+                  flexDirection='column'
+                  justifyContent='center'
+                  textAlign='center'
+                  alignItems='center'
                 >
                   <Box
-                    width="70px"
-                    height="70px"
+                    width='70px'
+                    height='70px'
                     background={counterColor}
-                    borderRadius="16px"
+                    borderRadius='16px'
                   >
                     <Text
-                      lineHeight="32px"
-                      fontSize="32px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
-                      py="25%"
+                      lineHeight='32px'
+                      fontSize='32px'
+                      fontWeight='700'
+                      fontFamily='Montserrat'
+                      py='25%'
                     >
                       13
                     </Text>
                   </Box>
                   <Text
-                    lineHeight="18.23px"
-                    fontSize="14px"
-                    fontWeight="400"
-                    py="10px"
+                    lineHeight='18.23px'
+                    fontSize='14px'
+                    fontWeight='400'
+                    py='10px'
                   >
                     secondes
                   </Text>
                 </Flex>
               </Grid>
-              <Separator width="80%" />
+              <Separator width='80%' />
               <Text
-                lineHeight="25.6px"
-                fontSize="21px"
-                fontWeight="700"
-                fontFamily="Montserrat"
-                py="40px"
+                lineHeight='25.6px'
+                fontSize='21px'
+                fontWeight='700'
+                fontFamily='Montserrat'
+                py='40px'
               >
                 Pre-sale
               </Text>
               <Progress
-                colorScheme="green"
-                height="16px"
-                width="80%"
-                borderRadius="50px"
+                colorScheme='green'
+                height='16px'
+                width='80%'
+                borderRadius='50px'
                 value={1}
                 isIndeterminate
-                mb="40px"
+                mb='40px'
               />
               <Button
-                mt="20px"
-                mb="20px"
-                borderRadius="16px"
-                width="50%"
-                height="44px"
-                background="#03CB88"
-                color="white"
+                mt='20px'
+                mb='20px'
+                borderRadius='16px'
+                width='50%'
+                height='44px'
+                background='#03CB88'
+                color='white'
                 _active={{
-                  background: "#8235FF",
+                  background: '#8235FF',
                 }}
               >
                 Purchase tokens
@@ -333,91 +339,91 @@ function Home() {
         </Box>
       </Grid>
       <Image
-        display={{ sm: "block", md: "block", lg: "block" }}
+        display={{ sm: 'block', md: 'block', lg: 'block' }}
         src={dualLine}
-        width={{ sm: "100%", md: "100%", lg: "72%" }}
-        position="absolute"
-        top={{ sm: "600px", md: "700px", lg: "0" }}
-        right={{ sm: "10%", md: "10%", lg: "0px" }}
-        zIndex="0"
+        width={{ sm: '100%', md: '100%', lg: '72%' }}
+        position='absolute'
+        top={{ sm: '600px', md: '700px', lg: '0' }}
+        right={{ sm: '10%', md: '10%', lg: '0px' }}
+        zIndex='0'
       />
       <Flex
-        flexDirection="row"
-        justifyContent="center"
-        textAlign="center"
-        alignItems="center"
-        width="100%"
-        height="108px"
-        mt="137px"
-        gap="20%"
-        pt="5px"
-        zIndex="1"
+        flexDirection='row'
+        justifyContent='center'
+        textAlign='center'
+        alignItems='center'
+        width='100%'
+        height='108px'
+        mt='137px'
+        gap='20%'
+        pt='5px'
+        zIndex='1'
       >
         {/*<VisaIcon height="65px" width="65px" zIndex="1" />
         <MastercardIcon height="65px" width="65px" zIndex="1" />
         <PayPalIcon height="65px" width="65px" zIndex="1" />*/}
       </Flex>
       <Flex
-        id="WhatIsMonopole"
-        flexDirection="column"
-        justifyContent="center"
-        textAlign="center"
-        alignItems="center"
-        width="100%"
-        mt="60px"
-        px="10%"
-        zIndex="1"
+        id='WhatIsMonopole'
+        flexDirection='column'
+        justifyContent='center'
+        textAlign='center'
+        alignItems='center'
+        width='100%'
+        mt='60px'
+        px='10%'
+        zIndex='1'
       >
         <Text
-          fontSize="16px"
-          fontWeight="700"
-          bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
-          bgClip="text"
-          zIndex="1"
+          fontSize='16px'
+          fontWeight='700'
+          bgGradient='linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)'
+          bgClip='text'
+          zIndex='1'
         >
           What is Monopole ?
         </Text>
         <Text
-          mt="4px"
-          mb="60px"
-          fontSize={{ sm: "20px", md: "30px", lg: "40px" }}
-          fontWeight="700"
-          fontFamily="Montserrat"
-          px={{ sm: "0%", md: "20%", lg: "20%" }}
-          zIndex="1"
+          mt='4px'
+          mb='60px'
+          fontSize={{ sm: '20px', md: '30px', lg: '40px' }}
+          fontWeight='700'
+          fontFamily='Montserrat'
+          px={{ sm: '0%', md: '20%', lg: '20%' }}
+          zIndex='1'
         >
           We’ve built a global ecosystem to use your crypto in your daily life.
         </Text>
-        <Flex flexDirection="column" width="100%">
+        <Flex flexDirection='column' width='100%'>
           <Grid
             templateColumns={{
-              sm: "1fr",
-              md: "1fr 1fr",
-              lg: "1fr 1fr",
-              xl: "1fr 1fr 1fr 1fr",
+              sm: '1fr',
+              md: '1fr 1fr',
+              lg: '1fr 1fr',
+              xl: '1fr 1fr 1fr 1fr',
             }}
-            mb="60px"
+            mb='60px'
           >
             <Flex>
-              <Flex direction="column" align="center" w="100%">
+              <Flex direction='column' align='center' w='100%'>
                 <Flex
-                  direction="column"
-                  align="center"
-                  width="80%"
-                  height="350px"
+                  direction='column'
+                  align='center'
+                  width='80%'
+                  height='350px'
                 >
-                  <Image src={financeIcon} w="110px" h="110px" mb="26px" />
-                  <Flex direction="column">
+                  <Image src={financeIcon} w='110px' h='110px' mb='26px' />
+                  <Flex direction='column'>
                     <Text
-                      mb="20px"
-                      lineHeight="24px"
-                      fontSize="18px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
+                      mb='20px'
+                      lineHeight='24px'
+                      fontSize='18px'
+                      fontWeight='700'
+                      fontFamily='Montserrat'
                     >
                       Finance
                     </Text>
-                    <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                    <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                       Your financial diversification associated with blockchain
                       management.
                     </Text>
@@ -425,31 +431,31 @@ function Home() {
                 </Flex>
               </Flex>
               <Divider
-                orientation="vertical"
-                height="350px"
-                display={{ sm: "none", md: "block", lg: "block", xl: "block" }}
+                orientation='vertical'
+                height='350px'
+                display={{ sm: 'none', md: 'block', lg: 'block', xl: 'block' }}
               />
             </Flex>
-            <Flex mb="54px">
-              <Flex direction="column" align="center" w="100%">
+            <Flex mb='54px'>
+              <Flex direction='column' align='center' w='100%'>
                 <Flex
-                  direction="column"
-                  align="center"
-                  width="80%"
-                  height="350px"
+                  direction='column'
+                  align='center'
+                  width='80%'
+                  height='350px'
                 >
-                  <Image src={investIcon} w="110px" h="110px" mb="26px" />
-                  <Flex direction="column">
+                  <Image src={investIcon} w='110px' h='110px' mb='26px' />
+                  <Flex direction='column'>
                     <Text
-                      mb="20px"
-                      lineHeight="24px"
-                      fontSize="18px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
+                      mb='20px'
+                      lineHeight='24px'
+                      fontSize='18px'
+                      fontWeight='700'
+                      fontFamily='Montserrat'
                     >
                       Invest
                     </Text>
-                    <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                    <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                       You invest what you own without going into debt. You
                       choose according to your income, at the right time, with a
                       minimum of risk. You see all your investments in real
@@ -459,31 +465,31 @@ function Home() {
                 </Flex>
               </Flex>
               <Divider
-                orientation="vertical"
-                height="350px"
-                display={{ sm: "none", md: "none", lg: "none", xl: "block" }}
+                orientation='vertical'
+                height='350px'
+                display={{ sm: 'none', md: 'none', lg: 'none', xl: 'block' }}
               />
             </Flex>
             <Flex>
-              <Flex direction="column" align="center" w="100%">
+              <Flex direction='column' align='center' w='100%'>
                 <Flex
-                  direction="column"
-                  align="center"
-                  width="80%"
-                  height="350px"
+                  direction='column'
+                  align='center'
+                  width='80%'
+                  height='350px'
                 >
-                  <Image src={conciergeIcon} w="110px" h="110px" mb="26px" />
-                  <Flex direction="column">
+                  <Image src={conciergeIcon} w='110px' h='110px' mb='26px' />
+                  <Flex direction='column'>
                     <Text
-                      mb="20px"
-                      lineHeight="24px"
-                      fontSize="18px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
+                      mb='20px'
+                      lineHeight='24px'
+                      fontSize='18px'
+                      fontWeight='700'
+                      fontFamily='Montserrat'
                     >
                       Concierge
                     </Text>
-                    <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                    <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                       Your needs in goods and services with verified
                       partnerships with major players for maximum security,
                       agility and sustainability.
@@ -492,31 +498,31 @@ function Home() {
                 </Flex>
               </Flex>
               <Divider
-                orientation="vertical"
-                height="350px"
-                display={{ sm: "none", md: "block", lg: "block", xl: "block" }}
+                orientation='vertical'
+                height='350px'
+                display={{ sm: 'none', md: 'block', lg: 'block', xl: 'block' }}
               />
             </Flex>
             <Flex>
-              <Flex direction="column" align="center" w="100%">
+              <Flex direction='column' align='center' w='100%'>
                 <Flex
-                  direction="column"
-                  align="center"
-                  width="80%"
-                  height="350px"
+                  direction='column'
+                  align='center'
+                  width='80%'
+                  height='350px'
                 >
-                  <Image src={insuranceIcon} w="110px" h="110px" mb="26px" />
-                  <Flex direction="column">
+                  <Image src={insuranceIcon} w='110px' h='110px' mb='26px' />
+                  <Flex direction='column'>
                     <Text
-                      mb="20px"
-                      lineHeight="24px"
-                      fontSize="18px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
+                      mb='20px'
+                      lineHeight='24px'
+                      fontSize='18px'
+                      fontWeight='700'
+                      fontFamily='Montserrat'
                     >
                       Insurance policies
                     </Text>
-                    <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                    <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                       Whether it is blockchain or for your daily uses, will
                       allow you to be both insured and insurer at the same time.
                       It covers all your needs, is accessible and secure. It
@@ -529,56 +535,56 @@ function Home() {
           </Grid>
         </Flex>
       </Flex>
-      <Flex flexDirection="column" width="100%" mt="30px" px="10%">
+      <Flex flexDirection='column' width='100%' mt='30px' px='10%'>
         <Flex
-          flexDirection="column"
-          pl={{ sm: "0%", md: "7%", lg: "11%", xl: "6%" }}
-          pr={{ sm: "20%", md: "40%", lg: "50%" }}
-          zIndex="1"
+          flexDirection='column'
+          pl={{ sm: '0%', md: '7%', lg: '11%', xl: '6%' }}
+          pr={{ sm: '20%', md: '40%', lg: '50%' }}
+          zIndex='1'
         >
           <Text
-            fontSize="16px"
-            fontWeight="700"
-            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
-            bgClip="text"
-            width="180px"
+            fontSize='16px'
+            fontWeight='700'
+            bgGradient='linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)'
+            bgClip='text'
+            width='180px'
           >
             Why choose our token ?
           </Text>
           <Text
-            mt="4px"
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
+            mt='4px'
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
           >
             Use your crypto everyday, everywhere, anytime.
           </Text>
         </Flex>
         <Grid
           templateColumns={{
-            sm: "1fr",
-            md: "1fr 1fr",
-            lg: "1fr 1fr",
-            xl: "1fr 1fr 1fr",
+            sm: '1fr',
+            md: '1fr 1fr',
+            lg: '1fr 1fr',
+            xl: '1fr 1fr 1fr',
           }}
-          mt="60px"
-          zIndex="1"
+          mt='60px'
+          zIndex='1'
         >
-          <Flex mb="50px">
-            <Flex direction="column" align="center" w="100%">
-              <Flex direction="column" width="262px" height="350px">
-                <SimplicityIcon w="64px" h="64px" mb="30px" />
-                <Flex direction="column">
+          <Flex mb='50px'>
+            <Flex direction='column' align='center' w='100%'>
+              <Flex direction='column' width='262px' height='350px'>
+                <SimplicityIcon w='64px' h='64px' mb='30px' />
+                <Flex direction='column'>
                   <Text
-                    mb="20px"
-                    lineHeight="24px"
-                    fontSize="18px"
-                    fontWeight="700"
-                    fontFamily="Montserrat"
+                    mb='20px'
+                    lineHeight='24px'
+                    fontSize='18px'
+                    fontWeight='700'
+                    fontFamily='Montserrat'
                   >
                     Simplicity
                   </Text>
-                  <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                  <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                     As we are a complete ecosystem and not an isolated project,
                     we work in synergy to facilitate your investments. A single
                     contact for everything! In 3 clicks and that's it.
@@ -587,25 +593,25 @@ function Home() {
               </Flex>
             </Flex>
             <Divider
-              orientation="vertical"
-              display={{ sm: "none", md: "block", lg: "block", xl: "block" }}
+              orientation='vertical'
+              display={{ sm: 'none', md: 'block', lg: 'block', xl: 'block' }}
             />
           </Flex>
-          <Flex mb="50px">
-            <Flex direction="column" align="center" w="100%">
-              <Flex direction="column" width="262px" height="350px">
-                <SupportIcon w="64px" h="64px" mb="26px" />
-                <Flex direction="column">
+          <Flex mb='50px'>
+            <Flex direction='column' align='center' w='100%'>
+              <Flex direction='column' width='262px' height='350px'>
+                <SupportIcon w='64px' h='64px' mb='26px' />
+                <Flex direction='column'>
                   <Text
-                    mb="20px"
-                    lineHeight="24px"
-                    fontSize="18px"
-                    fontWeight="700"
-                    fontFamily="Montserrat"
+                    mb='20px'
+                    lineHeight='24px'
+                    fontSize='18px'
+                    fontWeight='700'
+                    fontFamily='Montserrat'
                   >
                     Support
                   </Text>
-                  <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                  <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                     We have a recognized contract as a business contributor.
                     Everything is not dematerialized, you are surrounded to
                     better invest and better consume by people whose objective
@@ -615,25 +621,25 @@ function Home() {
               </Flex>
             </Flex>
             <Divider
-              orientation="vertical"
-              display={{ sm: "none", md: "none", lg: "none", xl: "block" }}
+              orientation='vertical'
+              display={{ sm: 'none', md: 'none', lg: 'none', xl: 'block' }}
             />
           </Flex>
-          <Flex mb="50px">
-            <Flex direction="column" align="center" w="100%">
-              <Flex direction="column" width="262px" height="350px">
-                <LegalIcon w="64px" h="64px" mb="26px" />
-                <Flex direction="column">
+          <Flex mb='50px'>
+            <Flex direction='column' align='center' w='100%'>
+              <Flex direction='column' width='262px' height='350px'>
+                <LegalIcon w='64px' h='64px' mb='26px' />
+                <Flex direction='column'>
                   <Text
-                    mb="20px"
-                    lineHeight="24px"
-                    fontSize="18px"
-                    fontWeight="700"
-                    fontFamily="Montserrat"
+                    mb='20px'
+                    lineHeight='24px'
+                    fontSize='18px'
+                    fontWeight='700'
+                    fontFamily='Montserrat'
                   >
                     Legal conformity
                   </Text>
-                  <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                  <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                     You can invest anywhere in the world without having to
                     travel and in all legality. Monopole allows international,
                     filtered, secure and easy investments.
@@ -642,25 +648,25 @@ function Home() {
               </Flex>
             </Flex>
             <Divider
-              orientation="vertical"
-              display={{ sm: "none", md: "block", lg: "block", xl: "none" }}
+              orientation='vertical'
+              display={{ sm: 'none', md: 'block', lg: 'block', xl: 'none' }}
             />
           </Flex>
-          <Flex mb="50px">
-            <Flex direction="column" align="center" w="100%">
-              <Flex direction="column" width="262px" height="350px">
-                <SecurityIcon w="64px" h="64px" mb="30px" />
-                <Flex direction="column">
+          <Flex mb='50px'>
+            <Flex direction='column' align='center' w='100%'>
+              <Flex direction='column' width='262px' height='350px'>
+                <SecurityIcon w='64px' h='64px' mb='30px' />
+                <Flex direction='column'>
                   <Text
-                    mb="20px"
-                    lineHeight="24px"
-                    fontSize="18px"
-                    fontWeight="700"
-                    fontFamily="Montserrat"
+                    mb='20px'
+                    lineHeight='24px'
+                    fontSize='18px'
+                    fontWeight='700'
+                    fontFamily='Montserrat'
                   >
                     Security
                   </Text>
-                  <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                  <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                     Monopole does not depend on one blockchain but is present on
                     more than 4 blockchains at the same time. This diversity
                     allows us to minimize risk and congestion through
@@ -671,25 +677,25 @@ function Home() {
               </Flex>
             </Flex>
             <Divider
-              orientation="vertical"
-              display={{ sm: "none", md: "none", lg: "none", xl: "block" }}
+              orientation='vertical'
+              display={{ sm: 'none', md: 'none', lg: 'none', xl: 'block' }}
             />
           </Flex>
-          <Flex mb="50px">
-            <Flex direction="column" align="center" w="100%">
-              <Flex direction="column" width="262px" height="350px">
-                <EthicsIcon w="64px" h="64px" mb="26px" />
-                <Flex direction="column">
+          <Flex mb='50px'>
+            <Flex direction='column' align='center' w='100%'>
+              <Flex direction='column' width='262px' height='350px'>
+                <EthicsIcon w='64px' h='64px' mb='26px' />
+                <Flex direction='column'>
                   <Text
-                    mb="20px"
-                    lineHeight="24px"
-                    fontSize="18px"
-                    fontWeight="700"
-                    fontFamily="Montserrat"
+                    mb='20px'
+                    lineHeight='24px'
+                    fontSize='18px'
+                    fontWeight='700'
+                    fontFamily='Montserrat'
                   >
                     Ethics & Responsability
                   </Text>
-                  <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                  <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                     We are on an ecologically neutral blockchain for a reduced
                     carbon footprint of investments. Monopole donates 0.5% of
                     its earnings to a foundation dedicated to decarbonization.
@@ -698,25 +704,25 @@ function Home() {
               </Flex>
             </Flex>
             <Divider
-              orientation="vertical"
-              display={{ sm: "none", md: "block", lg: "block", xl: "block" }}
+              orientation='vertical'
+              display={{ sm: 'none', md: 'block', lg: 'block', xl: 'block' }}
             />
           </Flex>
-          <Flex mb="50px">
-            <Flex direction="column" align="center" w="100%">
-              <Flex direction="column" width="262px" height="350px">
-                <AccessibilityIcon w="64px" h="64px" mb="26px" />
-                <Flex direction="column">
+          <Flex mb='50px'>
+            <Flex direction='column' align='center' w='100%'>
+              <Flex direction='column' width='262px' height='350px'>
+                <AccessibilityIcon w='64px' h='64px' mb='26px' />
+                <Flex direction='column'>
                   <Text
-                    mb="20px"
-                    lineHeight="24px"
-                    fontSize="18px"
-                    fontWeight="700"
-                    fontFamily="Montserrat"
+                    mb='20px'
+                    lineHeight='24px'
+                    fontSize='18px'
+                    fontWeight='700'
+                    fontFamily='Montserrat'
                   >
                     Accessibility
                   </Text>
-                  <Text lineHeight="24px" fontSize="16px" fontWeight="400">
+                  <Text lineHeight='24px' fontSize='16px' fontWeight='400'>
                     We offer premium services that can be accessed anywhere,
                     from any device, at any time. You can use the Monopole card
                     with partners via Metamask wallets and others. Soon, a
@@ -729,131 +735,131 @@ function Home() {
         </Grid>
         <Image
           src={shadowDot}
-          position="absolute"
-          zIndex="0"
-          left="0"
-          mt="100px"
+          position='absolute'
+          zIndex='0'
+          left='0'
+          mt='100px'
         />
       </Flex>
       <Flex
-        flexDirection="column"
-        width="100%"
-        mt="130px"
-        zIndex="1"
-        mb="280px"
+        flexDirection='column'
+        width='100%'
+        mt='130px'
+        zIndex='1'
+        mb='280px'
       >
         <Flex
-          flexDirection="column"
-          zIndex="1"
-          justifyContent="center"
-          textAlign="center"
-          alignItems="center"
-          px="10%"
+          flexDirection='column'
+          zIndex='1'
+          justifyContent='center'
+          textAlign='center'
+          alignItems='center'
+          px='10%'
         >
-          <Text fontSize="16px" fontWeight="700" width="180px">
+          <Text fontSize='16px' fontWeight='700' width='180px'>
             Want to know more ?
           </Text>
           <Text
-            mt="5px"
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
+            mt='5px'
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
           >
             Discover our lite paper
           </Text>
           <Text
-            mt="16px"
-            fontSize="16px"
-            fontWeight="400"
-            fontFamily="Montserrat"
+            mt='16px'
+            fontSize='16px'
+            fontWeight='400'
+            fontFamily='Montserrat'
           >
             Here is our full documents that help you to understand deeply about
             us and our project
           </Text>
           <Button
-            mt="32px"
-            borderRadius="16px"
-            width="20%"
-            height="64px"
-            background="#03CB88"
-            color="white"
-            minWidth="160px"
+            mt='32px'
+            borderRadius='16px'
+            width='20%'
+            height='64px'
+            background='#03CB88'
+            color='white'
+            minWidth='160px'
             _active={{
-              background: "#8235FF",
+              background: '#8235FF',
             }}
-            zIndex="1"
+            zIndex='1'
           >
             Purchase tokens
           </Button>
         </Flex>
         <Flex
-          mt="-100px"
-          zIndex="0"
-          justifyContent="center"
-          alignItems="center"
+          mt='-100px'
+          zIndex='0'
+          justifyContent='center'
+          alignItems='center'
         >
-          <Image src={centralDot} position="absolute" zIndex="0" />
+          <Image src={centralDot} position='absolute' zIndex='0' />
         </Flex>
       </Flex>
       <Flex
-        id="LitePaper"
-        flexDirection="column"
-        width="100%"
-        zIndex="1"
-        justifyContent="center"
-        textAlign="center"
-        alignItems="center"
-        px={{ sm: "5%", md: "10%", lg: "15%" }}
+        id='LitePaper'
+        flexDirection='column'
+        width='100%'
+        zIndex='1'
+        justifyContent='center'
+        textAlign='center'
+        alignItems='center'
+        px={{ sm: '5%', md: '10%', lg: '15%' }}
       >
         <Text
-          fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-          fontWeight="700"
-          fontFamily="Montserrat"
-          zIndex="1"
+          fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+          fontWeight='700'
+          fontFamily='Montserrat'
+          zIndex='1'
         >
           Discover the freedom to choose, invest, manage and use your crypto, in
           your daily life!
         </Text>
       </Flex>
       <SimpleGrid
-        mt="280px"
+        mt='280px'
         columns={{
-          sm: "1",
-          md: "1",
-          lg: "1",
-          xl: "2",
+          sm: '1',
+          md: '1',
+          lg: '1',
+          xl: '2',
         }}
       >
         <Flex
-          flexDirection="column"
-          zIndex="1"
-          mt="10%"
-          pl={{ sm: "10%", md: "15%", lg: "20%" }}
-          pr={{ sm: "10%", md: "10%", lg: "10%" }}
+          flexDirection='column'
+          zIndex='1'
+          mt='10%'
+          pl={{ sm: '10%', md: '15%', lg: '20%' }}
+          pr={{ sm: '10%', md: '10%', lg: '10%' }}
         >
           <Text
-            fontSize="16px"
-            fontWeight="700"
-            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
-            bgClip="text"
-            width="75px"
+            fontSize='16px'
+            fontWeight='700'
+            bgGradient='linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)'
+            bgClip='text'
+            width='75px'
           >
             Save time
           </Text>
           <Text
-            mt="4px"
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
-            lineHeight="54px"
+            mt='4px'
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
+            lineHeight='54px'
           >
             A unique, intuitive platform, available everywhere
           </Text>
           <Text
-            mt="16px"
-            fontSize="16px"
-            fontWeight="400"
-            fontFamily="Montserrat"
+            mt='16px'
+            fontSize='16px'
+            fontWeight='400'
+            fontFamily='Montserrat'
           >
             A unique, intuitive platform, available everywhere, that offers you
             full visibility on acquisitions and assets recognized in your
@@ -862,60 +868,60 @@ function Home() {
             manner and optimize your returns.
           </Text>
         </Flex>
-        <Flex zIndex="0" pt={{ sm: "50px", md: "50px", lg: "50px", xl: "0px" }}>
-          <Image src={saveTime} right="0px" position="absolute" zIndex="0" />
+        <Flex zIndex='0' pt={{ sm: '50px', md: '50px', lg: '50px', xl: '0px' }}>
+          <Image src={saveTime} right='0px' position='absolute' zIndex='0' />
         </Flex>
       </SimpleGrid>
       <SimpleGrid
-        mt={{ sm: "75%", md: "80%", lg: "500px", xl: "280px" }}
+        mt={{ sm: '75%', md: '80%', lg: '500px', xl: '280px' }}
         columns={{
-          sm: "1",
-          md: "1",
-          lg: "1",
-          xl: "2",
+          sm: '1',
+          md: '1',
+          lg: '1',
+          xl: '2',
         }}
       >
         <Flex
-          zIndex="0"
-          pt={{ sm: "350px", md: "350px", lg: "400px", xl: "0" }}
+          zIndex='0'
+          pt={{ sm: '350px', md: '350px', lg: '400px', xl: '0' }}
         >
           <Image
             src={topLevelSupport}
-            left="0px"
-            position="absolute"
-            zIndex="0"
+            left='0px'
+            position='absolute'
+            zIndex='0'
           />
         </Flex>
         <Flex
-          flexDirection="column"
-          zIndex="1"
-          mt={{ sm: "-350px", md: "-350px", lg: "-300px", xl: "110px" }}
-          pl={{ sm: "10%", md: "15%", lg: "10%" }}
-          pr={{ sm: "10%", md: "10%", lg: "20%" }}
+          flexDirection='column'
+          zIndex='1'
+          mt={{ sm: '-350px', md: '-350px', lg: '-300px', xl: '110px' }}
+          pl={{ sm: '10%', md: '15%', lg: '10%' }}
+          pr={{ sm: '10%', md: '10%', lg: '20%' }}
         >
           <Text
-            fontSize="16px"
-            fontWeight="700"
-            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
-            bgClip="text"
-            width="128px"
+            fontSize='16px'
+            fontWeight='700'
+            bgGradient='linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)'
+            bgClip='text'
+            width='128px'
           >
             Top level support
           </Text>
           <Text
-            mt="4px"
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
-            lineHeight="54px"
+            mt='4px'
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
+            lineHeight='54px'
           >
             Benefit from experienced, human and reactive support
           </Text>
           <Text
-            mt="16px"
-            fontSize="16px"
-            fontWeight="400"
-            fontFamily="Montserrat"
+            mt='16px'
+            fontSize='16px'
+            fontWeight='400'
+            fontFamily='Montserrat'
           >
             You are surrounded and advised by an expert and available team.
             Monopole changes your daily life by finding, selecting and verifying
@@ -925,97 +931,97 @@ function Home() {
         </Flex>
       </SimpleGrid>
       <SimpleGrid
-        mt={{ sm: "350px", md: "500px", lg: "500px", xl: "280px" }}
+        mt={{ sm: '350px', md: '500px', lg: '500px', xl: '280px' }}
         columns={{
-          sm: "1",
-          md: "1",
-          lg: "1",
-          xl: "2",
+          sm: '1',
+          md: '1',
+          lg: '1',
+          xl: '2',
         }}
       >
         <Flex
-          flexDirection="column"
-          zIndex="1"
-          mt={{ sm: "0%", md: "0%", lg: "0%", xl: "160px" }}
-          pl={{ sm: "10%", md: "15%", lg: "20%" }}
-          pr={{ sm: "10%", md: "10%", lg: "10%" }}
+          flexDirection='column'
+          zIndex='1'
+          mt={{ sm: '0%', md: '0%', lg: '0%', xl: '160px' }}
+          pl={{ sm: '10%', md: '15%', lg: '20%' }}
+          pr={{ sm: '10%', md: '10%', lg: '10%' }}
         >
           <Text
-            fontSize="16px"
-            fontWeight="700"
-            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
-            bgClip="text"
-            width="220px"
+            fontSize='16px'
+            fontWeight='700'
+            bgGradient='linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)'
+            bgClip='text'
+            width='220px'
           >
             Verified investments & NFT’s
           </Text>
           <Text
-            mt="4px"
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
-            lineHeight="54px"
+            mt='4px'
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
+            lineHeight='54px'
           >
             Enjoy verified investments and make them grow with NFT
           </Text>
           <Text
-            mt="16px"
-            fontSize="16px"
-            fontWeight="400"
-            fontFamily="Montserrat"
+            mt='16px'
+            fontSize='16px'
+            fontWeight='400'
+            fontFamily='Montserrat'
           >
             You buy a real asset or share and receive it in NFTs.
           </Text>
         </Flex>
-        <Flex zIndex="0" pt={{ sm: "50px", md: "50px", lg: "50px", xl: "0px" }}>
-          <Image src={nftInvest} right="0px" position="absolute" zIndex="0" />
+        <Flex zIndex='0' pt={{ sm: '50px', md: '50px', lg: '50px', xl: '0px' }}>
+          <Image src={nftInvest} right='0px' position='absolute' zIndex='0' />
         </Flex>
       </SimpleGrid>
       <SimpleGrid
-        mt={{ sm: "75%", md: "80%", lg: "500px", xl: "280px" }}
+        mt={{ sm: '75%', md: '80%', lg: '500px', xl: '280px' }}
         columns={{
-          sm: "1",
-          md: "1",
-          lg: "1",
-          xl: "2",
+          sm: '1',
+          md: '1',
+          lg: '1',
+          xl: '2',
         }}
       >
         <Flex
-          zIndex="0"
-          pt={{ sm: "350px", md: "350px", lg: "400px", xl: "0" }}
+          zIndex='0'
+          pt={{ sm: '350px', md: '350px', lg: '400px', xl: '0' }}
         >
-          <Image src={payInCrypto} left="0px" position="absolute" zIndex="0" />
+          <Image src={payInCrypto} left='0px' position='absolute' zIndex='0' />
         </Flex>
         <Flex
-          flexDirection="column"
-          zIndex="1"
-          mt={{ sm: "-350px", md: "-350px", lg: "-300px", xl: "150px" }}
-          pl={{ sm: "10%", md: "15%", lg: "10%" }}
-          pr={{ sm: "10%", md: "10%", lg: "20%" }}
+          flexDirection='column'
+          zIndex='1'
+          mt={{ sm: '-350px', md: '-350px', lg: '-300px', xl: '150px' }}
+          pl={{ sm: '10%', md: '15%', lg: '10%' }}
+          pr={{ sm: '10%', md: '10%', lg: '20%' }}
         >
           <Text
-            fontSize="16px"
-            fontWeight="700"
-            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
-            bgClip="text"
-            width="128px"
+            fontSize='16px'
+            fontWeight='700'
+            bgGradient='linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)'
+            bgClip='text'
+            width='128px'
           >
             Pay in crypto
           </Text>
           <Text
-            mt="4px"
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
-            lineHeight="54px"
+            mt='4px'
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
+            lineHeight='54px'
           >
             Access everything you need, pay in crypto
           </Text>
           <Text
-            mt="16px"
-            fontSize="16px"
-            fontWeight="400"
-            fontFamily="Montserrat"
+            mt='16px'
+            fontSize='16px'
+            fontWeight='400'
+            fontFamily='Montserrat'
           >
             Local and international crypto friendly player partners that allow
             you to access verified services to use your crypto for all your
@@ -1024,160 +1030,160 @@ function Home() {
         </Flex>
       </SimpleGrid>
       <SimpleGrid
-        id="MnplToken"
-        mt={{ sm: "80%", md: "70%", lg: "60%", xl: "30%" }}
+        id='MnplToken'
+        mt={{ sm: '80%', md: '70%', lg: '60%', xl: '30%' }}
         columns={{
-          sm: "1",
-          md: "1",
-          lg: "1",
-          xl: "2",
+          sm: '1',
+          md: '1',
+          lg: '1',
+          xl: '2',
         }}
       >
-        <Flex flexDirection="column">
+        <Flex flexDirection='column'>
           <Text
-            mb="50px"
-            pl={{ sm: "10%", md: "15%", lg: "20%" }}
-            pr={{ sm: "10%", md: "15%", lg: "20%" }}
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
-            lineHeight="54px"
+            mb='50px'
+            pl={{ sm: '10%', md: '15%', lg: '20%' }}
+            pr={{ sm: '10%', md: '15%', lg: '20%' }}
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
+            lineHeight='54px'
           >
             Funding allocation
           </Text>
           <Flex
-            zIndex="0"
-            justifyContent="center"
-            textAlign="center"
-            alignItems="center"
-            w="100%"
+            zIndex='0'
+            justifyContent='center'
+            textAlign='center'
+            alignItems='center'
+            w='100%'
           >
-            <Image src={chartMain} left="0px" zIndex="0" />
+            <Image src={chartMain} left='0px' zIndex='0' />
           </Flex>
         </Flex>
         <Flex
-          flexDirection="column"
-          zIndex="1"
-          pl={{ sm: "10%", md: "15%", lg: "10%" }}
-          pr={{ sm: "10%", md: "10%", lg: "20%" }}
+          flexDirection='column'
+          zIndex='1'
+          pl={{ sm: '10%', md: '15%', lg: '10%' }}
+          pr={{ sm: '10%', md: '10%', lg: '20%' }}
         >
           <Text
-            mt="24px"
-            fontSize="21px"
-            fontWeight="400"
-            fontFamily="Montserrat"
-            lineHeight="25.6px"
-            mb="50px"
+            mt='24px'
+            fontSize='21px'
+            fontWeight='400'
+            fontFamily='Montserrat'
+            lineHeight='25.6px'
+            mb='50px'
           >
             Token allocation
           </Text>
           <Flex
-            flexDirection="column"
-            zIndex="1"
-            w="100%"
-            justifyContent="center"
-            h="100%"
+            flexDirection='column'
+            zIndex='1'
+            w='100%'
+            justifyContent='center'
+            h='100%'
           >
-            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+            <Text mb='10px' fontSize='16px' fontWeight='700' zIndex='1'>
               Contingency: 10 %
             </Text>
             <Progress
               value={10}
-              w="100%"
-              h="6px"
-              colorScheme="orange"
-              borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              w='100%'
+              h='6px'
+              colorScheme='orange'
+              borderRadius='10px'
+              bg='transparent'
+              mb='20px'
             />
-            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+            <Text mb='10px' fontSize='16px' fontWeight='700' zIndex='1'>
               Partner / Investor: 5 %
             </Text>
             <Progress
               value={5}
-              w="100%"
-              h="6px"
-              colorScheme="green"
-              borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              w='100%'
+              h='6px'
+              colorScheme='green'
+              borderRadius='10px'
+              bg='transparent'
+              mb='20px'
             />
-            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+            <Text mb='10px' fontSize='16px' fontWeight='700' zIndex='1'>
               Legal & Regulation: 25 %
             </Text>
             <Progress
               value={25}
-              w="100%"
-              h="6px"
-              colorScheme="blue"
-              borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              w='100%'
+              h='6px'
+              colorScheme='blue'
+              borderRadius='10px'
+              bg='transparent'
+              mb='20px'
             />
-            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+            <Text mb='10px' fontSize='16px' fontWeight='700' zIndex='1'>
               Business development: 5 %
             </Text>
             <Progress
               value={5}
-              w="100%"
-              h="6px"
-              colorScheme="red"
-              borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              w='100%'
+              h='6px'
+              colorScheme='red'
+              borderRadius='10px'
+              bg='transparent'
+              mb='20px'
             />
-            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+            <Text mb='10px' fontSize='16px' fontWeight='700' zIndex='1'>
               Operational: 35 %
             </Text>
             <Progress
               value={35}
-              w="100%"
-              h="6px"
-              colorScheme="purple"
-              borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              w='100%'
+              h='6px'
+              colorScheme='purple'
+              borderRadius='10px'
+              bg='transparent'
+              mb='20px'
             />
-            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+            <Text mb='10px' fontSize='16px' fontWeight='700' zIndex='1'>
               Product development: 10 %
             </Text>
             <Progress
               value={10}
-              w="100%"
-              h="6px"
-              colorScheme="gray"
-              borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              w='100%'
+              h='6px'
+              colorScheme='gray'
+              borderRadius='10px'
+              bg='transparent'
+              mb='20px'
             />
-            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+            <Text mb='10px' fontSize='16px' fontWeight='700' zIndex='1'>
               Marketing: 5 %
             </Text>
             <Progress
               value={10}
-              w="100%"
-              h="6px"
-              colorScheme="teal"
-              borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              w='100%'
+              h='6px'
+              colorScheme='teal'
+              borderRadius='10px'
+              bg='transparent'
+              mb='20px'
             />
           </Flex>
         </Flex>
       </SimpleGrid>
-      <Flex flexDirection="column" zIndex="0" w="100%" mt="100px">
-        <DividerSVG w="100%" h="100%" zIndex="0" />
+      <Flex flexDirection='column' zIndex='0' w='100%' mt='100px'>
+        <DividerSVG w='100%' h='100%' zIndex='0' />
       </Flex>
-      <Flex flexDirection="column" w="100%" pt="20px" background="white">
+      <Flex flexDirection='column' w='100%' pt='20px' background='white'>
         <Flex
-          zIndex="0"
-          justifyContent="center"
-          textAlign="center"
-          alignItems="center"
-          flexDirection="column"
-          w="100%"
+          zIndex='0'
+          justifyContent='center'
+          textAlign='center'
+          alignItems='center'
+          flexDirection='column'
+          w='100%'
         >
-        {/*
+          {/*
           <Text
             lineHeight="54px"
             fontSize={{ sm: "34px", md: "44px" }}
@@ -1220,75 +1226,76 @@ function Home() {
           </Flex>
         */}
           <Text
-            id="Team"
-            lineHeight="54px"
-            fontSize={{ sm: "34px", md: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
-            color="black"
-            mb="65px"
+            id='Team'
+            lineHeight='54px'
+            fontSize={{ sm: '34px', md: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
+            color='black'
+            mb='65px'
           >
             Real people behind
           </Text>
           <Grid
-            w="100%"
-            px={{ sm: "5%", md: "10%", lg: "15%" }}
+            w='100%'
+            px={{ sm: '5%', md: '10%', lg: '15%' }}
             templateColumns={{
-              sm: "1fr 1fr",
-              md: "1fr 1fr 1fr 1fr",
-              lg: "1fr 1fr 1fr 1fr",
+              sm: '1fr 1fr',
+              md: '1fr 1fr 1fr 1fr',
+              lg: '1fr 1fr 1fr 1fr',
             }}
-            mb="65px"
-            gap={{ sm: "20px", md: "30px" }}
+            mb='65px'
+            gap={{ sm: '20px', md: '30px' }}
           >
             {Object.keys(Team).map((id) => {
               return (
-                <Box maxW="sm">
+                <Box maxW='sm'>
                   <Flex
-                    justifyContent="center"
-                    textAlign="center"
-                    alignItems="center"
-                    flexDirection="column"
+                    justifyContent='center'
+                    textAlign='center'
+                    alignItems='center'
+                    flexDirection='column'
                   >
                     <Link href={Team[id].link} isExternal>
                       <Avatar
-                        border="0"
-                        size="128px"
+                        border='0'
+                        size='128px'
                         name={Team[id].name}
                         src={Team[id].img}
-                        mb="20px"
+                        mb='20px'
+                        bg='#fff'
                       />
                       <Text
-                        lineHeight="24px"
-                        fontSize="16px"
-                        fontWeight="700"
-                        color="black"
+                        lineHeight='24px'
+                        fontSize='16px'
+                        fontWeight='700'
+                        color='black'
                       >
                         {Team[id].name}
                       </Text>
                       <Text
-                        lineHeight="21px"
-                        fontSize="14px"
-                        fontWeight="700"
-                        color="black"
+                        lineHeight='21px'
+                        fontSize='14px'
+                        fontWeight='700'
+                        color='black'
                       >
                         {Team[id].rank}
                       </Text>
                     </Link>
-                    <Flex gap="10px" flexDirection="row">
+                    <Flex gap='10px' flexDirection='row'>
                       {Team[id].twitter && (
                         <Link href={Team[id].twitter} isExternal>
-                          <FaTwitter color="black" />
+                          <FaTwitter color='black' />
                         </Link>
                       )}
                       {Team[id].linkedin && (
                         <Link href={Team[id].linkedin} isExternal>
-                          <FaLinkedin color="black" />
+                          <FaLinkedin color='black' />
                         </Link>
                       )}
                       {Team[id].instagram && (
                         <Link href={Team[id].instagram} isExternal>
-                          <FaInstagram color="black" />
+                          <FaInstagram color='black' />
                         </Link>
                       )}
                     </Flex>
@@ -1298,74 +1305,75 @@ function Home() {
             })}
           </Grid>
           <Text
-            lineHeight="54px"
-            fontSize={{ sm: "34px", md: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
-            color="black"
-            mb="65px"
+            lineHeight='54px'
+            fontSize={{ sm: '34px', md: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
+            color='black'
+            mb='65px'
           >
             Advisors
           </Text>
           <Grid
-            w="100%"
+            w='100%'
             templateColumns={{
-              sm: "1fr 1fr",
-              md: "1fr 1fr 1fr 1fr",
-              lg: "1fr 1fr 1fr 1fr",
+              sm: '1fr 1fr',
+              md: '1fr 1fr 1fr 1fr',
+              lg: '1fr 1fr 1fr 1fr',
             }}
-            mb="70px"
-            gap={{ sm: "20px", md: "30px" }}
-            px={{ sm: "5%", md: "10%", lg: "15%" }}
+            mb='70px'
+            gap={{ sm: '20px', md: '30px' }}
+            px={{ sm: '5%', md: '10%', lg: '15%' }}
           >
             {Object.keys(Advisors).map((id) => {
               return (
-                <Box maxW="sm">
+                <Box maxW='sm'>
                   <Flex
-                    justifyContent="center"
-                    textAlign="center"
-                    alignItems="center"
-                    flexDirection="column"
+                    justifyContent='center'
+                    textAlign='center'
+                    alignItems='center'
+                    flexDirection='column'
                   >
                     <Link href={Advisors[id].link} isExternal>
                       <Avatar
-                        border="0"
-                        size="128px"
+                        border='0'
+                        size='128px'
                         name={Advisors[id].name}
                         src={Advisors[id].img}
-                        mb="20px"
+                        mb='20px'
+                        bg='#fff'
                       />
                       <Text
-                        lineHeight="24px"
-                        fontSize="16px"
-                        fontWeight="700"
-                        color="black"
+                        lineHeight='24px'
+                        fontSize='16px'
+                        fontWeight='700'
+                        color='black'
                       >
                         {Advisors[id].name}
                       </Text>
                       <Text
-                        lineHeight="21px"
-                        fontSize="14px"
-                        fontWeight="700"
-                        color="black"
+                        lineHeight='21px'
+                        fontSize='14px'
+                        fontWeight='700'
+                        color='black'
                       >
                         {Advisors[id].rank}
                       </Text>
                     </Link>
-                    <Flex gap="10px" flexDirection="row">
+                    <Flex gap='10px' flexDirection='row'>
                       {Advisors[id].twitter && (
                         <Link href={Advisors[id].twitter} isExternal>
-                          <FaTwitter color="black" />
+                          <FaTwitter color='black' />
                         </Link>
                       )}
                       {Advisors[id].linkedin && (
                         <Link href={Advisors[id].linkedin} isExternal>
-                          <FaLinkedin color="black" />
+                          <FaLinkedin color='black' />
                         </Link>
                       )}
                       {Advisors[id].instagram && (
                         <Link href={Advisors[id].instagram} isExternal>
-                          <FaInstagram color="black" />
+                          <FaInstagram color='black' />
                         </Link>
                       )}
                     </Flex>
@@ -1377,42 +1385,42 @@ function Home() {
         </Flex>
       </Flex>
       <SimpleGrid
-        id="Faq"
-        mt="85px"
+        id='Faq'
+        mt='85px'
         columns={{
-          sm: "1",
-          md: "1",
-          lg: "1",
-          xl: "2",
+          sm: '1',
+          md: '1',
+          lg: '1',
+          xl: '2',
         }}
       >
         <Flex
-          flexDirection="column"
-          zIndex="1"
-          mt="10%"
-          px={{ sm: "5%", md: "10%", lg: "12%" }}
+          flexDirection='column'
+          zIndex='1'
+          mt='10%'
+          px={{ sm: '5%', md: '10%', lg: '12%' }}
         >
           <Text
-            fontSize="16px"
-            fontWeight="700"
-            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
-            bgClip="text"
-            width="180px"
+            fontSize='16px'
+            fontWeight='700'
+            bgGradient='linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)'
+            bgClip='text'
+            width='180px'
           >
             We speak your language
           </Text>
           <Text
-            mb="30px"
-            mt="4px"
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
-            lineHeight="54px"
+            mb='30px'
+            mt='4px'
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
+            lineHeight='54px'
           >
             Frequently asked questions
           </Text>
-          <Tabs variant="soft-rounded" colorScheme="gray">
-            <TabList gap="25px" mb="30px">
+          <Tabs variant='soft-rounded' colorScheme='gray'>
+            <TabList gap='25px' mb='30px'>
               {Object.keys(Faq).map((id) => {
                 return <Tab>{Faq[id].category}</Tab>;
               })}
@@ -1425,15 +1433,15 @@ function Home() {
                       {Object.keys(Faq[id].questions).map((index) => {
                         return (
                           <AccordionItem
-                            mb="20px"
-                            borderTop="0"
-                            borderBottom="1px"
-                            pb="20px"
+                            mb='20px'
+                            borderTop='0'
+                            borderBottom='1px'
+                            pb='20px'
                           >
                             <AccordionButton
-                              _hover={{ background: "transaprent" }}
+                              _hover={{ background: 'transaprent' }}
                             >
-                              <Box flex="1" textAlign="left">
+                              <Box flex='1' textAlign='left'>
                                 {Faq[id].questions[index].question}
                               </Box>
                               <AccordionIcon />
@@ -1452,63 +1460,63 @@ function Home() {
           </Tabs>
         </Flex>
         <Flex
-          zIndex="0"
-          pt={{ sm: "50px", md: "50px", lg: "50px", xl: "0px" }}
-          display={{ sm: "none", md: "none", lg: "none", xl: "block" }}
+          zIndex='0'
+          pt={{ sm: '50px', md: '50px', lg: '50px', xl: '0px' }}
+          display={{ sm: 'none', md: 'none', lg: 'none', xl: 'block' }}
         >
-          <Image src={faqIcon} right="0px" position="absolute" zIndex="0" />
+          <Image src={faqIcon} right='0px' position='absolute' zIndex='0' />
         </Flex>
       </SimpleGrid>
       <Flex
-        flexDirection="column"
-        width="100%"
-        height="491px"
-        mt="250px"
+        flexDirection='column'
+        width='100%'
+        height='491px'
+        mt='250px'
         backgroundImage={bgCircle}
-        backgroundPosition="center"
-        backgroundRepeat="no-repeat"
+        backgroundPosition='center'
+        backgroundRepeat='no-repeat'
       >
         <Flex
-          flexDirection="column"
-          justifyContent="center"
-          textAlign="center"
-          alignItems="center"
-          px="10%"
-          pt="100px"
-          color="black"
+          flexDirection='column'
+          justifyContent='center'
+          textAlign='center'
+          alignItems='center'
+          px='10%'
+          pt='100px'
+          color='black'
         >
           <Text
-            fontSize="16px"
-            fontWeight="700"
-            bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
-            bgClip="text"
-            width="85px"
+            fontSize='16px'
+            fontWeight='700'
+            bgGradient='linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)'
+            bgClip='text'
+            width='85px'
           >
             Stay tuned
           </Text>
           <Text
-            mt="8px"
-            fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
-            fontWeight="700"
-            fontFamily="Montserrat"
+            mt='8px'
+            fontSize={{ sm: '24px', md: '34px', lg: '44px' }}
+            fontWeight='700'
+            fontFamily='Montserrat'
           >
             Never miss a news
           </Text>
           <Text
-            mt="20px"
-            mb="20px"
-            fontSize="18px"
-            fontWeight="400"
-            maxW="600px"
+            mt='20px'
+            mb='20px'
+            fontSize='18px'
+            fontWeight='400'
+            maxW='600px'
           >
             Don’t hesitate to subscribe to latest news about MONOPOLE as well as
             crucial financial knowledge to become successful investor globally
           </Text>
           <Newsletter
-            color="#0C0E47"
-            borderColor="#000131"
-            buttonColor="#8235FF"
-            mailChimpURL="https://network.us20.list-manage.com/subscribe/post?u=2b2c4e861a24bb799b68bcf93&id=aebe886589"
+            color='#0C0E47'
+            borderColor='#000131'
+            buttonColor='#8235FF'
+            mailChimpURL='https://network.us20.list-manage.com/subscribe/post?u=2b2c4e861a24bb799b68bcf93&id=aebe886589'
           />
         </Flex>
       </Flex>
