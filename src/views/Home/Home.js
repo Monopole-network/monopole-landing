@@ -84,7 +84,7 @@ import faqW from "../../assets/img/faq.svg";
 
 function Home() {
   const cardColor = useColorModeValue("white", "royal");
-  const counterColor = useColorModeValue("white", "royal");
+  //const counterColor = useColorModeValue("white", "royal");
   const faqIcon = useColorModeValue(faqD, faqW);
   const chartMain = useColorModeValue(chartMainW, chartMainD);
 

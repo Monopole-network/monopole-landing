@@ -6,20 +6,20 @@ import {
   Button,
   ButtonGroup,
   Divider,
-  Image,
   Flex,
+  /*Image,
   Menu,
   MenuList,
   MenuItem,
   MenuButton,
-  Icon,
+  Icon,*/
   Text,
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-import { FaWallet, FaAngleUp, FaAngleDown } from "react-icons/fa";
+//import { FaWallet, FaAngleUp, FaAngleDown } from "react-icons/fa";
 
 import { MonopoleIconText, MonopoleIcon } from "../Icons/Icons";
 import { WalletModal } from "../WalletModal";
