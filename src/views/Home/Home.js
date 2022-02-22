@@ -1305,7 +1305,7 @@ function Home() {
                     <Link href={Team[id].link} isExternal>
                       <Image
                         borderRadius="full"
-                        size="128px"
+                        w="128px"
                         name={Team[id].name}
                         src={Team[id].img}
                         mb="20px"
@@ -1383,7 +1383,7 @@ function Home() {
                     <Link href={Advisors[id].link} isExternal>
                       <Image
                         borderRadius="full"
-                        size="128px"
+                        w="128px"
                         name={Advisors[id].name}
                         src={Advisors[id].img}
                         mb="20px"
