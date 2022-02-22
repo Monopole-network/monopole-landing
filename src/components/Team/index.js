@@ -26,7 +26,11 @@ import alexandre from "../../assets/img/advisors/alexandre.png";
 import florian from "../../assets/img/advisors/florian.png";
 import felix from "../../assets/img/advisors/felix.png";
 
-import nomDuPartenaire from "../../assets/img/partners/justine.png";
+import pierreg from "../../assets/img/partners/pierreg.png";
+import leadc from "../../assets/img/partners/leadc.png";
+import alysal from "../../assets/img/partners/alysal.png";
+import eleonore from "../../assets/img/partners/eleonore.png";
+import romainb from "../../assets/img/partners/romainb.png";
 
 const Team = {
   0: {
@@ -95,7 +99,7 @@ const Team = {
   7: {
     name: "Yanis Perrillat",
     img: yanis,
-    rank: "Financial Manager",
+    rank: "Finance",
     link: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
@@ -129,12 +133,12 @@ const Team = {
     instagram: "https://www.instagram.com/ugo_lgme/",
   },
   11: {
-    name: "Maxime Parra",
-    img: maxime,
-    rank: "Community Manager",
-    link: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
+    name: "Robin Barchechat",
+    img: robin,
+    rank: "Business Developer",
+    link: "",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
+    linkedin: "",
     instagram: "",
   },
   12: {
@@ -165,12 +169,12 @@ const Team = {
     instagram: "",
   },
   15: {
-    name: "Robin Barchechat",
-    img: robin,
-    rank: "Business Developer",
-    link: "",
+    name: "Maxime Parra",
+    img: maxime,
+    rank: "Community Manager",
+    link: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
     twitter: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
     instagram: "",
   },
   16: {
@@ -260,7 +264,7 @@ const Advisors = {
   8: {
     name: "Felix Escalona",
     img: felix,
-    rank: "Architect LatAm/Spain",
+    rank: "Architect LaTam/Spain",
     link: "",
     twitter: "",
     linkedin: "",
@@ -270,12 +274,48 @@ const Advisors = {
 
 const Partners = {
   0: {
-    name: "nomDuPartenaire",
-    img: nomDuPartenaire,
-    rank: "Description",
-    link: "lien du site web",
+    name: "Pierre Georgeot",
+    img: pierreg,
+    rank: "VECINO co-living",
+    link: "https://www.instagram.com/vecinocoliving/",
     twitter: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/pierre-georgeot-764176aa/",
+    instagram: "https://www.instagram.com/vecinocoliving/",
+    
+  1: {
+    name: "Léa De Carmo",
+    img: leadc,
+    rank: "Raduga Films LLC",
+    link: "https://www.linkedin.com/in/l%C3%A9a-de-carmo-5b0b8218a/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/l%C3%A9a-de-carmo-5b0b8218a/",
+    instagram: "",
+    
+   2: {
+    name: "Alysa Levinson",
+    img: alysal,
+    rank: "Raduga Films LLC",
+    link: "https://www.linkedin.com/in/alisa-levinson-b705b51a1/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/alisa-levinson-b705b51a1/",
+    instagram: "",
+     
+   3: {
+    name: "Eleonore Plé",
+    img: eleonore,
+    rank: "Spectomedia",
+    link: "https://spectomedia.fr/",
+    twitter: "https://twitter.com/media_specto",
+    linkedin: "https://www.linkedin.com/in/el%C3%A9onore-pl%C3%A9-392a571b4/",
+    instagram: "https://www.instagram.com/spectomedia/",
+     
+   4: {
+    name: "Romain Bailleul",
+    img: romainb,
+    rank: "Fumigène",
+    link: "https://www.linkedin.com/company/fumigene/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/romain-bailleul/",
     instagram: "",
   },
 };
