@@ -63,7 +63,7 @@ export default function Footer() {
         </Flex>
         <Flex alignItems="center">
           <ButtonGroup isAttached>
-            <Button
+            {/*<Button
               background="transparent"
               borderRadius="50px"
               onClick={() => {
@@ -73,7 +73,7 @@ export default function Footer() {
               <Text fontSize="14px" fontWeight="700">
                 Legal
               </Text>
-            </Button>
+            </Button>*/}
             <Button
               background="transparent"
               borderRadius="50px"
@@ -82,7 +82,7 @@ export default function Footer() {
               }}
             >
               <Text fontSize="14px" fontWeight="700">
-                CGU
+                Terms of Use
               </Text>
             </Button>
             <Button
