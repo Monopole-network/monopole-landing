@@ -95,7 +95,7 @@ const Team = {
   7: {
     name: "Yanis Perrillat",
     img: yanis,
-    rank: "Finance",
+    rank: "Financial Manager",
     link: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
@@ -129,12 +129,12 @@ const Team = {
     instagram: "https://www.instagram.com/ugo_lgme/",
   },
   11: {
-    name: "Robin Barchechat",
-    img: robin,
-    rank: "Business Developer",
-    link: "",
+    name: "Maxime Parra",
+    img: maxime,
+    rank: "Community Manager",
+    link: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
     twitter: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
     instagram: "",
   },
   12: {
@@ -165,12 +165,12 @@ const Team = {
     instagram: "",
   },
   15: {
-    name: "Maxime Parra",
-    img: maxime,
-    rank: "Community Manager",
-    link: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
+    name: "Robin Barchechat",
+    img: robin,
+    rank: "Business Developer",
+    link: "",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
+    linkedin: "",
     instagram: "",
   },
   16: {
@@ -260,7 +260,7 @@ const Advisors = {
   8: {
     name: "Felix Escalona",
     img: felix,
-    rank: "Architect LaTam/Spain",
+    rank: "Architect LatAm/Spain",
     link: "",
     twitter: "",
     linkedin: "",
