@@ -28,7 +28,7 @@ import felix from "../../assets/img/advisors/felix.png";
 
 import pierreg from "../../assets/img/partners/pierreg.png";
 import leadc from "../../assets/img/partners/leadc.png";
-import alysal from "../../assets/img/partners/alysal.png";
+import alisal from "../../assets/img/partners/alisal.png";
 import eleonore from "../../assets/img/partners/eleonore.png";
 import romainb from "../../assets/img/partners/romainb.png";
 
@@ -281,7 +281,7 @@ const Partners = {
     twitter: "",
     linkedin: "https://www.linkedin.com/in/pierre-georgeot-764176aa/",
     instagram: "https://www.instagram.com/vecinocoliving/",
-    
+  },
   1: {
     name: "Léa De Carmo",
     img: leadc,
@@ -290,17 +290,17 @@ const Partners = {
     twitter: "",
     linkedin: "https://www.linkedin.com/in/l%C3%A9a-de-carmo-5b0b8218a/",
     instagram: "",
-    
-   2: {
-    name: "Alysa Levinson",
-    img: alysal,
+  },
+  2: {
+    name: "Alisa Levinson",
+    img: alisal,
     rank: "Raduga Films LLC",
     link: "https://www.linkedin.com/in/alisa-levinson-b705b51a1/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/alisa-levinson-b705b51a1/",
     instagram: "",
-     
-   3: {
+  },
+  3: {
     name: "Eleonore Plé",
     img: eleonore,
     rank: "Spectomedia",
@@ -308,8 +308,8 @@ const Partners = {
     twitter: "https://twitter.com/media_specto",
     linkedin: "https://www.linkedin.com/in/el%C3%A9onore-pl%C3%A9-392a571b4/",
     instagram: "https://www.instagram.com/spectomedia/",
-     
-   4: {
+  },
+  4: {
     name: "Romain Bailleul",
     img: romainb,
     rank: "Fumigène",
