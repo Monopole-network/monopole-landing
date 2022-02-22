@@ -18,14 +18,13 @@ import martin from "../../assets/img/team/martin.png";
 
 import pedro from "../../assets/img/advisors/pedro.png";
 import anissa from "../../assets/img/advisors/anissa.png";
-import damienp from "../../assets/img/advisors/damienp.png"
+import damienp from "../../assets/img/advisors/damienp.png";
 import pelallemant from "../../assets/img/advisors/pelallemant.png";
 import pablo from "../../assets/img/advisors/pablo.png";
 import julien from "../../assets/img/advisors/julien.png";
 import alexandre from "../../assets/img/advisors/alexandre.png";
 import florian from "../../assets/img/advisors/florian.png";
 import felix from "../../assets/img/advisors/felix.png";
-
 
 const Team = {
   0: {
@@ -102,7 +101,7 @@ const Team = {
   },
   8: {
     name: "Léa Despinasse",
-    img: léa,
+    img: lea,
     rank: "Sport & Health Manager",
     link: "",
     twitter: "",
@@ -174,7 +173,7 @@ const Team = {
   },
   16: {
     name: "Martin Gudim",
-    img: 
+    img: martin,
     rank: "3D Design",
     link: "https://www.linkedin.com/in/martin-gudim-designer-072520150/",
     twitter: "",
@@ -255,6 +254,7 @@ const Advisors = {
     twitter: "",
     linkedin: "https://www.linkedin.com/in/florianpouvreau/",
     instagram: "https://www.instagram.com/florianpouvreau/",
+  },
   8: {
     name: "Felix Escalona",
     img: felix,
