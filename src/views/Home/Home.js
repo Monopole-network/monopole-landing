@@ -27,7 +27,7 @@ import {
 //import { Chrono } from "react-chrono";
 
 import { Separator } from "../../components/Separator";
-import { Team, Advisors } from "../../components/Team";
+import { Team, Advisors, Partners } from "../../components/Team";
 import { Faq } from "../../components/Faq";
 //import { Roadmap } from "../../components/Roadmap";
 import { Newsletter } from "../../components/Newsletter";
@@ -1419,6 +1419,84 @@ function Home() {
                       )}
                       {Advisors[id].instagram && (
                         <Link href={Advisors[id].instagram} isExternal>
+                          <FaInstagram color="black" />
+                        </Link>
+                      )}
+                    </Flex>
+                  </Flex>
+                </Box>
+              );
+            })}
+          </Grid>
+          <Text
+            lineHeight="54px"
+            fontSize={{ sm: "34px", md: "44px" }}
+            fontWeight="700"
+            fontFamily="Montserrat"
+            color="black"
+            mb="65px"
+          >
+            Partners
+          </Text>
+          <Grid
+            w="100%"
+            templateColumns={{
+              sm: "1fr 1fr",
+              md: "1fr 1fr 1fr 1fr",
+              lg: "1fr 1fr 1fr 1fr",
+            }}
+            mb="70px"
+            gap={{ sm: "20px", md: "30px" }}
+            px={{ sm: "5%", md: "10%", lg: "15%" }}
+          >
+            {Object.keys(Partners).map((id) => {
+              return (
+                <Box maxW="sm">
+                  <Flex
+                    justifyContent="center"
+                    textAlign="center"
+                    alignItems="center"
+                    flexDirection="column"
+                  >
+                    <Link href={Partners[id].link} isExternal>
+                      <Image
+                        borderRadius="full"
+                        w="128px"
+                        name={Partners[id].name}
+                        src={Partners[id].img}
+                        mb="20px"
+                      />
+                      <Text
+                        lineHeight="24px"
+                        fontSize="16px"
+                        fontWeight="700"
+                        color="black"
+                      >
+                        {Partners[id].name}
+                      </Text>
+                      <Text
+                        lineHeight="21px"
+                        fontSize="14px"
+                        fontWeight="700"
+                        color="black"
+                        maxW="128px"
+                      >
+                        {Partners[id].rank}
+                      </Text>
+                    </Link>
+                    <Flex gap="10px" flexDirection="row">
+                      {Partners[id].twitter && (
+                        <Link href={Partners[id].twitter} isExternal>
+                          <FaTwitter color="black" />
+                        </Link>
+                      )}
+                      {Partners[id].linkedin && (
+                        <Link href={Partners[id].linkedin} isExternal>
+                          <FaLinkedin color="black" />
+                        </Link>
+                      )}
+                      {Partners[id].instagram && (
+                        <Link href={Partners[id].instagram} isExternal>
                           <FaInstagram color="black" />
                         </Link>
                       )}

@@ -26,6 +26,8 @@ import alexandre from "../../assets/img/advisors/alexandre.png";
 import florian from "../../assets/img/advisors/florian.png";
 import felix from "../../assets/img/advisors/felix.png";
 
+import nomDuPartenaire from "../../assets/img/partners/justine.png";
+
 const Team = {
   0: {
     name: "Justine Houge",
@@ -265,4 +267,17 @@ const Advisors = {
     instagram: "",
   },
 };
-export { Advisors, Team };
+
+const Partners = {
+  0: {
+    name: "nomDuPartenaire",
+    img: nomDuPartenaire,
+    rank: "Description",
+    link: "lien du site web",
+    twitter: "",
+    linkedin: "",
+    instagram: "",
+  },
+};
+
+export { Advisors, Team, Partners };
