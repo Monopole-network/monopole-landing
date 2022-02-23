@@ -14,17 +14,18 @@ import {
   MenuButton,
   Icon,
   Text,
+  Link,
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 import {
-   //FaWallet,
-   FaRegBell,
-   FaAngleUp,
-   FaAngleDown,
-  } from "react-icons/fa";
+  //FaWallet,
+  FaRegBell,
+  FaAngleUp,
+  FaAngleDown,
+} from "react-icons/fa";
 
 import { Social } from "../Social";
 import { MonopoleIconText, MonopoleIcon } from "../Icons/Icons";
@@ -315,18 +316,20 @@ export default function Navbar(props) {
                 <Flex flexDirection="column">
                   {Object.keys(Social).map((id) => {
                     return (
-                      <MenuItem
-                        borderRadius="20px"
-                        _hover={{ border: "2px solid" }}
-                      >
-                        <Icon
-                          h="18px"
-                          w="18px"
-                          as={Social[id].logo}
-                          mr="10px"
-                        />
-                        <Text fontSize="md">{Social[id].name}</Text>
-                      </MenuItem>
+                      <Link href={Social[id].link} isExternal>
+                        <MenuItem
+                          borderRadius="20px"
+                          _hover={{ border: "2px solid" }}
+                        >
+                          <Icon
+                            h="18px"
+                            w="18px"
+                            as={Social[id].logo}
+                            mr="10px"
+                          />
+                          <Text fontSize="md">{Social[id].name}</Text>
+                        </MenuItem>
+                      </Link>
                     );
                   })}
                 </Flex>
