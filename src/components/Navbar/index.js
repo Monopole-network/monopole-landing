@@ -16,6 +16,7 @@ import {
   Text,
   Link,
   useColorMode,
+  useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
@@ -49,6 +50,8 @@ export default function Navbar(props) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
+
+  const menuColor = useColorModeValue("white", "#000126");
 
   return (
     <>
@@ -310,7 +313,7 @@ export default function Navbar(props) {
               <MenuList
                 borderRadius="20px"
                 alignItems="center"
-                bg="#000126"
+                bg={menuColor}
                 border="2px solid"
               >
                 <Flex flexDirection="column">
