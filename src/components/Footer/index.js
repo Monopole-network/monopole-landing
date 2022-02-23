@@ -73,7 +73,7 @@ export default function Footer() {
               <Text fontSize="14px" fontWeight="700">
                 Legal
               </Text>
-            </Button>*/}
+            </Button>
             <Button
               background="transparent"
               borderRadius="50px"
@@ -95,7 +95,7 @@ export default function Footer() {
               <Text fontSize="14px" fontWeight="700">
                 Privacy policy
               </Text>
-            </Button>
+            </Button>*/}
             <Button
               background="transparent"
               onClick={toggleColorMode}
