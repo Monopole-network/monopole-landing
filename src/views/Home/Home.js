@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 // Chakra imports
 import {
   Accordion,
@@ -19,7 +20,7 @@ import {
   TabPanel,
   Text,
   Image,
-  Progress,
+  //Progress,
   Link,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -94,11 +95,8 @@ function Home() {
   const saveTime = useColorModeValue(saveTimeW, saveTimeD);
 
   const Support = useColorModeValue(SupportGradIcon, SupportIcon);
-
   const Legal = useColorModeValue(LegalGradIcon, LegalIcon);
-
   const Security = useColorModeValue(SecurityGradIcon, SecurityIcon);
-
   const Ethics = useColorModeValue(EthicsGradIcon, EthicsIcon);
 
   const Accessibility = useColorModeValue(
@@ -109,12 +107,11 @@ function Home() {
   const Simplicity = useColorModeValue(SimplicityGradIcon, SimplicityIcon);
 
   const financeIcon = useColorModeValue(financeWIcon, financeDIcon);
-
   const investIcon = useColorModeValue(investWIcon, investDIcon);
-
   const conciergeIcon = useColorModeValue(conciergeWIcon, conciergeDIcon);
-
   const insuranceIcon = useColorModeValue(insuranceWIcon, insuranceDIcon);
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -155,32 +152,42 @@ function Home() {
             estate or your next trip ?
           </Text>
           <Flex flexDirection="row" justifyContent="space-between" gap="5%">
-            <Button
-              borderRadius="16px"
-              width="100%"
-              minWidth="160px"
-              height="64px"
-              background="#8235FF"
-              color="white"
-              _active={{
-                background: "#03CB88",
-              }}
-            >
-              Discover our project
-            </Button>
-            <Button
-              borderRadius="16px"
-              width="100%"
-              height="64px"
-              opacity="0.75"
-              minWidth="100px"
-              border="2px solid #FFFFFF"
-              _active={{
-                background: "#03CB88",
-              }}
-            >
-              Lite paper
-            </Button>
+            <Flex w="100%">
+              <Button
+                borderRadius="16px"
+                width="100%"
+                minWidth="160px"
+                height="64px"
+                background="#8235FF"
+                color="white"
+                _active={{
+                  background: "#03CB88",
+                }}
+                onClick={() => {
+                  navigate("/paper");
+                }}
+              >
+                Discover our project
+              </Button>
+            </Flex>
+            <Flex w="100%">
+              <Button
+                borderRadius="16px"
+                width="100%"
+                height="64px"
+                opacity="0.75"
+                minWidth="100px"
+                border="2px solid #FFFFFF"
+                _active={{
+                  background: "#03CB88",
+                }}
+                onClick={() => {
+                  navigate("/paper");
+                }}
+              >
+                One pager
+              </Button>
+            </Flex>
           </Flex>
         </Box>
         <Box
@@ -355,7 +362,7 @@ function Home() {
               >
                 Coming soon
               </Text>
-              <Progress
+              {/*<Progress
                 colorScheme="green"
                 height="16px"
                 width="80%"
@@ -363,7 +370,7 @@ function Home() {
                 value={1}
                 isIndeterminate
                 mb="40px"
-              />
+              />*/}
               <Button
                 mt="20px"
                 mb="20px"
@@ -811,7 +818,7 @@ function Home() {
             fontWeight="700"
             fontFamily="Montserrat"
           >
-            Discover our lite paper
+            Discover our one pager
           </Text>
           <Text
             mt="16px"
@@ -834,8 +841,11 @@ function Home() {
               background: "#8235FF",
             }}
             zIndex="1"
+            onClick={() => {
+              navigate("/paper");
+            }}
           >
-            Purchase tokens
+            One Pager
           </Button>
         </Flex>
         <Flex
@@ -1131,88 +1141,104 @@ function Home() {
             h="100%"
           >
             <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
-              Contingency: 10 %
+              PS1: 4 %
             </Text>
-            <Progress
-              value={10}
-              w="100%"
-              h="6px"
-              colorScheme="orange"
+            <Divider
+              height="6px"
+              width="4%"
               borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              bg="#00ce88"
+              mb="10px"
             />
             <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
-              Partner / Investor: 5 %
+              PS2: 8%
             </Text>
-            <Progress
-              value={5}
-              w="100%"
-              h="6px"
-              colorScheme="green"
+            <Divider
+              height="6px"
+              width="8%"
               borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              bg="#51d05a"
+              mb="10px"
             />
             <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
-              Legal & Regulation: 25 %
+              PS3: 14%
             </Text>
-            <Progress
-              value={25}
-              w="100%"
-              h="6px"
-              colorScheme="blue"
+            <Divider
+              height="6px"
+              width="14%"
               borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              bg="#3cb746"
+              mb="10px"
             />
             <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
-              Business development: 5 %
+              ICO: 3%
             </Text>
-            <Progress
-              value={5}
-              w="100%"
-              h="6px"
-              colorScheme="red"
+            <Divider
+              height="6px"
+              width="3%"
               borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              bg="#2c6e97"
+              mb="10px"
             />
             <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
-              Operational: 35 %
+              Airdrop: 2 %
             </Text>
-            <Progress
-              value={35}
-              w="100%"
-              h="6px"
-              colorScheme="purple"
+            <Divider
+              height="6px"
+              width="2%"
               borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              bg="#a0bed5"
+              mb="10px"
             />
             <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
-              Product development: 10 %
+              Liquidity Providing: 13 %
             </Text>
-            <Progress
-              value={10}
-              w="100%"
-              h="6px"
-              colorScheme="gray"
+            <Divider
+              height="6px"
+              width="13%"
               borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              bg="#f9b81c"
+              mb="10px"
             />
             <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
-              Marketing: 5 %
+              Founders: 13 %
             </Text>
-            <Progress
-              value={10}
-              w="100%"
-              h="6px"
-              colorScheme="teal"
+            <Divider
+              height="6px"
+              width="13%"
               borderRadius="10px"
-              bg="transparent"
-              mb="20px"
+              bg="#ecd288"
+              mb="10px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Advisors & Rewards: 3 %
+            </Text>
+            <Divider
+              height="6px"
+              width="3%"
+              borderRadius="10px"
+              bg="#e74d79"
+              mb="10px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Development: 10 %
+            </Text>
+            <Divider
+              height="6px"
+              width="10%"
+              borderRadius="10px"
+              bg="#8336fa"
+              mb="10px"
+            />
+            <Text mb="10px" fontSize="16px" fontWeight="700" zIndex="1">
+              Foundation: 30 %
+            </Text>
+            <Divider
+              height="6px"
+              width="30%"
+              borderRadius="10px"
+              bg="#4d04b9"
+              mb="10px"
             />
           </Flex>
         </Flex>
