@@ -7,20 +7,26 @@ import {
   ButtonGroup,
   Divider,
   Flex,
-  /*Image,
+  //Image,
   Menu,
   MenuList,
   MenuItem,
   MenuButton,
-  Icon,*/
+  Icon,
   Text,
   useColorMode,
   useDisclosure,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-//import { FaWallet, FaAngleUp, FaAngleDown } from "react-icons/fa";
+import {
+   //FaWallet,
+   FaRegBell,
+   FaAngleUp,
+   FaAngleDown,
+  } from "react-icons/fa";
 
+import { Social } from "../Social";
 import { MonopoleIconText, MonopoleIcon } from "../Icons/Icons";
 import { WalletModal } from "../WalletModal";
 
@@ -170,7 +176,7 @@ export default function Navbar(props) {
                       _active={{ background: "transparent" }}
                     >
                       <Text fontSize="14px" fontWeight="700">
-                        Lite paper
+                        One Pager
                       </Text>
                     </Button>
                   </HashLink>
@@ -290,6 +296,42 @@ export default function Navbar(props) {
               </Menu>
             )}
             */}
+            <Menu>
+              <MenuButton>
+                <Button background="transparent" borderRadius="50px">
+                  <Icon h="18px" w="18px" as={FaRegBell} mr="10px" />
+                  <Flex flexDirection="column">
+                    <Icon h="12px" w="12px" as={FaAngleUp} />
+                    <Icon h="12px" w="12px" as={FaAngleDown} />
+                  </Flex>
+                </Button>
+              </MenuButton>
+              <MenuList
+                borderRadius="20px"
+                alignItems="center"
+                bg="#000126"
+                border="2px solid"
+              >
+                <Flex flexDirection="column">
+                  {Object.keys(Social).map((id) => {
+                    return (
+                      <MenuItem
+                        borderRadius="20px"
+                        _hover={{ border: "2px solid" }}
+                      >
+                        <Icon
+                          h="18px"
+                          w="18px"
+                          as={Social[id].logo}
+                          mr="10px"
+                        />
+                        <Text fontSize="md">{Social[id].name}</Text>
+                      </MenuItem>
+                    );
+                  })}
+                </Flex>
+              </MenuList>
+            </Menu>
             <Button
               background="transparent"
               onClick={toggleColorMode}
