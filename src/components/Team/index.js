@@ -1,4 +1,4 @@
-import justine from "../../assets/img/team/justine.png";
+import justine from "../../assets/img/team/jus.png";
 import esteban from "../../assets/img/team/esteban.png";
 import gaelle from "../../assets/img/team/gaelle.png";
 import rudy from "../../assets/img/team/rudy.png";
@@ -9,11 +9,17 @@ import yanis from "../../assets/img/team/yanis.png";
 import lea from "../../assets/img/team/lea.png";
 import thibault from "../../assets/img/team/thibault.png";
 import hugo from "../../assets/img/team/hugo.png";
+import angelina from "../../assets/img/team/angelina.png";
 import robin from "../../assets/img/team/robin.png";
+import hanae from "../../assets/img/team/hanae.png"
 import samuel from "../../assets/img/team/samuel.png";
 import thomas from "../../assets/img/team/thomas.png";
 import erman from "../../assets/img/team/erman.png";
 import maxime from "../../assets/img/team/maxime.png";
+import julien from "../../assets/img/team/julien.png"
+import mariano from "../../assets/img/team/mariano.png";
+import guillaume from "../../assets/img/team/guillaume.png";
+import vince from "../../assets/img/team/vince.png";
 import martin from "../../assets/img/team/martin.png";
 
 import pedro from "../../assets/img/advisors/pedro.png";
@@ -21,21 +27,23 @@ import anissa from "../../assets/img/advisors/anissa.png";
 import damienp from "../../assets/img/advisors/damienp.png";
 import pelallemant from "../../assets/img/advisors/pelallemant.png";
 import pablo from "../../assets/img/advisors/pablo.png";
-import julien from "../../assets/img/advisors/julien.png";
+import quentin from "../../assets/img/advisors/quentin.png";
 import alexandre from "../../assets/img/advisors/alexandre.png";
-import florian from "../../assets/img/advisors/florian.png";
+import javier from "../../assets/img/advisors/javier.png";
 import felix from "../../assets/img/advisors/felix.png";
+import quentin from "../../assets/img/advisors/quentin.png";
 
 import pierreg from "../../assets/img/partners/pierreg.png";
 import leadc from "../../assets/img/partners/leadc.png";
 import alisal from "../../assets/img/partners/alisal.png";
 import eleonore from "../../assets/img/partners/eleonore.png";
+import amel from "../../assets/img/partners/amel.png";
 import romainb from "../../assets/img/partners/romainb.png";
 
 const Team = {
   0: {
     name: "Justine Houge",
-    img: justine,
+    img: jus,
     rank: "Founder & CEO",
     link: "https://www.linkedin.com/in/justine-h-5b6155100",
     twitter: "https://twitter.com/justine_houge",
@@ -64,9 +72,9 @@ const Team = {
     name: "Rudy Lemoine",
     img: rudy,
     rank: "COO Concierge",
-    link: "https://www.linkedin.com/in/rudy-revolife-56028914a/",
+    link: "https://www.linkedin.com/in/rudylemoine-mnpl/",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/rudy-revolife-56028914a/",
+    linkedin: "https://www.linkedin.com/in/rudylemoine-mnpl/",
     instagram: "",
   },
   4: {
@@ -133,12 +141,12 @@ const Team = {
     instagram: "https://www.instagram.com/ugo_lgme/",
   },
   11: {
-    name: "Robin Barchechat",
-    img: robin,
-    rank: "Business Developer",
-    link: "",
+    name: "Angelina Tomova",
+    img: angelina,
+    rank: "UX/UI",
+    link: "https://www.linkedin.com/in/angelina-tomova-a23593176/",
     twitter: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/angelina-tomova-a23593176/",
     instagram: "",
   },
   12: {
@@ -160,12 +168,12 @@ const Team = {
     instagram: "",
   },
   14: {
-    name: "Erman Choupo",
-    img: erman,
-    rank: "Support Team",
-    link: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
+    name: "Hanae Boukantar",
+    img: hanae,
+    rank: "RH & Process",
+    link: "https://www.linkedin.com/in/hanaeboukantar/",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
+    linkedin: "https://www.linkedin.com/in/hanaeboukantar/",
     instagram: "",
   },
   15: {
@@ -186,6 +194,50 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/martin-gudim-designer-072520150/",
     instagram: "",
   },
+  17: {
+     name: "Mariano Chomicki",
+    img: mariano,
+    rank: "Developer",
+    link: "https://www.linkedin.com/in/marianochomicki/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/marianochomicki/",
+    instagram: "",
+   },
+  18: {
+     name: "Robin Barchechat",
+    img: robin,
+    rank: "Business Developer",
+    link: "",
+    twitter: "",
+    linkedin: "",
+    instagram: "",
+   },
+  18: {
+     name: "Guillaume Touraine",
+    img: guillaume,
+    rank: "Head Accountant",
+    link: "https://www.linkedin.com/in/guillaume-touraine-2607abb9/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/guillaume-touraine-2607abb9/",
+    instagram: "",
+   },
+  19: {
+     name: "Julien Celet",
+    img: julien,
+    rank: "Head of Sales",
+    link: "https://www.linkedin.com/in/julien-c-35787a39/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/julien-c-35787a39/",
+    instagram: "", 
+   },
+  19: {
+     name: "Vincent Salomon",
+    img: vince,
+    rank: "Culture department",
+    link: "",
+    twitter: "",
+    linkedin: "",
+    instagram: "", 
 };
 
 const Advisors = {
@@ -235,12 +287,12 @@ const Advisors = {
     instagram: "https://www.instagram.com/pabloguiraox/",
   },
   5: {
-    name: "Julien Celet",
-    img: julien,
-    rank: "Strategic Advisor",
-    link: "https://www.linkedin.com/in/julien-c-35787a39/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/julien-c-35787a39/",
+    name: "Quentin Herbrecht",
+    img: quentin,
+    rank: "Crypto Advisor",
+    link: "https://www.linkedin.com/in/marketing-blockchain/",
+    twitter: "https://twitter.com/Markchain_io",
+    linkedin: "https://www.linkedin.com/in/marketing-blockchain/",
     instagram: "",
   },
   6: {
@@ -253,18 +305,18 @@ const Advisors = {
     instagram: "",
   },
   7: {
-    name: "Florian Pouvreau",
-    img: florian,
-    rank: "Marketing Advisor / La Forge",
-    link: "https://www.linkedin.com/in/florianpouvreau/",
+    name: "Javier Traverso",
+    img: javier,
+    rank: "Real Estate LatAm Expansion",
+    link: "https://www.linkedin.com/in/javitraversorealtor/",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/florianpouvreau/",
-    instagram: "https://www.instagram.com/florianpouvreau/",
+    linkedin: "https://www.linkedin.com/in/javitraversorealtor/",
+    instagram: "",
   },
   8: {
     name: "Felix Escalona",
     img: felix,
-    rank: "Architect LaTam/Spain",
+    rank: "Architect LatAm/Spain",
     link: "",
     twitter: "",
     linkedin: "",
@@ -310,11 +362,20 @@ const Partners = {
     instagram: "https://www.instagram.com/spectomedia/",
   },
   4: {
+    name: "Amel Alem",
+    img: amel,
+    rank: "Founder & CEO Fumigene",
+    link: "https://fumigene.agency/",
+    twitter: "https://twitter.com/AmelFumigene",
+    linkedin: "https://www.linkedin.com/in/amel-alem-fumigene/",
+    instagram: "https://www.instagram.com/amelfumigene/",
+  },
+  5: {
     name: "Romain Bailleul",
     img: romainb,
-    rank: "Fumigène",
-    link: "https://www.linkedin.com/company/fumigene/",
-    twitter: "",
+    rank: "CNO Fumigene",
+    link: "https://fumigene.agency/",
+    twitter: "https://twitter.com/BailleulRomain",
     linkedin: "https://www.linkedin.com/in/romain-bailleul/",
     instagram: "",
   },
