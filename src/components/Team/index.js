@@ -1,4 +1,4 @@
-import justine from "../../assets/img/team/justine.png";
+import justine from "../../assets/img/team/jus.png";
 import esteban from "../../assets/img/team/esteban.png";
 import gaelle from "../../assets/img/team/gaelle.png";
 import rudy from "../../assets/img/team/rudy.png";
@@ -43,7 +43,7 @@ import romainb from "../../assets/img/partners/romainb.png";
 const Team = {
   0: {
     name: "Justine Houge",
-    img: justine,
+    img: jus,
     rank: "Founder & CEO",
     link: "https://www.linkedin.com/in/justine-h-5b6155100",
     twitter: "https://twitter.com/justine_houge",
@@ -364,11 +364,11 @@ const Partners = {
   4: {
     name: "Amel Alem",
     img: amel,
-    rank: "CEO Fumigene",
+    rank: "Founder & CEO Fumigene",
     link: "https://fumigene.agency/",
     twitter: "https://twitter.com/AmelFumigene",
     linkedin: "https://www.linkedin.com/in/amel-alem-fumigene/",
-    instagram: "",
+    instagram: "https://www.instagram.com/amelfumigene/",
   },
   5: {
     name: "Romain Bailleul",
