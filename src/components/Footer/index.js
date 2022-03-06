@@ -93,7 +93,18 @@ export default function Footer() {
               }}
             >
               <Text fontSize="14px" fontWeight="700">
-                Privacy policy
+                Privacy Policy
+              </Text>
+            </Button>
+            <Button
+              background="transparent"
+              borderRadius="50px"
+              onClick={() => {
+                navigate("/code-of-conduct");
+              }}
+            >
+              <Text fontSize="14px" fontWeight="700">
+                Code of Conduct
               </Text>
             </Button>
             <Button
