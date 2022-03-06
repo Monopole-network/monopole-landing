@@ -185,7 +185,7 @@ function Home() {
                   navigate("/paper");
                 }}
               >
-                One pager
+                Lite paper
               </Button>
             </Flex>
           </Flex>
@@ -818,7 +818,7 @@ function Home() {
             fontWeight="700"
             fontFamily="Montserrat"
           >
-            Discover our one pager
+            Discover our lite paper
           </Text>
           <Text
             mt="16px"
@@ -845,7 +845,7 @@ function Home() {
               navigate("/paper");
             }}
           >
-            One Pager
+            Lite paper
           </Button>
         </Flex>
         <Flex

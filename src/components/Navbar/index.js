@@ -180,7 +180,7 @@ export default function Navbar(props) {
                       _active={{ background: "transparent" }}
                     >
                       <Text fontSize="14px" fontWeight="700">
-                        One Pager
+                        Lite paper
                       </Text>
                     </Button>
                   </HashLink>
