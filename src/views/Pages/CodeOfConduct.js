@@ -7,13 +7,6 @@ import {
   Center,
   ListItem,
   UnorderedList,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Link,
-  List,
 } from "@chakra-ui/react";
 
 function CodeOfConduct() {
