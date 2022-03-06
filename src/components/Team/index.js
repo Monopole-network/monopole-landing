@@ -107,7 +107,7 @@ const Team = {
   7: {
     name: "Yanis Perrillat",
     img: yanis,
-    rank: "Finance",
+    rank: "Financial Operator",
     link: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
