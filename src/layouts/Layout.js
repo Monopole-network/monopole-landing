@@ -17,6 +17,7 @@ import Home from "../views/Home/Home.js";
 import PrivacyPolicy from "../views/Pages/PrivacyPolicy.js";
 import Legal from "../views/Pages/Legal.js";
 import TermsOfUse from "../views/Pages/TermsOfUse.js";
+import CodeOfConduct from "../views/Pages/CodeOfConduct";
 
 import Paper from "../views/Pages/Paper.js";
 
@@ -57,6 +58,7 @@ export default function Layout() {
           <Route path="/legal" element={<Legal />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
           <Route path="/paper" element={<Paper />} />
+          <Route path="/code-of-conduct" element={<CodeOfConduct />} />
         </Routes>
         <Footer />
       </Wallet>
