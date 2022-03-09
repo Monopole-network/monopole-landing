@@ -32,6 +32,7 @@ import alexandre from "../../assets/img/advisors/alexandre.png";
 import javier from "../../assets/img/advisors/javier.png";
 import felix from "../../assets/img/advisors/felix.png";
 import quentin from "../../assets/img/advisors/quentin.png";
+import thomas from "../../assets/img/advisors/thomas.png";
 
 import pierreg from "../../assets/img/partners/pierreg.png";
 import leadc from "../../assets/img/partners/leadc.png";
@@ -320,6 +321,15 @@ const Advisors = {
     link: "",
     twitter: "",
     linkedin: "",
+    instagram: "",
+  },
+  9: {
+    name: "Thomas Ménard",
+    img: thomas,
+    rank: "Strategic & Crypto Advisor",
+    link: "https://twitter.com/MevenRekt",
+    twitter: "https://twitter.com/MevenRekt",
+    linkedin: "https://www.linkedin.com/in/thomas-menard/",
     instagram: "",
   },
 };
