@@ -21,6 +21,7 @@ import mariano from "../../assets/img/team/mariano.png";
 import guillaume from "../../assets/img/team/guillaume.png";
 import vince from "../../assets/img/team/vince.png";
 import martin from "../../assets/img/team/martin.png";
+import thomasm from "../../assets/img/team/thomasm.png";
 
 import pedro from "../../assets/img/advisors/pedro.png";
 import anissa from "../../assets/img/advisors/anissa.png";
@@ -115,32 +116,31 @@ const Team = {
     instagram: "",
   },
   8: {
-    name: "Léa Despinasse",
-    img: lea,
-    rank: "Sport & Health Manager",
-    link: "",
+    name: "Hanae Boukantar",
+    img: hanae,
+    rank: "Ethics & Compliance",
+    link: "https://www.linkedin.com/in/hanaeboukantar/",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/l%C3%A9a-despinasse-992b73113/",
+    linkedin: "https://www.linkedin.com/in/hanaeboukantar/",
     instagram: "",
   },
   9: {
-    name: "Thibault Pitolin",
-    img: thibault,
-    rank: "Real Estate Manager / Immorentier",
-    link: "https://www.instagram.com/immorentier/",
+     name: "Julien Celet",
+    img: julien,
+    rank: "CSO",
+    link: "https://www.linkedin.com/in/julien-c-35787a39/",
     twitter: "",
-    linkedin: "",
-    instagram: "https://www.instagram.com/tybo.pn/",
+    linkedin: "https://www.linkedin.com/in/julien-c-35787a39/",
+    instagram: "", 
   },
-  10: {
-    name: "Hugo Legname",
-    img: hugo,
-    rank: "Real Estate Manager / Immorentier",
-    link: "https://www.instagram.com/immorentier/",
-    twitter: "",
-    linkedin: "",
-    instagram: "https://www.instagram.com/ugo_lgme/",
-  },
+  9: {
+    name: "Thomas Ménard",
+    img:thomasm,
+    rank: "CSO",
+    link: "https://twitter.com/MevenRekt",
+    twitter: "https://twitter.com/MevenRekt",
+    linkedin: "https://www.linkedin.com/in/thomas-menard/",
+    instagram: "",
   11: {
     name: "Angelina Tomova",
     img: angelina,
@@ -153,7 +153,7 @@ const Team = {
   12: {
     name: "Samuel Adonai",
     img: samuel,
-    rank: "Manager Sport & Health",
+    rank: "Concierge Developer",
     link: "https://www.linkedin.com/in/samuel-adonai-72895a184/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/samuel-adonai-72895a184/",
@@ -162,19 +162,19 @@ const Team = {
   13: {
     name: "Thomas Brebion",
     img: thomas,
-    rank: "Manager Sport & Health",
+    rank: "Concierge Developer",
     link: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
     instagram: "",
   },
   14: {
-    name: "Hanae Boukantar",
-    img: hanae,
-    rank: "RH & Process",
-    link: "https://www.linkedin.com/in/hanaeboukantar/",
+    name: "Léa Despinasse",
+    img: lea,
+    rank: "Sport & Health Manager",
+    link: "",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/hanaeboukantar/",
+    linkedin: "https://www.linkedin.com/in/l%C3%A9a-despinasse-992b73113/",
     instagram: "",
   },
   15: {
@@ -223,13 +223,13 @@ const Team = {
     instagram: "",
    },
   19: {
-     name: "Julien Celet",
-    img: julien,
-    rank: "Head of Sales",
-    link: "https://www.linkedin.com/in/julien-c-35787a39/",
+     name: "Thibault Pitolin",
+    img: thibault,
+    rank: "Real Estate Manager / Immorentier",
+    link: "https://www.instagram.com/immorentier/",
     twitter: "",
-    linkedin: "https://www.linkedin.com/in/julien-c-35787a39/",
-    instagram: "", 
+    linkedin: "",
+    instagram: "https://www.instagram.com/tybo.pn/", 
    },
   19: {
      name: "Vincent Salomon",
@@ -239,6 +239,15 @@ const Team = {
     twitter: "",
     linkedin: "",
     instagram: "", 
+   },
+  20: {
+     name: « Hugo Legname »,
+    img: hugo,
+    rank: "Real Estate Manager / Immorentier",
+    link: "https://www.instagram.com/immorentier/",
+    twitter: "",
+    linkedin: "",
+    instagram: "",
 };
 
 const Advisors = {
@@ -322,16 +331,6 @@ const Advisors = {
     twitter: "",
     linkedin: "",
     instagram: "",
-  },
-  9: {
-    name: "Thomas Ménard",
-    img: thomas,
-    rank: "Strategic & Crypto Advisor",
-    link: "https://twitter.com/MevenRekt",
-    twitter: "https://twitter.com/MevenRekt",
-    linkedin: "https://www.linkedin.com/in/thomas-menard/",
-    instagram: "",
-  },
 };
 
 const Partners = {
