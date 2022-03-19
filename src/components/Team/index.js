@@ -44,7 +44,7 @@ import romainb from "../../assets/img/partners/romainb.png";
 
 const Team = {
   0: {
-    name: "Justine Houge",
+    name: "Justine H.",
     img: jus,
     rank: "Founder & CEO",
     link: "https://www.linkedin.com/in/justine-h-5b6155100",
@@ -53,7 +53,7 @@ const Team = {
     instagram: "",
   },
   1: {
-    name: "Esteban Lopes",
+    name: "Esteban L.",
     img: esteban,
     rank: "CTO",
     link: "https://www.linkedin.com/in/esteban-lopes/",
@@ -62,7 +62,7 @@ const Team = {
     instagram: "",
   },
   2: {
-    name: "Gaëlle Vageon",
+    name: "Gaëlle V.",
     img: gaelle,
     rank: "COO Real Estate",
     link: "https://www.linkedin.com/in/gaelle-vageon/",
@@ -71,7 +71,7 @@ const Team = {
     instagram: "",
   },
   3: {
-    name: "Rudy Lemoine",
+    name: "Rudy L.",
     img: rudy,
     rank: "COO Concierge",
     link: "https://www.linkedin.com/in/rudylemoine-mnpl/",
@@ -80,7 +80,7 @@ const Team = {
     instagram: "",
   },
   4: {
-    name: "Kristina Gudim",
+    name: "Kristina G.",
     img: kristina,
     rank: "CDO",
     link: "https://www.linkedin.com/in/kristina-gudim/",
@@ -89,7 +89,7 @@ const Team = {
     instagram: "",
   },
   5: {
-    name: "Pierre Giannone",
+    name: "Pierre G.",
     img: pierre,
     rank: "CMO",
     link: "https://www.linkedin.com/in/pierre-giannone-48665411a/",
@@ -98,7 +98,7 @@ const Team = {
     instagram: "https://www.instagram.com/pierregiannone/",
   },
   6: {
-    name: "Sarah Moinet",
+    name: "Sarah M.",
     img: sarah,
     rank: "CMO",
     link: "https://www.linkedin.com/in/moinet-sarah/",
@@ -107,7 +107,7 @@ const Team = {
     instagram: "",
   },
   7: {
-    name: "Yanis Perrillat",
+    name: "Yanis P.-B.",
     img: yanis,
     rank: "Financial Operator",
     link: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
@@ -116,7 +116,7 @@ const Team = {
     instagram: "",
   },
   8: {
-    name: "Hanae Boukantar",
+    name: "Hanae B.",
     img: hanae,
     rank: "Ethics & Compliance",
     link: "https://www.linkedin.com/in/hanaeboukantar/",
@@ -125,7 +125,7 @@ const Team = {
     instagram: "",
   },
   9: {
-     name: "Julien Celet",
+     name: "Julien C.",
     img: julien,
     rank: "CSO",
     link: "https://www.linkedin.com/in/julien-c-35787a39/",
@@ -134,7 +134,7 @@ const Team = {
     instagram: "", 
   },
   9: {
-    name: "Thomas Ménard",
+    name: "Thomas M.",
     img:thomasm,
     rank: "CSO",
     link: "https://twitter.com/MevenRekt",
@@ -142,7 +142,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/thomas-menard/",
     instagram: "",
   11: {
-    name: "Angelina Tomova",
+    name: "Angelina T.",
     img: angelina,
     rank: "UX/UI",
     link: "https://www.linkedin.com/in/angelina-tomova-a23593176/",
@@ -151,7 +151,7 @@ const Team = {
     instagram: "",
   },
   12: {
-    name: "Samuel Adonai",
+    name: "Samuel A.",
     img: samuel,
     rank: "Concierge Developer",
     link: "https://www.linkedin.com/in/samuel-adonai-72895a184/",
@@ -160,7 +160,7 @@ const Team = {
     instagram: "",
   },
   13: {
-    name: "Thomas Brebion",
+    name: "Thomas B.",
     img: thomas,
     rank: "Concierge Developer",
     link: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
@@ -169,7 +169,7 @@ const Team = {
     instagram: "",
   },
   14: {
-    name: "Léa Despinasse",
+    name: "Léa D.",
     img: lea,
     rank: "Sport & Health Manager",
     link: "",
@@ -178,7 +178,7 @@ const Team = {
     instagram: "",
   },
   15: {
-    name: "Maxime Parra",
+    name: "Maxime P.",
     img: maxime,
     rank: "Community Manager",
     link: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
@@ -187,7 +187,7 @@ const Team = {
     instagram: "",
   },
   16: {
-    name: "Martin Gudim",
+    name: "Martin G.",
     img: martin,
     rank: "3D Design",
     link: "https://www.linkedin.com/in/martin-gudim-designer-072520150/",
@@ -196,7 +196,7 @@ const Team = {
     instagram: "",
   },
   17: {
-     name: "Mariano Chomicki",
+     name: "Mariano C.",
     img: mariano,
     rank: "Developer",
     link: "https://www.linkedin.com/in/marianochomicki/",
@@ -205,7 +205,7 @@ const Team = {
     instagram: "",
    },
   18: {
-     name: "Robin Barchechat",
+     name: "Robin B.",
     img: robin,
     rank: "Business Developer",
     link: "",
@@ -214,7 +214,7 @@ const Team = {
     instagram: "",
    },
   18: {
-     name: "Guillaume Touraine",
+     name: "Guillaume T.",
     img: guillaume,
     rank: "Head Accountant",
     link: "https://www.linkedin.com/in/guillaume-touraine-2607abb9/",
@@ -223,7 +223,7 @@ const Team = {
     instagram: "",
    },
   19: {
-     name: "Thibault Pitolin",
+     name: "Thibault P.",
     img: thibault,
     rank: "Real Estate Manager / Immorentier",
     link: "https://www.instagram.com/immorentier/",
@@ -232,7 +232,7 @@ const Team = {
     instagram: "https://www.instagram.com/tybo.pn/", 
    },
   19: {
-     name: "Vincent Salomon",
+     name: "Vincent S.",
     img: vince,
     rank: "Culture department",
     link: "",
@@ -241,7 +241,7 @@ const Team = {
     instagram: "", 
    },
   20: {
-     name: « Hugo Legname »,
+     name: "Hugo Legname",
     img: hugo,
     rank: "Real Estate Manager / Immorentier",
     link: "https://www.instagram.com/immorentier/",
@@ -252,7 +252,7 @@ const Team = {
 
 const Advisors = {
   0: {
-    name: "Pedro Afonso",
+    name: "Pedro A.",
     img: pedro,
     rank: "Legal Advisor PT",
     link: "https://www.linkedin.com/in/pedro-afonso-33589478/",
@@ -261,7 +261,7 @@ const Advisors = {
     instagram: "",
   },
   1: {
-    name: "Anissa Ouadah",
+    name: "Anissa O.",
     img: anissa,
     rank: "Legal Advisor FR",
     link: "https://www.linkedin.com/in/anissa-ouadah-480ba855/",
@@ -270,7 +270,7 @@ const Advisors = {
     instagram: "",
   },
   2: {
-    name: "Damien Patureaux",
+    name: "Damien P.",
     img: damienp,
     rank: "Strategic Advisor/ Lyzi",
     link: "https://www.linkedin.com/in/damienpatureaux/",
@@ -279,7 +279,7 @@ const Advisors = {
     instagram: "",
   },
   3: {
-    name: "Pierre-Eliott Lallemant",
+    name: "Pierre-Eliott L.",
     img: pelallemant,
     rank: "Communication & Marketing / Skeall",
     link: "https://www.youtube.com/channel/UCnP0jba1VHZ_sSpLRRxaCbw",
@@ -288,7 +288,7 @@ const Advisors = {
     instagram: "https://www.instagram.com/pierreeliottlall/",
   },
   4: {
-    name: "Pablo Guirao",
+    name: "Pablo G.",
     img: pablo,
     rank: "Marketing & Social Branding / Skeall",
     link: "https://www.linkedin.com/in/pablo-guirao-079411152/",
@@ -297,7 +297,7 @@ const Advisors = {
     instagram: "https://www.instagram.com/pabloguiraox/",
   },
   5: {
-    name: "Quentin Herbrecht",
+    name: "Quentin H.",
     img: quentin,
     rank: "Crypto Advisor",
     link: "https://www.linkedin.com/in/marketing-blockchain/",
@@ -306,7 +306,7 @@ const Advisors = {
     instagram: "",
   },
   6: {
-    name: "Alexandre Chkirate",
+    name: "Alexandre C.",
     img: alexandre,
     rank: "Communication Advisor / Block Interview - Crypto4Good",
     link: "https://www.linkedin.com/in/achkirate/",
@@ -315,7 +315,7 @@ const Advisors = {
     instagram: "",
   },
   7: {
-    name: "Javier Traverso",
+    name: "Javier T.",
     img: javier,
     rank: "Real Estate LatAm Expansion",
     link: "https://www.linkedin.com/in/javitraversorealtor/",
@@ -324,7 +324,7 @@ const Advisors = {
     instagram: "",
   },
   8: {
-    name: "Felix Escalona",
+    name: "Felix E.",
     img: felix,
     rank: "Architect LatAm/Spain",
     link: "",
@@ -335,7 +335,7 @@ const Advisors = {
 
 const Partners = {
   0: {
-    name: "Pierre Georgeot",
+    name: "Pierre G.",
     img: pierreg,
     rank: "VECINO co-living",
     link: "https://www.instagram.com/vecinocoliving/",
@@ -344,7 +344,7 @@ const Partners = {
     instagram: "https://www.instagram.com/vecinocoliving/",
   },
   1: {
-    name: "Léa De Carmo",
+    name: "Léa D.",
     img: leadc,
     rank: "Raduga Films LLC",
     link: "https://www.linkedin.com/in/l%C3%A9a-de-carmo-5b0b8218a/",
@@ -353,7 +353,7 @@ const Partners = {
     instagram: "",
   },
   2: {
-    name: "Alisa Levinson",
+    name: "Alisa L.",
     img: alisal,
     rank: "Raduga Films LLC",
     link: "https://www.linkedin.com/in/alisa-levinson-b705b51a1/",
@@ -362,7 +362,7 @@ const Partners = {
     instagram: "",
   },
   3: {
-    name: "Eleonore Plé",
+    name: "Eleonore P.",
     img: eleonore,
     rank: "Spectomedia",
     link: "https://spectomedia.fr/",
@@ -371,7 +371,7 @@ const Partners = {
     instagram: "https://www.instagram.com/spectomedia/",
   },
   4: {
-    name: "Amel Alem",
+    name: "Amel A.",
     img: amel,
     rank: "Founder & CEO Fumigene",
     link: "https://fumigene.agency/",
@@ -380,7 +380,7 @@ const Partners = {
     instagram: "https://www.instagram.com/amelfumigene/",
   },
   5: {
-    name: "Romain Bailleul",
+    name: "Romain B.",
     img: romainb,
     rank: "CNO Fumigene",
     link: "https://fumigene.agency/",
