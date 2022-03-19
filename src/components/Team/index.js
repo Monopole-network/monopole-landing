@@ -31,6 +31,7 @@ import quentin from "../../assets/img/advisors/quentin.png";
 import alexandre from "../../assets/img/advisors/alex.png";
 import javier from "../../assets/img/advisors/javier.png";
 import felix from "../../assets/img/advisors/felix.png";
+import thomasM from "../../assets/img/advisors/thomas.png";
 
 import pierreg from "../../assets/img/partners/pierreg.png";
 import leadc from "../../assets/img/partners/leadc.png";
@@ -106,13 +107,22 @@ const Team = {
   7: {
     name: "Yanis Perrillat",
     img: yanis,
-    rank: "Finance",
+    rank: "Financial Operator",
     link: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
     instagram: "",
   },
   8: {
+    name: "Thomas Ménard",
+    img: thomasM,
+    rank: "Strategic & Crypto Advisor",
+    link: "https://twitter.com/MevenRekt",
+    twitter: "https://twitter.com/MevenRekt",
+    linkedin: "https://www.linkedin.com/in/thomas-menard/",
+    instagram: "",
+  },
+  9: {
     name: "Léa Despinasse",
     img: lea,
     rank: "Sport & Health Manager",
@@ -121,7 +131,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/l%C3%A9a-despinasse-992b73113/",
     instagram: "",
   },
-  9: {
+  10: {
     name: "Thibault Pitolin",
     img: thibault,
     rank: "Real Estate Manager / Immorentier",
@@ -130,7 +140,7 @@ const Team = {
     linkedin: "",
     instagram: "https://www.instagram.com/tybo.pn/",
   },
-  10: {
+  11: {
     name: "Hugo Legname",
     img: hugo,
     rank: "Real Estate Manager / Immorentier",
@@ -139,7 +149,7 @@ const Team = {
     linkedin: "",
     instagram: "https://www.instagram.com/ugo_lgme/",
   },
-  11: {
+  12: {
     name: "Angelina Tomova",
     img: angelina,
     rank: "UX/UI",
@@ -148,7 +158,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/angelina-tomova-a23593176/",
     instagram: "",
   },
-  12: {
+  13: {
     name: "Samuel Adonai",
     img: samuel,
     rank: "Manager Sport & Health",
@@ -157,7 +167,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/samuel-adonai-72895a184/",
     instagram: "",
   },
-  13: {
+  14: {
     name: "Thomas Brebion",
     img: thomas,
     rank: "Manager Sport & Health",
@@ -166,7 +176,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
     instagram: "",
   },
-  14: {
+  15: {
     name: "Hanae Boukantar",
     img: hanae,
     rank: "RH & Process",
@@ -175,7 +185,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/hanaeboukantar/",
     instagram: "",
   },
-  15: {
+  16: {
     name: "Maxime Parra",
     img: maxime,
     rank: "Community Manager",
@@ -184,7 +194,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
     instagram: "",
   },
-  16: {
+  17: {
     name: "Martin Gudim",
     img: martin,
     rank: "3D Design",
@@ -193,7 +203,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/martin-gudim-designer-072520150/",
     instagram: "",
   },
-  17: {
+  18: {
     name: "Mariano Chomicki",
     img: mariano,
     rank: "Developer",
@@ -202,7 +212,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/marianochomicki/",
     instagram: "",
   },
-  18: {
+  19: {
     name: "Erman Choupo",
     img: erman,
     rank: "Support Team",
@@ -211,7 +221,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
     instagram: "",
   },
-  19: {
+  20: {
     name: "Robin Barchechat",
     img: robin,
     rank: "Business Developer",
@@ -220,7 +230,7 @@ const Team = {
     linkedin: "",
     instagram: "",
   },
-  20: {
+  21: {
     name: "Guillaume Touraine",
     img: guillaume,
     rank: "Head Accountant",
@@ -229,7 +239,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/guillaume-touraine-2607abb9/",
     instagram: "",
   },
-  21: {
+  22: {
     name: "Julien Celet",
     img: julien,
     rank: "Head of Sales",
@@ -238,7 +248,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/julien-c-35787a39/",
     instagram: "",
   },
-  22: {
+  23: {
     name: "Vincent Salomon",
     img: vince,
     rank: "Culture department",
