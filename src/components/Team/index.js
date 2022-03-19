@@ -195,7 +195,7 @@ const Team = {
     instagram: "",
   },
   17: {
-    name: "Erman Choupo",
+    name: "Erman C.",
     img: erman,
     rank: "Support Team",
     link: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
@@ -249,7 +249,7 @@ const Team = {
     instagram: "",
   },
   23: {
-    name: "Hugo Legname",
+    name: "Hugo L.",
     img: hugo,
     rank: "Real Estate Manager / Immorentier",
     link: "https://www.instagram.com/immorentier/",
