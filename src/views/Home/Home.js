@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // Chakra imports
 import {
   Accordion,
@@ -111,7 +111,7 @@ function Home() {
   const conciergeIcon = useColorModeValue(conciergeWIcon, conciergeDIcon);
   const insuranceIcon = useColorModeValue(insuranceWIcon, insuranceDIcon);
 
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [days, setDays] = useState();
   const [hours, setHours] = useState();
@@ -193,64 +193,40 @@ function Home() {
           </Text>
           <Flex flexDirection="row" justifyContent="space-between" gap="5%">
             <Flex w="100%">
-              <Link
-                href={
-                  "https://github.com/Monopole-network/monopole-ui/raw/main/src/assets/pdf/litepaper.pdf"
-                }
+              <Button
+                borderRadius="16px"
                 width="100%"
                 minWidth="160px"
                 height="64px"
-                isExternal
-                target="_blank"
-                _focus={{ boxShadow: "none" }}
+                background="#8235FF"
+                color="white"
+                _active={{
+                  background: "#03CB88",
+                }}
+                onClick={() => {
+                  navigate("/paper");
+                }}
               >
-                <Button
-                  borderRadius="16px"
-                  width="100%"
-                  minWidth="160px"
-                  height="64px"
-                  background="#8235FF"
-                  color="white"
-                  _active={{
-                    background: "#03CB88",
-                  }}
-                  onClick={() => {
-                    //  navigate("/paper");
-                  }}
-                >
-                  Discover our project
-                </Button>
-              </Link>
+                Discover our project
+              </Button>
             </Flex>
             <Flex w="100%">
-              <Link
-                href={
-                  "https://github.com/Monopole-network/monopole-ui/raw/main/src/assets/pdf/litepaper.pdf"
-                }
+              <Button
+                borderRadius="16px"
                 width="100%"
-                minWidth="160px"
                 height="64px"
-                isExternal
-                target="_blank"
-                _focus={{ boxShadow: "none" }}
+                opacity="0.75"
+                minWidth="100px"
+                border="2px solid #FFFFFF"
+                _active={{
+                  background: "#03CB88",
+                }}
+                onClick={() => {
+                  navigate("/paper");
+                }}
               >
-                <Button
-                  borderRadius="16px"
-                  width="100%"
-                  height="64px"
-                  opacity="0.75"
-                  minWidth="100px"
-                  border="2px solid #FFFFFF"
-                  _active={{
-                    background: "#03CB88",
-                  }}
-                  onClick={() => {
-                    //navigate("/paper");
-                  }}
-                >
-                  Lite paper
-                </Button>
-              </Link>
+                Lite paper
+              </Button>
             </Flex>
           </Flex>
         </Box>

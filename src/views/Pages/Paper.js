@@ -46,7 +46,7 @@ function Paper() {
               background: "#03CB88",
             }}
           >
-            Discover our project
+            Download our Lite Paper
           </Button>
         </Flex>
       </Link>
