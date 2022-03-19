@@ -3,19 +3,19 @@ import { WalletLogo } from "../components/Wallet";
 import { AssetsLogo } from "../components/Assets";
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [1, 4, 137, 56, 43114],
+  supportedChainIds: [1, 137, 56, 43114],
 });
 
 export const connectorsWallet = [
   {
     name: "MetaMask",
     logo: WalletLogo.MetaMask,
-    chainId: [1, 4],
+    chainId: [1, 56, 137, 43114],
     connector: injected,
   },
   {
     name: "Web3",
-    chainId: [1, 4],
+    chainId: [1, 56, 137, 43114],
     connector: injected,
   },
 ];
@@ -33,7 +33,7 @@ export const supportedNetworksWallet = [
     },
     connectors: [0, 1],
   },
-  {
+  /*{
     name: "Rinkeby",
     label: "RINK",
     logo: AssetsLogo.Rinkeby,
@@ -44,7 +44,7 @@ export const supportedNetworksWallet = [
       decimals: 18,
     },
     connectors: [1],
-  },
+  },*/
   {
     name: "Binance Smart Chain",
     label: "BSC",
@@ -91,7 +91,7 @@ export const supportedNetworksWallet = [
 
 export const networkByChainId = {
   1: "0",
-  4: "1",
+  //  4: "1",
   56: "2",
   137: "3",
   43114: "4",
@@ -99,7 +99,7 @@ export const networkByChainId = {
 
 export const chainIdByNetwork = {
   0: 1,
-  1: 4,
+  //1: 4,
   2: 56,
   3: 137,
   4: 43114,
