@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 // Chakra imports
 import {
   Accordion,
@@ -111,7 +111,7 @@ function Home() {
   const conciergeIcon = useColorModeValue(conciergeWIcon, conciergeDIcon);
   const insuranceIcon = useColorModeValue(insuranceWIcon, insuranceDIcon);
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
 
   const [days, setDays] = useState();
   const [hours, setHours] = useState();
