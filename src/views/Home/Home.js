@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // Chakra imports
 import {
@@ -85,7 +85,7 @@ import faqW from "../../assets/img/faq.svg";
 
 function Home() {
   const cardColor = useColorModeValue("white", "royal");
-  //const counterColor = useColorModeValue("white", "royal");
+  const counterColor = useColorModeValue("white", "royal");
   const faqIcon = useColorModeValue(faqD, faqW);
   const chartMain = useColorModeValue(chartMainW, chartMainD);
 
@@ -112,6 +112,46 @@ function Home() {
   const insuranceIcon = useColorModeValue(insuranceWIcon, insuranceDIcon);
 
   const navigate = useNavigate();
+
+  const [days, setDays] = useState();
+  const [hours, setHours] = useState();
+  const [minutes, setMinutes] = useState();
+  const [seconds, setSeconds] = useState();
+
+  let deadline = new Date("March 20, 2022 12:00:00").getTime();
+
+  function count() {
+    var now = new Date().getTime();
+    var t = deadline - now;
+    var dd = Math.floor(t / (1000 * 60 * 60 * 24));
+    var hh = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var mm = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    var ss = Math.floor((t % (1000 * 60)) / 1000);
+
+    var days = dd < 10 ? "0" + dd : dd;
+    var hours = hh < 10 ? "0" + hh : hh;
+    var minutes = mm < 10 ? "0" + mm : mm;
+    var seconds = ss < 10 ? "0" + ss : ss;
+
+    if (t > 0) {
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
+    } else {
+      setDays(0);
+      setHours(0);
+      setMinutes(0);
+      setSeconds(0);
+    }
+  }
+
+  useEffect(() => {
+    count();
+    setInterval(() => {
+      count();
+    }, 1000);
+  });
 
   return (
     <>
@@ -221,136 +261,138 @@ function Home() {
                 Pre-sale
               </Text>
 
-              {/*<Grid
-                templateColumns="1fr 1fr 1fr 1fr"
-                gap={{ sm: "10px", md: "20px", lg: "30px" }}
-                mb="40px"
-              >
-                <Flex
-                  flexDirection="column"
-                  justifyContent="center"
-                  textAlign="center"
-                  alignItems="center"
+              {
+                <Grid
+                  templateColumns="1fr 1fr 1fr 1fr"
+                  gap={{ sm: "10px", md: "20px", lg: "30px" }}
+                  mb="40px"
                 >
-                  <Box
-                    width="70px"
-                    height="70px"
-                    background={counterColor}
-                    borderRadius="16px"
+                  <Flex
+                    flexDirection="column"
+                    justifyContent="center"
+                    textAlign="center"
+                    alignItems="center"
                   >
-                    <Text
-                      lineHeight="32px"
-                      fontSize="32px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
-                      py="25%"
+                    <Box
+                      width="70px"
+                      height="70px"
+                      background={counterColor}
+                      borderRadius="16px"
                     >
-                      29
-                    </Text>
-                  </Box>
-                  <Text
-                    lineHeight="18.23px"
-                    fontSize="14px"
-                    fontWeight="400"
-                    py="10px"
-                  >
-                    day
-                  </Text>
-                </Flex>
-                <Flex
-                  flexDirection="column"
-                  justifyContent="center"
-                  textAlign="center"
-                  alignItems="center"
-                >
-                  <Box
-                    width="70px"
-                    height="70px"
-                    background={counterColor}
-                    borderRadius="16px"
-                  >
+                      <Text
+                        lineHeight="32px"
+                        fontSize="32px"
+                        fontWeight="700"
+                        fontFamily="Montserrat"
+                        py="25%"
+                      >
+                        {days}
+                      </Text>
+                    </Box>
                     <Text
-                      lineHeight="32px"
-                      fontSize="32px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
-                      py="25%"
+                      lineHeight="18.23px"
+                      fontSize="14px"
+                      fontWeight="400"
+                      py="10px"
                     >
-                      10
+                      days
                     </Text>
-                  </Box>
-                  <Text
-                    lineHeight="18.23px"
-                    fontSize="14px"
-                    fontWeight="400"
-                    py="10px"
+                  </Flex>
+                  <Flex
+                    flexDirection="column"
+                    justifyContent="center"
+                    textAlign="center"
+                    alignItems="center"
                   >
-                    hours
-                  </Text>
-                </Flex>
-                <Flex
-                  flexDirection="column"
-                  justifyContent="center"
-                  textAlign="center"
-                  alignItems="center"
-                >
-                  <Box
-                    width="70px"
-                    height="70px"
-                    background={counterColor}
-                    borderRadius="16px"
-                  >
+                    <Box
+                      width="70px"
+                      height="70px"
+                      background={counterColor}
+                      borderRadius="16px"
+                    >
+                      <Text
+                        lineHeight="32px"
+                        fontSize="32px"
+                        fontWeight="700"
+                        fontFamily="Montserrat"
+                        py="25%"
+                      >
+                        {hours}
+                      </Text>
+                    </Box>
                     <Text
-                      lineHeight="32px"
-                      fontSize="32px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
-                      py="25%"
+                      lineHeight="18.23px"
+                      fontSize="14px"
+                      fontWeight="400"
+                      py="10px"
                     >
-                      55
+                      hours
                     </Text>
-                  </Box>
-                  <Text
-                    lineHeight="18.23px"
-                    fontSize="14px"
-                    fontWeight="400"
-                    py="10px"
+                  </Flex>
+                  <Flex
+                    flexDirection="column"
+                    justifyContent="center"
+                    textAlign="center"
+                    alignItems="center"
                   >
-                    minutes
-                  </Text>
-                </Flex>
-                <Flex
-                  flexDirection="column"
-                  justifyContent="center"
-                  textAlign="center"
-                  alignItems="center"
-                >
-                  <Box
-                    width="70px"
-                    height="70px"
-                    background={counterColor}
-                    borderRadius="16px"
-                  >
+                    <Box
+                      width="70px"
+                      height="70px"
+                      background={counterColor}
+                      borderRadius="16px"
+                    >
+                      <Text
+                        lineHeight="32px"
+                        fontSize="32px"
+                        fontWeight="700"
+                        fontFamily="Montserrat"
+                        py="25%"
+                      >
+                        {minutes}
+                      </Text>
+                    </Box>
                     <Text
-                      lineHeight="32px"
-                      fontSize="32px"
-                      fontWeight="700"
-                      fontFamily="Montserrat"
-                      py="25%"
+                      lineHeight="18.23px"
+                      fontSize="14px"
+                      fontWeight="400"
+                      py="10px"
                     >
-                      13
+                      minutes
                     </Text>
-                  </Box>
-                  <Text
-                    lineHeight="18.23px"
-                    fontSize="14px"
-                    fontWeight="400"
-                    py="10px"
+                  </Flex>
+                  <Flex
+                    flexDirection="column"
+                    justifyContent="center"
+                    textAlign="center"
+                    alignItems="center"
                   >
-                    secondes
-                  </Text>
-                </Flex>
-              </Grid>*/}
+                    <Box
+                      width="70px"
+                      height="70px"
+                      background={counterColor}
+                      borderRadius="16px"
+                    >
+                      <Text
+                        lineHeight="32px"
+                        fontSize="32px"
+                        fontWeight="700"
+                        fontFamily="Montserrat"
+                        py="25%"
+                      >
+                        {seconds}
+                      </Text>
+                    </Box>
+                    <Text
+                      lineHeight="18.23px"
+                      fontSize="14px"
+                      fontWeight="400"
+                      py="10px"
+                    >
+                      seconds
+                    </Text>
+                  </Flex>
+                </Grid>
+              }
               <Separator width="80%" mt="10%" />
               <Text
                 mt="10%"
