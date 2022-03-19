@@ -241,13 +241,22 @@ const Team = {
     instagram: "", 
    },
   20: {
-     name: "Hugo Legname",
+     name: "Hugo L.",
     img: hugo,
     rank: "Real Estate Manager / Immorentier",
     link: "https://www.instagram.com/immorentier/",
     twitter: "",
     linkedin: "",
     instagram: "",
+   },
+  21: {
+     name: "Erman C.",
+    img: erman,
+    rank: "Support Service",
+    link: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
+    twitter: "",
+    linkedin: "",
+    instagram: ""
 };
 
 const Advisors = {
