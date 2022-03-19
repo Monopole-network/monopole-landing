@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // Chakra imports
 import {
@@ -85,7 +85,7 @@ import faqW from "../../assets/img/faq.svg";
 
 function Home() {
   const cardColor = useColorModeValue("white", "royal");
-  //const counterColor = useColorModeValue("white", "royal");
+  const counterColor = useColorModeValue("white", "royal");
   const faqIcon = useColorModeValue(faqD, faqW);
   const chartMain = useColorModeValue(chartMainW, chartMainD);
 
@@ -113,6 +113,46 @@ function Home() {
 
   const navigate = useNavigate();
 
+  const [days, setDays] = useState();
+  const [hours, setHours] = useState();
+  const [minutes, setMinutes] = useState();
+  const [seconds, setSeconds] = useState();
+
+  let deadline = new Date("March 20, 2022 12:00:00").getTime();
+
+  function count() {
+    var now = new Date().getTime();
+    var t = deadline - now;
+    var dd = Math.floor(t / (1000 * 60 * 60 * 24));
+    var hh = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var mm = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    var ss = Math.floor((t % (1000 * 60)) / 1000);
+
+    var days = dd < 10 ? "0" + dd : dd;
+    var hours = hh < 10 ? "0" + hh : hh;
+    var minutes = mm < 10 ? "0" + mm : mm;
+    var seconds = ss < 10 ? "0" + ss : ss;
+
+    if (t > 0) {
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
+    } else {
+      setDays(0);
+      setHours(0);
+      setMinutes(0);
+      setSeconds(0);
+    }
+  }
+
+  useEffect(() => {
+    count();
+    setInterval(() => {
+      count();
+    }, 1000);
+  });
+
   return (
     <>
       <Grid mt="-88px" templateColumns={{ md: "1fr", lg: "1fr 1fr" }}>
@@ -124,7 +164,7 @@ function Home() {
           zIndex="1"
         >
           <Text
-            lineHeight="58px"
+            lineHeight="50px"
             fontSize={{ sm: "34px", md: "44px" }}
             fontWeight="300"
             fontFamily="Montserrat"
@@ -132,7 +172,7 @@ function Home() {
             Everywhere.
           </Text>
           <Text
-            lineHeight="58px"
+            lineHeight="50px"
             fontSize={{ sm: "34px", md: "44px" }}
             fontWeight="700"
             fontFamily="Montserrat"
@@ -140,7 +180,7 @@ function Home() {
             Everyday.
           </Text>
           <Text
-            lineHeight="58px"
+            lineHeight="50px"
             fontSize={{ sm: "34px", md: "44px" }}
             fontWeight="900"
             fontFamily="Montserrat"
@@ -153,40 +193,64 @@ function Home() {
           </Text>
           <Flex flexDirection="row" justifyContent="space-between" gap="5%">
             <Flex w="100%">
-              <Button
-                borderRadius="16px"
+              <Link
+                href={
+                  "https://github.com/Monopole-network/monopole-ui/raw/main/src/assets/pdf/litepaper.pdf"
+                }
                 width="100%"
                 minWidth="160px"
                 height="64px"
-                background="#8235FF"
-                color="white"
-                _active={{
-                  background: "#03CB88",
-                }}
-                onClick={() => {
-                  navigate("/paper");
-                }}
+                isExternal
+                target="_blank"
+                _focus={{ boxShadow: "none" }}
               >
-                Discover our project
-              </Button>
+                <Button
+                  borderRadius="16px"
+                  width="100%"
+                  minWidth="160px"
+                  height="64px"
+                  background="#8235FF"
+                  color="white"
+                  _active={{
+                    background: "#03CB88",
+                  }}
+                  onClick={() => {
+                    //  navigate("/paper");
+                  }}
+                >
+                  Discover our project
+                </Button>
+              </Link>
             </Flex>
             <Flex w="100%">
-              <Button
-                borderRadius="16px"
+              <Link
+                href={
+                  "https://github.com/Monopole-network/monopole-ui/raw/main/src/assets/pdf/litepaper.pdf"
+                }
                 width="100%"
+                minWidth="160px"
                 height="64px"
-                opacity="0.75"
-                minWidth="100px"
-                border="2px solid #FFFFFF"
-                _active={{
-                  background: "#03CB88",
-                }}
-                onClick={() => {
-                  navigate("/paper");
-                }}
+                isExternal
+                target="_blank"
+                _focus={{ boxShadow: "none" }}
               >
-                Lite paper
-              </Button>
+                <Button
+                  borderRadius="16px"
+                  width="100%"
+                  height="64px"
+                  opacity="0.75"
+                  minWidth="100px"
+                  border="2px solid #FFFFFF"
+                  _active={{
+                    background: "#03CB88",
+                  }}
+                  onClick={() => {
+                    //navigate("/paper");
+                  }}
+                >
+                  Lite paper
+                </Button>
+              </Link>
             </Flex>
           </Flex>
         </Box>
@@ -221,7 +285,7 @@ function Home() {
                 Pre-sale
               </Text>
 
-              {/*<Grid
+              <Grid
                 templateColumns="1fr 1fr 1fr 1fr"
                 gap={{ sm: "10px", md: "20px", lg: "30px" }}
                 mb="40px"
@@ -245,7 +309,7 @@ function Home() {
                       fontFamily="Montserrat"
                       py="25%"
                     >
-                      29
+                      {days}
                     </Text>
                   </Box>
                   <Text
@@ -276,7 +340,7 @@ function Home() {
                       fontFamily="Montserrat"
                       py="25%"
                     >
-                      10
+                      {hours}
                     </Text>
                   </Box>
                   <Text
@@ -307,7 +371,7 @@ function Home() {
                       fontFamily="Montserrat"
                       py="25%"
                     >
-                      55
+                      {minutes}
                     </Text>
                   </Box>
                   <Text
@@ -338,7 +402,7 @@ function Home() {
                       fontFamily="Montserrat"
                       py="25%"
                     >
-                      13
+                      {seconds}
                     </Text>
                   </Box>
                   <Text
@@ -347,13 +411,12 @@ function Home() {
                     fontWeight="400"
                     py="10px"
                   >
-                    secondes
+                    seconds
                   </Text>
                 </Flex>
-              </Grid>*/}
-              <Separator width="80%" mt="10%" />
+              </Grid>
+              <Separator width="80%" />
               <Text
-                mt="10%"
                 lineHeight="25.6px"
                 fontSize="21px"
                 fontWeight="700"
@@ -444,6 +507,7 @@ function Home() {
           fontFamily="Montserrat"
           px={{ sm: "0%", md: "20%", lg: "20%" }}
           zIndex="1"
+          lineHeight="50px"
         >
           We’ve built a global ecosystem to use your crypto in your daily life.
         </Text>
@@ -600,11 +664,12 @@ function Home() {
             fontWeight="700"
             bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
             bgClip="text"
-            width="180px"
+            width="190px"
           >
             Why choose our token ?
           </Text>
           <Text
+            lineHeight="50px"
             mt="4px"
             fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
             fontWeight="700"
@@ -829,24 +894,36 @@ function Home() {
             Here is our full documents that help you to understand deeply about
             us and our project
           </Text>
-          <Button
-            mt="32px"
-            borderRadius="16px"
+          <Link
+            href={
+              "https://github.com/Monopole-network/monopole-ui/raw/main/src/assets/pdf/litepaper.pdf"
+            }
             width="20%"
             height="64px"
-            background="#03CB88"
-            color="white"
             minWidth="160px"
-            _active={{
-              background: "#8235FF",
-            }}
-            zIndex="1"
-            onClick={() => {
-              navigate("/paper");
-            }}
+            isExternal
+            target="_blank"
+            _focus={{ boxShadow: "none" }}
           >
-            Lite paper
-          </Button>
+            <Button
+              mt="32px"
+              borderRadius="16px"
+              width="20%"
+              height="64px"
+              background="#03CB88"
+              color="white"
+              minWidth="160px"
+              _active={{
+                background: "#8235FF",
+              }}
+              zIndex="1"
+              onClick={() => {
+                //  navigate("/paper");
+              }}
+            >
+              Lite paper
+            </Button>
+          </Link>
         </Flex>
         <Flex
           mt="-100px"
@@ -872,6 +949,7 @@ function Home() {
           fontWeight="700"
           fontFamily="Montserrat"
           zIndex="1"
+          lineHeight="50px"
         >
           Discover the freedom to choose, invest, manage and use your crypto, in
           your daily life!
@@ -898,7 +976,7 @@ function Home() {
             fontWeight="700"
             bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
             bgClip="text"
-            width="75px"
+            width="85px"
           >
             Save time
           </Text>
@@ -907,7 +985,7 @@ function Home() {
             fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
             fontWeight="700"
             fontFamily="Montserrat"
-            lineHeight="54px"
+            lineHeight="50px"
           >
             A unique, intuitive platform, available everywhere
           </Text>
@@ -960,7 +1038,7 @@ function Home() {
             fontWeight="700"
             bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
             bgClip="text"
-            width="128px"
+            width="140px"
           >
             Top level support
           </Text>
@@ -969,7 +1047,7 @@ function Home() {
             fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
             fontWeight="700"
             fontFamily="Montserrat"
-            lineHeight="54px"
+            lineHeight="50px"
           >
             Benefit from experienced, human and reactive support
           </Text>
@@ -1007,7 +1085,7 @@ function Home() {
             fontWeight="700"
             bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
             bgClip="text"
-            width="220px"
+            width="230px"
           >
             Verified investments & NFT’s
           </Text>
@@ -1016,7 +1094,7 @@ function Home() {
             fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
             fontWeight="700"
             fontFamily="Montserrat"
-            lineHeight="54px"
+            lineHeight="50px"
           >
             Enjoy verified investments and make them grow with NFT
           </Text>
@@ -1069,7 +1147,7 @@ function Home() {
             fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
             fontWeight="700"
             fontFamily="Montserrat"
-            lineHeight="54px"
+            lineHeight="50px"
           >
             Access everything you need, pay in crypto
           </Text>
@@ -1328,7 +1406,11 @@ function Home() {
                     alignItems="center"
                     flexDirection="column"
                   >
-                    <Link href={Team[id].link} isExternal>
+                    <Link
+                      href={Team[id].link}
+                      isExternal
+                      _focus={{ boxShadow: "none" }}
+                    >
                       <Image
                         borderRadius="full"
                         w="128px"
@@ -1356,17 +1438,29 @@ function Home() {
                     </Link>
                     <Flex gap="10px" flexDirection="row">
                       {Team[id].twitter && (
-                        <Link href={Team[id].twitter} isExternal>
+                        <Link
+                          href={Team[id].twitter}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaTwitter color="black" />
                         </Link>
                       )}
                       {Team[id].linkedin && (
-                        <Link href={Team[id].linkedin} isExternal>
+                        <Link
+                          href={Team[id].linkedin}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaLinkedin color="black" />
                         </Link>
                       )}
                       {Team[id].instagram && (
-                        <Link href={Team[id].instagram} isExternal>
+                        <Link
+                          href={Team[id].instagram}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaInstagram color="black" />
                         </Link>
                       )}
@@ -1406,7 +1500,11 @@ function Home() {
                     alignItems="center"
                     flexDirection="column"
                   >
-                    <Link href={Advisors[id].link} isExternal>
+                    <Link
+                      href={Advisors[id].link}
+                      isExternal
+                      _focus={{ boxShadow: "none" }}
+                    >
                       <Image
                         borderRadius="full"
                         w="128px"
@@ -1434,17 +1532,29 @@ function Home() {
                     </Link>
                     <Flex gap="10px" flexDirection="row">
                       {Advisors[id].twitter && (
-                        <Link href={Advisors[id].twitter} isExternal>
+                        <Link
+                          href={Advisors[id].twitter}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaTwitter color="black" />
                         </Link>
                       )}
                       {Advisors[id].linkedin && (
-                        <Link href={Advisors[id].linkedin} isExternal>
+                        <Link
+                          href={Advisors[id].linkedin}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaLinkedin color="black" />
                         </Link>
                       )}
                       {Advisors[id].instagram && (
-                        <Link href={Advisors[id].instagram} isExternal>
+                        <Link
+                          href={Advisors[id].instagram}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaInstagram color="black" />
                         </Link>
                       )}
@@ -1484,7 +1594,11 @@ function Home() {
                     alignItems="center"
                     flexDirection="column"
                   >
-                    <Link href={Partners[id].link} isExternal>
+                    <Link
+                      href={Partners[id].link}
+                      isExternal
+                      _focus={{ boxShadow: "none" }}
+                    >
                       <Image
                         borderRadius="full"
                         w="128px"
@@ -1512,17 +1626,29 @@ function Home() {
                     </Link>
                     <Flex gap="10px" flexDirection="row">
                       {Partners[id].twitter && (
-                        <Link href={Partners[id].twitter} isExternal>
+                        <Link
+                          href={Partners[id].twitter}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaTwitter color="black" />
                         </Link>
                       )}
                       {Partners[id].linkedin && (
-                        <Link href={Partners[id].linkedin} isExternal>
+                        <Link
+                          href={Partners[id].linkedin}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaLinkedin color="black" />
                         </Link>
                       )}
                       {Partners[id].instagram && (
-                        <Link href={Partners[id].instagram} isExternal>
+                        <Link
+                          href={Partners[id].instagram}
+                          isExternal
+                          _focus={{ boxShadow: "none" }}
+                        >
                           <FaInstagram color="black" />
                         </Link>
                       )}
@@ -1555,7 +1681,7 @@ function Home() {
             fontWeight="700"
             bgGradient="linear-gradient(86.3deg, #8135FF 3.04%, #FF006B 101.29%)"
             bgClip="text"
-            width="180px"
+            width="200px"
           >
             We speak your language
           </Text>
@@ -1565,7 +1691,7 @@ function Home() {
             fontSize={{ sm: "24px", md: "34px", lg: "44px" }}
             fontWeight="700"
             fontFamily="Montserrat"
-            lineHeight="54px"
+            lineHeight="50px"
           >
             Frequently asked questions
           </Text>
@@ -1590,6 +1716,7 @@ function Home() {
                           >
                             <AccordionButton
                               _hover={{ background: "transaprent" }}
+                              _focus={{ boxShadow: "none" }}
                             >
                               <Box flex="1" textAlign="left">
                                 {Faq[id].questions[index].question}
