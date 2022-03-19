@@ -182,7 +182,7 @@ function Home() {
           <Text
             lineHeight="50px"
             fontSize={{ sm: "34px", md: "44px" }}
-            fontWeight="900"
+            fontWeight="black"
             fontFamily="Montserrat"
           >
             Everyone.
