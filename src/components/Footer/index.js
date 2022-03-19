@@ -62,7 +62,11 @@ export default function Footer() {
           </Flex>
         </Flex>
         <Flex alignItems="center">
-          <ButtonGroup isAttached>
+          <ButtonGroup
+            isAttached
+            flexWrap={{ sm: "wrap" }}
+            justifyContent={{ sm: "center" }}
+          >
             {/*<Button
               background="transparent"
               borderRadius="50px"
