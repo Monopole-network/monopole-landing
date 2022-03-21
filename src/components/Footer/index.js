@@ -3,11 +3,15 @@ import { useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
-  ButtonGroup,
   Divider,
   Flex,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
   Text,
   useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
@@ -17,6 +21,7 @@ export default function Footer() {
   const { colorMode, toggleColorMode } = useColorMode();
   const navigate = useNavigate();
   let currentYear = new Date().getFullYear();
+  const menuColor = useColorModeValue("white", "#000126");
 
   return (
     <Box
@@ -62,63 +67,71 @@ export default function Footer() {
           </Flex>
         </Flex>
         <Flex alignItems="center">
-          <ButtonGroup
-            isAttached
-            flexWrap={{ sm: "wrap" }}
-            justifyContent={{ sm: "center" }}
+          <Menu>
+            <MenuButton>
+              <Button background="transparent" borderRadius="50px">
+                More
+              </Button>
+            </MenuButton>
+            <MenuList
+              borderRadius="20px"
+              alignItems="center"
+              border="2px solid"
+              background={menuColor}
+            >
+              {/*<MenuItem
+                  borderRadius="20px"
+                  _hover={{ border: "2px solid" }}
+                  onClick={() => {
+                    navigate("/legal");
+                  }}
+                >
+                  <Text fontSize="14px" fontWeight="700">
+                    Legal
+                  </Text>
+                </MenuItem>*/}
+              <MenuItem
+                background="transparent"
+                borderRadius="50px"
+                onClick={() => {
+                  navigate("/terms-of-use");
+                }}
+              >
+                <Text fontSize="14px" fontWeight="700">
+                  Terms of Use
+                </Text>
+              </MenuItem>
+              <MenuItem
+                background="transparent"
+                borderRadius="50px"
+                onClick={() => {
+                  navigate("/privacy-policy");
+                }}
+              >
+                <Text fontSize="14px" fontWeight="700">
+                  Privacy Policy
+                </Text>
+              </MenuItem>
+              <MenuItem
+                background="transparent"
+                borderRadius="50px"
+                onClick={() => {
+                  navigate("/code-of-conduct");
+                }}
+              >
+                <Text fontSize="14px" fontWeight="700">
+                  Code of Conduct
+                </Text>
+              </MenuItem>
+            </MenuList>
+          </Menu>
+          <Button
+            background="transparent"
+            onClick={toggleColorMode}
+            borderRadius="50px"
           >
-            {/*<Button
-              background="transparent"
-              borderRadius="50px"
-              onClick={() => {
-                navigate("/legal");
-              }}
-            >
-              <Text fontSize="14px" fontWeight="700">
-                Legal
-              </Text>
-            </Button>*/}
-            <Button
-              background="transparent"
-              borderRadius="50px"
-              onClick={() => {
-                navigate("/terms-of-use");
-              }}
-            >
-              <Text fontSize="14px" fontWeight="700">
-                Terms of Use
-              </Text>
-            </Button>
-            <Button
-              background="transparent"
-              borderRadius="50px"
-              onClick={() => {
-                navigate("/privacy-policy");
-              }}
-            >
-              <Text fontSize="14px" fontWeight="700">
-                Privacy Policy
-              </Text>
-            </Button>
-            <Button
-              background="transparent"
-              borderRadius="50px"
-              onClick={() => {
-                navigate("/code-of-conduct");
-              }}
-            >
-              <Text fontSize="14px" fontWeight="700">
-                Code of Conduct
-              </Text>
-            </Button>
-            <Button
-              background="transparent"
-              onClick={toggleColorMode}
-              borderRadius="50px"
-            >
-              {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
-            </Button>
-          </ButtonGroup>
+            {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </Flex>
       </Flex>
     </Box>
