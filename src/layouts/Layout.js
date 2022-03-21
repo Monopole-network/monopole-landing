@@ -1,7 +1,18 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import "@fontsource/dm-sans";
-import "@fontsource/montserrat";
+import "@fontsource/montserrat/100.css";
+import "@fontsource/montserrat/200.css";
+import "@fontsource/montserrat/300.css";
+import "@fontsource/montserrat/400.css";
+import "@fontsource/montserrat/500.css";
+import "@fontsource/montserrat/600.css";
+import "@fontsource/montserrat/700.css";
+import "@fontsource/montserrat/800.css";
+import "@fontsource/montserrat/900.css";
+
+import "@fontsource/dm-sans/400.css";
+import "@fontsource/dm-sans/500.css";
+import "@fontsource/dm-sans/700.css";
 
 // chakra imports
 import { ChakraProvider } from "@chakra-ui/react";

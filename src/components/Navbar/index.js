@@ -7,7 +7,7 @@ import {
   ButtonGroup,
   Divider,
   Flex,
-  //Image,
+  Image,
   Menu,
   MenuList,
   MenuItem,
@@ -21,12 +21,7 @@ import {
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-import {
-  //FaWallet,
-  FaRegBell,
-  FaAngleUp,
-  FaAngleDown,
-} from "react-icons/fa";
+import { FaWallet, FaRegBell, FaAngleUp, FaAngleDown } from "react-icons/fa";
 
 import { Social } from "../Social";
 import { MonopoleIconText, MonopoleIcon } from "../Icons/Icons";
@@ -50,7 +45,6 @@ export default function Navbar(props) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
-
   const menuColor = useColorModeValue("white", "#000126");
 
   return (
@@ -227,7 +221,7 @@ export default function Navbar(props) {
             </Flex>
           </Flex>
           <Flex alignItems="center" border="2px solid" borderRadius="50px">
-            {/*<Button
+            <Button
               borderRadius="50px"
               background="transparent"
               onClick={() => {
@@ -252,7 +246,7 @@ export default function Navbar(props) {
                 </Flex>
               ) : (
                 <Text fontSize="14px" fontWeight="700" mt="3px">
-                  Connect Wallet
+                  Connect
                 </Text>
               )}
             </Button>
@@ -272,7 +266,12 @@ export default function Navbar(props) {
                     </Flex>
                   </Button>
                 </MenuButton>
-                <MenuList borderRadius="20px" alignItems="center">
+                <MenuList
+                  borderRadius="20px"
+                  alignItems="center"
+                  bg={menuColor}
+                  border="2px solid"
+                >
                   <Flex flexDirection="column">
                     {Object.keys(supportedNetworksWallet).map((networkId) => {
                       return (
@@ -299,9 +298,8 @@ export default function Navbar(props) {
                 </MenuList>
               </Menu>
             )}
-            */}
             <Menu>
-              <MenuButton>
+              <MenuButton display={{ sm: "none", md: "block", lg: "block" }}>
                 <Button background="transparent" borderRadius="50px">
                   <Icon h="18px" w="18px" as={FaRegBell} mr="10px" />
                   <Flex flexDirection="column">

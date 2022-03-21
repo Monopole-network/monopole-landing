@@ -75,7 +75,7 @@ function useEvmReact() {
     if (error instanceof NoEthereumProviderError) {
       return "No wallet browser extension detected, install MetaMask on desktop or visit from a dApp browser on mobile.";
     } else if (error instanceof UnsupportedChainIdError) {
-      return "Switch";
+      return "Your network is not supported";
     } else if (error instanceof UserRejectedRequestErrorInjected) {
       return "Please authorize this website to access your wallet.";
     } else {

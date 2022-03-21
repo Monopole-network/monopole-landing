@@ -128,6 +128,8 @@ function Home() {
     var mm = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
     var ss = Math.floor((t % (1000 * 60)) / 1000);
 
+    console.log("horas: ", hh);
+
     var days = dd < 10 ? "0" + dd : dd;
     var hours = hh < 10 ? "0" + hh : hh;
     var minutes = mm < 10 ? "0" + mm : mm;
@@ -135,8 +137,8 @@ function Home() {
 
     if (t > 0) {
       setDays(days);
-      setHours(hours);
-      setMinutes(minutes);
+      setHours(minutes);
+      setMinutes(hours);
       setSeconds(seconds);
     } else {
       setDays(0);
@@ -295,7 +297,7 @@ function Home() {
                       fontWeight="400"
                       py="10px"
                     >
-                      days
+                      day
                     </Text>
                   </Flex>
                   <Flex
@@ -388,7 +390,7 @@ function Home() {
                       fontWeight="400"
                       py="10px"
                     >
-                      seconds
+                      secondes
                     </Text>
                   </Flex>
                 </Grid>
