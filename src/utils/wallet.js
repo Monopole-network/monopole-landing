@@ -17,10 +17,10 @@ import { toHex } from "./utils";
 export function Wallet(props) {
   const { children } = props;
   // handle logic to eagerly connect to the injected ethereum provider, if it exists and has granted access already
-//  const triedEager = useEagerConnect();
+  const triedEager = useEagerConnect();
 
   // handle logic to connect in reaction to certain events on the injected ethereum provider, if it exists
-//  useInactiveListener(!triedEager);
+  useInactiveListener(!triedEager);
 
   return <>{children}</>;
 }
@@ -110,6 +110,8 @@ export function useWallet() {
     chainEvm,
   } = useEvmReact();
 
+  const [loadingWallet, setLoadingWallet] = useState(false);
+
   const [libraryWallet, setLibraryWallet] = useState(undefined);
 
   const [networkWallet, setNetworkWallet] = useState(undefined);
@@ -117,8 +119,6 @@ export function useWallet() {
   const [accountWallet, setAccountWallet] = useState(undefined);
 
   const [usernameWallet, setUsernameWallet] = useState(undefined);
-
-  const [loadingWallet, setLoadingWallet] = useState(false);
 
   const [errorWallet, setErrorWallet] = useState(undefined);
 
@@ -142,6 +142,23 @@ export function useWallet() {
           activateEvm(connectorsWallet[connectorsId].connector);
           switchNetworkWallet(networkId);
         }
+        break;
+      default:
+        setErrorWallet("Network type not supported");
+    }
+  }
+
+  function disconnectWallet() {
+    setErrorWallet(undefined);
+
+    switch (networkWallet) {
+      case "0":
+      case "1":
+      case "2":
+      case "3":
+      case "4":
+        deactivateEvm();
+        setNetworkWallet(undefined);
         break;
       default:
         setErrorWallet("Network type not supported");
@@ -227,23 +244,6 @@ export function useWallet() {
     }
   }
 
-  function disconnectWallet() {
-    setErrorWallet(undefined);
-
-    switch (networkWallet) {
-      case "0":
-      case "1":
-      case "2":
-      case "3":
-      case "4":
-        deactivateEvm();
-        setNetworkWallet(undefined);
-        break;
-      default:
-        setErrorWallet("Network type not supported");
-    }
-  }
-
   useEffect(() => {
     if (libraryEvm) {
       setLibraryWallet(libraryEvm);
@@ -315,6 +315,7 @@ export function useWallet() {
     activeWallet,
     errorWallet,
     loadingWallet,
+    libraryWallet,
     connectWallet,
     disconnectWallet,
   };
