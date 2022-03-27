@@ -15,7 +15,6 @@ import hanae from "../../assets/img/team/hanae.png";
 import samuel from "../../assets/img/team/samuel.png";
 import thomas from "../../assets/img/team/thomas.png";
 import erman from "../../assets/img/team/erman.png";
-import maxime from "../../assets/img/team/maxime.png";
 import julien from "../../assets/img/team/julien.png";
 import mariano from "../../assets/img/team/mariano.png";
 import guillaume from "../../assets/img/team/guillaume.png";
@@ -177,15 +176,6 @@ const Team = {
     instagram: "",
   },
   15: {
-    name: "Maxime P.",
-    img: maxime,
-    rank: "Community Manager",
-    link: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/maxime-parra-069b831b3/",
-    instagram: "",
-  },
-  16: {
     name: "Martin G.",
     img: martin,
     rank: "3D Design",
@@ -194,7 +184,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/martin-gudim-designer-072520150/",
     instagram: "",
   },
-  17: {
+  16: {
     name: "Erman C.",
     img: erman,
     rank: "Support Team",
@@ -203,7 +193,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
     instagram: "",
   },
-  18: {
+  17: {
     name: "Mariano C.",
     img: mariano,
     rank: "Developer",
@@ -212,7 +202,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/marianochomicki/",
     instagram: "",
   },
-  19: {
+  18: {
     name: "Robin B.",
     img: robin,
     rank: "Business Developer",
@@ -221,7 +211,7 @@ const Team = {
     linkedin: "",
     instagram: "",
   },
-  20: {
+  19: {
     name: "Guillaume T.",
     img: guillaume,
     rank: "Head Accountant",
@@ -230,7 +220,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/guillaume-touraine-2607abb9/",
     instagram: "",
   },
-  21: {
+  20: {
     name: "Thibault P.",
     img: thibault,
     rank: "Real Estate Manager / Immorentier",
@@ -239,7 +229,7 @@ const Team = {
     linkedin: "",
     instagram: "https://www.instagram.com/tybo.pn/",
   },
-  22: {
+  21: {
     name: "Vincent S.",
     img: vince,
     rank: "Culture department",
@@ -248,7 +238,7 @@ const Team = {
     linkedin: "",
     instagram: "",
   },
-  23: {
+  22: {
     name: "Hugo L.",
     img: hugo,
     rank: "Real Estate Manager / Immorentier",
