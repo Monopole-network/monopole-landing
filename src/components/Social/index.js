@@ -12,7 +12,7 @@ const Social = {
   0: {
     name: "Tiwtter",
     logo: FaTwitter,
-    link: "https://twitter.com/MNPL_off",
+    link: "https://twitter.com/monopole_mnpl",
   },
   1: {
     name: "Linkedin",
