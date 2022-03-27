@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
-import { useWeb3React } from '@web3-react/core';
-import { CHAIN_INFO } from './constants';
+import { useState, useEffect } from "react";
+import { useWeb3React } from "@web3-react/core";
 
 export function useUpdater() {
   const { library, chainId } = useWeb3React();
@@ -11,7 +10,7 @@ export function useUpdater() {
       let stale = false;
       library
         .getBlockNumber()
-        .then(blockNumber => {
+        .then((blockNumber) => {
           if (!stale) {
             setUpdater(blockNumber);
           }
@@ -22,13 +21,13 @@ export function useUpdater() {
           }
         });
 
-      const updateBlockNumber = blockNumber => {
+      const updateBlockNumber = (blockNumber) => {
         setUpdater(blockNumber);
       };
-      library.on('block', updateBlockNumber);
+      library.on("block", updateBlockNumber);
 
       return () => {
-        library.removeListener('block', updateBlockNumber);
+        library.removeListener("block", updateBlockNumber);
         stale = true;
         setUpdater(undefined);
       };
