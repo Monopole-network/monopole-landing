@@ -14,6 +14,12 @@ export const connectorsWallet = [
     connector: injected,
   },
   {
+    name: "TrustWallet",
+    logo: WalletLogo.TrustWallet,
+    chainId: [1, 56, 137, 43114],
+    connector: injected,
+  },
+  {
     name: "Web3",
     chainId: [1, 56, 137, 43114],
     connector: injected,
@@ -31,7 +37,7 @@ export const supportedNetworksWallet = [
       symbol: "ETH",
       decimals: 18,
     },
-    connectors: [0, 1],
+    connectors: [0, 1, 2],
   },
   /*{
     name: "Rinkeby",
@@ -57,7 +63,7 @@ export const supportedNetworksWallet = [
       symbol: "BNB",
       decimals: 18,
     },
-    connectors: [0, 1],
+    connectors: [0, 1, 2],
   },
   {
     name: "Polygon",
@@ -71,7 +77,7 @@ export const supportedNetworksWallet = [
       symbol: "MATIC",
       decimals: 18,
     },
-    connectors: [0, 1],
+    connectors: [0, 1, 2],
   },
   {
     name: "Avalanche",
@@ -85,22 +91,22 @@ export const supportedNetworksWallet = [
       symbol: "AVAX",
       decimals: 18,
     },
-    connectors: [0, 1],
+    connectors: [0, 1, 2],
   },
 ];
 
 export const networkByChainId = {
   1: "0",
   //  4: "1",
-  56: "2",
-  137: "3",
-  43114: "4",
+  56: "1",
+  137: "2",
+  43114: "3",
 };
 
 export const chainIdByNetwork = {
   0: 1,
   //1: 4,
-  2: 56,
-  3: 137,
-  4: 43114,
+  1: 56,
+  2: 137,
+  3: 43114,
 };
