@@ -54,7 +54,7 @@ export function WalletModal(props) {
   const modalColor = useColorModeValue("white", "royal");
   const menuColor = useColorModeValue("white", "#000126");
 
-  const [openId, setOpenId] = useState();
+  const [openId, setOpenId] = useState(0);
 
   return (
     <Modal
@@ -175,12 +175,12 @@ export function WalletModal(props) {
                   Connect wallet
                 </Text>
                 <Text w="60%" align="center">
-                  Dynamically leverage other's backend metrics without
-                  collaborative.
+                  Choose your networks and the wallet you want to use
                 </Text>
               </Flex>
               <Accordion
                 allowToggle
+                defaultIndex={[0]}
                 onChange={(id) => {
                   setOpenId(id);
                 }}
@@ -195,7 +195,7 @@ export function WalletModal(props) {
                       align="center"
                       borderRadius="16px"
                       id={networkId}
-                      opacity={networkId == openId ? "1" : "0.45"}
+                      opacity={networkId === openId.toString() ? "1" : "0.45"}
                       p="15px"
                     >
                       <AccordionButton
