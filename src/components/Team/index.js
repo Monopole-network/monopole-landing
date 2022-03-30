@@ -64,7 +64,7 @@ const Team = {
   2: {
     name: "Gaëlle V.",
     img: gaelle,
-    rank: "COO Real Estate",
+    rank: "Real Estate",
     link: "https://www.linkedin.com/in/gaelle-vageon/",
     twitter: "https://twitter.com/GVageon",
     linkedin: "https://www.linkedin.com/in/gaelle-vageon/",
