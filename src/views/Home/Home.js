@@ -32,6 +32,7 @@ import { Team, Advisors, Partners } from "../../components/Team";
 import { Faq } from "../../components/Faq";
 //import { Roadmap } from "../../components/Roadmap";
 import { Newsletter } from "../../components/Newsletter";
+import { PartnersBox } from "../../components/Partners/PartnersBox";
 
 import {
   //  VisaIcon,

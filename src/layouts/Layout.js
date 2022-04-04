@@ -28,7 +28,10 @@ import Home from "../views/Home/Home.js";
 import PrivacyPolicy from "../views/Pages/PrivacyPolicy.js";
 import Legal from "../views/Pages/Legal.js";
 import TermsOfUse from "../views/Pages/TermsOfUse.js";
-import CodeOfConduct from "../views/Pages/CodeOfConduct";
+import CodeOfConduct from "../views/Pages/CodeOfConduct.js";
+import Landing from "../views/Pages/Landing.js";
+import LandingVideo from "../views/Pages/LandingVideo.js";
+import ThankYou from "../views/Pages/ThankYou.js";
 
 import Paper from "../views/Pages/Paper.js";
 
@@ -70,6 +73,9 @@ export default function Layout() {
           <Route path="/terms-of-use" element={<TermsOfUse />} />
           <Route path="/paper" element={<Paper />} />
           <Route path="/code-of-conduct" element={<CodeOfConduct />} />
+          <Route path="/landing" element={<Landing />} />
+          <Route path="/landingVideo" element={<LandingVideo />} />
+          <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
         <Footer />
       </Wallet>
