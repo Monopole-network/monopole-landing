@@ -11,7 +11,7 @@ import thibault from "../../assets/img/team/thibault.png";
 import hugo from "../../assets/img/team/hugo.png";
 import angelina from "../../assets/img/team/angelina.png";
 import robin from "../../assets/img/team/robin.png";
-import hanae from "../../assets/img/team/hanae.png";
+//import hanae from "../../assets/img/team/hanae.png";
 import samuel from "../../assets/img/team/samuel.png";
 import thomas from "../../assets/img/team/thomas.png";
 import erman from "../../assets/img/team/erman.png";
@@ -20,7 +20,6 @@ import mariano from "../../assets/img/team/mariano.png";
 import guillaume from "../../assets/img/team/guillaume.png";
 import vince from "../../assets/img/team/vince.png";
 import martin from "../../assets/img/team/martin.png";
-import thomasm from "../../assets/img/team/thomasm.png";
 
 import pedro from "../../assets/img/advisors/pedro.png";
 import anissa from "../../assets/img/advisors/anissa.png";
@@ -31,6 +30,7 @@ import alexandre from "../../assets/img/advisors/alexandre.png";
 import javier from "../../assets/img/advisors/javier.png";
 import felix from "../../assets/img/advisors/felix.png";
 import quentin from "../../assets/img/advisors/quentin.png";
+import thomasm from "../../assets/img/team/thomasm.png";
 
 import pierreg from "../../assets/img/partners/pierreg.png";
 import leadc from "../../assets/img/partners/leadc.png";
@@ -59,24 +59,6 @@ const Team = {
     instagram: "",
   },
   2: {
-    name: "Gaëlle V.",
-    img: gaelle,
-    rank: "COO Real Estate",
-    link: "https://www.linkedin.com/in/gaelle-vageon/",
-    twitter: "https://twitter.com/GVageon",
-    linkedin: "https://www.linkedin.com/in/gaelle-vageon/",
-    instagram: "",
-  },
-  3: {
-    name: "Rudy L.",
-    img: rudy,
-    rank: "COO Concierge",
-    link: "https://www.linkedin.com/in/rudylemoine-mnpl/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/rudylemoine-mnpl/",
-    instagram: "",
-  },
-  4: {
     name: "Kristina G.",
     img: kristina,
     rank: "CDO",
@@ -85,43 +67,16 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/kristina-gudim/",
     instagram: "",
   },
-  5: {
-    name: "Pierre G.",
-    img: pierre,
-    rank: "CMO",
-    link: "https://www.linkedin.com/in/pierre-giannone-48665411a/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/pierre-giannone-48665411a/",
-    instagram: "https://www.instagram.com/pierregiannone/",
-  },
-  6: {
-    name: "Sarah M.",
-    img: sarah,
-    rank: "CMO",
-    link: "https://www.linkedin.com/in/moinet-sarah/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/moinet-sarah/",
+  3: {
+    name: "Rudy L.",
+    img: rudy,
+    rank: "COO Concierge",
+    link: "https://www.linkedin.com/in/rudylemoine-mnpl/",
+    twitter: "https://twitter.com/RudyRevolife",
+    linkedin: "https://www.linkedin.com/in/rudylemoine-mnpl/",
     instagram: "",
   },
-  7: {
-    name: "Yanis P.-B.",
-    img: yanis,
-    rank: "Financial Operator",
-    link: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
-    instagram: "",
-  },
-  8: {
-    name: "Hanae B.",
-    img: hanae,
-    rank: "Ethics & Compliance",
-    link: "https://www.linkedin.com/in/hanaeboukantar/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/hanaeboukantar/",
-    instagram: "",
-  },
-  9: {
+  4: {
     name: "Julien C.",
     img: julien,
     rank: "CSO",
@@ -130,16 +85,25 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/julien-c-35787a39/",
     instagram: "",
   },
-  10: {
-    name: "Thomas M.",
-    img: thomasm,
-    rank: "CSO",
-    link: "https://twitter.com/MevenRekt",
-    twitter: "https://twitter.com/MevenRekt",
-    linkedin: "https://www.linkedin.com/in/thomas-menard/",
+  5: {
+    name: "Sarah M.",
+    img: sarah,
+    rank: "CMO",
+    link: "https://www.linkedin.com/in/moinet-sarah/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/moinet-sarah/",
     instagram: "",
   },
-  11: {
+  6: {
+    name: "Pierre G.",
+    img: pierre,
+    rank: "CMO",
+    link: "https://www.linkedin.com/in/pierre-giannone-48665411a/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/pierre-giannone-48665411a/",
+    instagram: "https://www.instagram.com/pierregiannone/",
+  },
+  7: {
     name: "Angelina T.",
     img: angelina,
     rank: "UX/UI",
@@ -148,7 +112,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/angelina-tomova-a23593176/",
     instagram: "",
   },
-  12: {
+  8: {
     name: "Samuel A.",
     img: samuel,
     rank: "Concierge Developer",
@@ -157,16 +121,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/samuel-adonai-72895a184/",
     instagram: "",
   },
-  13: {
-    name: "Thomas B.",
-    img: thomas,
-    rank: "Concierge Developer",
-    link: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
-    instagram: "",
-  },
-  14: {
+  9: {
     name: "Léa D.",
     img: lea,
     rank: "Sport & Health Manager",
@@ -175,7 +130,25 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/l%C3%A9a-despinasse-992b73113/",
     instagram: "",
   },
-  15: {
+  10: {
+    name: "Yanis P.-B.",
+    img: yanis,
+    rank: "Financial Operator",
+    link: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/yanis-perrillat-bottonet-40b149196/",
+    instagram: "",
+  },
+  11: {
+    name: "Thomas B.",
+    img: thomas,
+    rank: "Concierge Developer",
+    link: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/thomas-brebion-a904b3166/",
+    instagram: "",
+  },
+  12: {
     name: "Martin G.",
     img: martin,
     rank: "3D Design",
@@ -184,7 +157,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/martin-gudim-designer-072520150/",
     instagram: "",
   },
-  16: {
+  13: {
     name: "Erman C.",
     img: erman,
     rank: "Support Team",
@@ -193,7 +166,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/erman-choupo-2029b31ba/",
     instagram: "",
   },
-  17: {
+  14: {
     name: "Mariano C.",
     img: mariano,
     rank: "Developer",
@@ -202,7 +175,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/marianochomicki/",
     instagram: "",
   },
-  18: {
+  15: {
     name: "Robin B.",
     img: robin,
     rank: "Business Developer",
@@ -211,7 +184,7 @@ const Team = {
     linkedin: "",
     instagram: "",
   },
-  19: {
+  16: {
     name: "Guillaume T.",
     img: guillaume,
     rank: "Head Accountant",
@@ -220,7 +193,7 @@ const Team = {
     linkedin: "https://www.linkedin.com/in/guillaume-touraine-2607abb9/",
     instagram: "",
   },
-  20: {
+  17: {
     name: "Thibault P.",
     img: thibault,
     rank: "Real Estate Manager / Immorentier",
@@ -229,7 +202,16 @@ const Team = {
     linkedin: "",
     instagram: "https://www.instagram.com/tybo.pn/",
   },
-  21: {
+  18: {
+    name: "Gaëlle V.",
+    img: gaelle,
+    rank: "Real Estate",
+    link: "https://www.linkedin.com/in/gaelle-vageon/",
+    twitter: "https://twitter.com/GVageon",
+    linkedin: "https://www.linkedin.com/in/gaelle-vageon/",
+    instagram: "",
+  },
+  19: {
     name: "Vincent S.",
     img: vince,
     rank: "Culture department",
@@ -238,7 +220,7 @@ const Team = {
     linkedin: "",
     instagram: "",
   },
-  22: {
+  20: {
     name: "Hugo L.",
     img: hugo,
     rank: "Real Estate Manager / Immorentier",
@@ -251,21 +233,21 @@ const Team = {
 
 const Advisors = {
   0: {
-    name: "Pedro A.",
-    img: pedro,
-    rank: "Legal Advisor PT",
-    link: "https://www.linkedin.com/in/pedro-afonso-33589478/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/pedro-afonso-33589478/",
-    instagram: "",
-  },
-  1: {
     name: "Anissa O.",
     img: anissa,
     rank: "Legal Advisor FR",
     link: "https://www.linkedin.com/in/anissa-ouadah-480ba855/",
     twitter: "",
     linkedin: "https://www.linkedin.com/in/anissa-ouadah-480ba855/",
+    instagram: "",
+  },
+  1: {
+    name: "Pedro A.",
+    img: pedro,
+    rank: "Legal Advisor PT",
+    link: "https://www.linkedin.com/in/pedro-afonso-33589478/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/pedro-afonso-33589478/",
     instagram: "",
   },
   2: {
@@ -278,30 +260,30 @@ const Advisors = {
     instagram: "",
   },
   3: {
-    name: "Pierre-Eliott L.",
-    img: pelallemant,
-    rank: "Communication & Marketing / Skeall",
-    link: "https://www.youtube.com/channel/UCnP0jba1VHZ_sSpLRRxaCbw",
-    twitter: "https://twitter.com/pelallt",
-    linkedin: "https://www.linkedin.com/in/pierre-eliott-lallemant-343a2b199/",
-    instagram: "https://www.instagram.com/pierreeliottlall/",
+    name: "Thomas M.",
+    img: thomasm,
+    rank: "CSO",
+    link: "https://twitter.com/MevenRekt",
+    twitter: "https://twitter.com/MevenRekt",
+    linkedin: "https://www.linkedin.com/in/thomas-menard/",
+    instagram: "",
   },
   4: {
-    name: "Pablo G.",
-    img: pablo,
-    rank: "Marketing & Social Branding / Skeall",
-    link: "https://www.linkedin.com/in/pablo-guirao-079411152/",
-    twitter: "https://twitter.com/PabloGuirao4",
-    linkedin: "https://www.linkedin.com/in/pablo-guirao-079411152/",
-    instagram: "https://www.instagram.com/pabloguiraox/",
-  },
-  5: {
     name: "Quentin H.",
     img: quentin,
     rank: "Crypto Advisor",
     link: "https://www.linkedin.com/in/marketing-blockchain/",
     twitter: "https://twitter.com/Markchain_io",
     linkedin: "https://www.linkedin.com/in/marketing-blockchain/",
+    instagram: "",
+  },
+  5: {
+    name: "Javier T.",
+    img: javier,
+    rank: "Real Estate LatAm Expansion",
+    link: "https://www.linkedin.com/in/javitraversorealtor/",
+    twitter: "",
+    linkedin: "https://www.linkedin.com/in/javitraversorealtor/",
     instagram: "",
   },
   6: {
@@ -314,15 +296,6 @@ const Advisors = {
     instagram: "",
   },
   7: {
-    name: "Javier T.",
-    img: javier,
-    rank: "Real Estate LatAm Expansion",
-    link: "https://www.linkedin.com/in/javitraversorealtor/",
-    twitter: "",
-    linkedin: "https://www.linkedin.com/in/javitraversorealtor/",
-    instagram: "",
-  },
-  8: {
     name: "Felix E.",
     img: felix,
     rank: "Architect LatAm/Spain",
@@ -330,6 +303,24 @@ const Advisors = {
     twitter: "",
     linkedin: "",
     instagram: "",
+  },
+  8: {
+    name: "Pablo G.",
+    img: pablo,
+    rank: "Marketing & Social Branding / Skeall",
+    link: "https://www.linkedin.com/in/pablo-guirao-079411152/",
+    twitter: "https://twitter.com/PabloGuirao4",
+    linkedin: "https://www.linkedin.com/in/pablo-guirao-079411152/",
+    instagram: "https://www.instagram.com/pabloguiraox/",
+  },
+  9: {
+    name: "Pierre-Eliott L.",
+    img: pelallemant,
+    rank: "Communication & Marketing / Skeall",
+    link: "https://www.youtube.com/channel/UCnP0jba1VHZ_sSpLRRxaCbw",
+    twitter: "https://twitter.com/pelallt",
+    linkedin: "https://www.linkedin.com/in/pierre-eliott-lallemant-343a2b199/",
+    instagram: "https://www.instagram.com/pierreeliottlall/",
   },
 };
 
