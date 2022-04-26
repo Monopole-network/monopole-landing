@@ -7,7 +7,6 @@ import {
   ButtonGroup,
   Divider,
   Flex,
-  Image,
   Menu,
   MenuList,
   MenuItem,
@@ -15,56 +14,24 @@ import {
   Icon,
   Text,
   Link,
+  Tooltip,
   useColorMode,
   useColorModeValue,
-  useDisclosure,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
-import { FaWallet, FaRegBell, FaAngleUp, FaAngleDown } from "react-icons/fa";
+import { FaRegBell, FaAngleUp, FaAngleDown } from "react-icons/fa";
 
 import { Social } from "../Social";
 import { MonopoleIconText, MonopoleIcon } from "../Icons/Icons";
-import { WalletModal } from "../WalletModal";
 
-export default function Navbar(props) {
-  const {
-    switchNetworkWallet,
-    usernameWallet,
-    accountWallet,
-    networkWallet,
-    supportedNetworksWallet,
-    connectorsWallet,
-    activeWallet,
-    errorWallet,
-    loadingWallet,
-    connectWallet,
-    disconnectWallet,
-  } = props;
-
+export default function Navbar() {
   const { colorMode, toggleColorMode } = useColorMode();
-  const { isOpen, onOpen, onClose } = useDisclosure();
   const navigate = useNavigate();
   const menuColor = useColorModeValue("white", "#000126");
 
   return (
     <>
-      <WalletModal
-        switchNetworkWallet={switchNetworkWallet}
-        usernameWallet={usernameWallet}
-        accountWallet={accountWallet}
-        networkWallet={networkWallet}
-        supportedNetworksWallet={supportedNetworksWallet}
-        connectorsWallet={connectorsWallet}
-        activeWallet={activeWallet}
-        errorWallet={errorWallet}
-        loadingWallet={loadingWallet}
-        connectWallet={connectWallet}
-        disconnectWallet={disconnectWallet}
-        isOpen={isOpen}
-        onClose={onClose}
-        onOpen={onOpen}
-      />
       <Box top="0px" left="0px" right="0px" height="88px"></Box>
       <Box
         px={{ sm: "20px", md: "30px", lg: "40px" }}
@@ -221,83 +188,21 @@ export default function Navbar(props) {
             </Flex>
           </Flex>
           <Flex alignItems="center" border="2px solid" borderRadius="50px">
-            <Button
-              borderRadius="50px"
-              background="transparent"
-              onClick={() => {
-                onOpen();
-              }}
-              _hover={{ background: "transparent" }}
-              _active={{ background: "transparent" }}
-            >
-              {activeWallet ? (
-                <Flex flexDirection="row" alignItems="center">
-                  <Icon h="16px" w="16px" as={FaWallet} mr="10px" />
-                  {usernameWallet ? (
-                    <Text fontSize="14px" fontWeight="700" mt="3px">
-                      {usernameWallet}
-                    </Text>
-                  ) : (
-                    <Text fontSize="14px" fontWeight="700" mt="3px">
-                      {accountWallet.substring(0, 6)}...
-                      {accountWallet.substring(accountWallet.length - 4)}
-                    </Text>
-                  )}
-                </Flex>
-              ) : (
+            <Tooltip hasArrow label="Coming soon" shouldWrapChildren mt="3">
+              {/*<Link href={"https://app.monopole.network"} isExternal>*/}
+              <Button
+                borderRadius="50px"
+                background="transparent"
+                _hover={{ background: "transparent" }}
+                _active={{ background: "transparent" }}
+                disabled="true"
+              >
                 <Text fontSize="14px" fontWeight="700" mt="3px">
-                  Connect
+                  Launch App
                 </Text>
-              )}
-            </Button>
-            {networkWallet && (
-              <Menu>
-                <MenuButton>
-                  <Button background="transparent" borderRadius="50px">
-                    <Image
-                      mr="5px"
-                      h="20px"
-                      w="20px"
-                      src={supportedNetworksWallet[networkWallet].logo}
-                    />
-                    <Flex flexDirection="column">
-                      <Icon h="12px" w="12px" as={FaAngleUp} />
-                      <Icon h="12px" w="12px" as={FaAngleDown} />
-                    </Flex>
-                  </Button>
-                </MenuButton>
-                <MenuList
-                  borderRadius="20px"
-                  alignItems="center"
-                  bg={menuColor}
-                  border="2px solid"
-                >
-                  <Flex flexDirection="column">
-                    {Object.keys(supportedNetworksWallet).map((networkId) => {
-                      return (
-                        <MenuItem
-                          borderRadius="20px"
-                          onClick={() => {
-                            switchNetworkWallet(networkId);
-                          }}
-                        >
-                          <Image
-                            mr="10px"
-                            h="25px"
-                            w="25px"
-                            color="white"
-                            src={supportedNetworksWallet[networkId].logo}
-                          />
-                          <Text fontSize="md">
-                            {supportedNetworksWallet[networkId].name}
-                          </Text>
-                        </MenuItem>
-                      );
-                    })}
-                  </Flex>
-                </MenuList>
-              </Menu>
-            )}
+              </Button>
+              {/*</Link>*/}
+            </Tooltip>
             <Menu>
               <MenuButton display={{ sm: "none", md: "block", lg: "block" }}>
                 <Button background="transparent" borderRadius="50px">
