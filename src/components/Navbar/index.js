@@ -127,7 +127,7 @@ export default function Navbar() {
                     </Button>
                   </HashLink>
                   <HashLink
-                    to="/#LitePaper"
+                    to="/#Documents"
                     scroll={(el) =>
                       el.scrollIntoView({ behavior: "smooth", block: "end" })
                     }
@@ -141,7 +141,7 @@ export default function Navbar() {
                       _active={{ background: "transparent" }}
                     >
                       <Text fontSize="14px" fontWeight="700">
-                        Lite paper
+                        Docs
                       </Text>
                     </Button>
                   </HashLink>

@@ -202,7 +202,7 @@ function Home(props) {
                   background: "#03CB88",
                 }}
                 onClick={() => {
-                  navigate("/paper");
+                  navigate("/documents");
                 }}
               >
                 Discover our project
@@ -726,7 +726,7 @@ function Home(props) {
             fontWeight="700"
             fontFamily="Montserrat"
           >
-            Discover our lite paper
+            Discover our documents
           </Text>
           <Text
             mt="16px"
@@ -761,10 +761,10 @@ function Home(props) {
               }}
               zIndex="1"
               onClick={() => {
-                //  navigate("/paper");
+                //  navigate("/documents");
               }}
             >
-              Lite paper
+              Documents
             </Button>
           </Link>
         </Flex>

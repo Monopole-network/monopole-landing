@@ -28,19 +28,19 @@ import PrivacyPolicy from "../views/Pages/PrivacyPolicy.js";
 import Legal from "../views/Pages/Legal.js";
 import TermsOfUse from "../views/Pages/TermsOfUse.js";
 import CodeOfConduct from "../views/Pages/CodeOfConduct";
+import Documents from "../views/Pages/Documents.js";
 
-import Paper from "../views/Pages/Paper.js";
 
 export default function Layout() {
   return (
     <ChakraProvider theme={theme} resetCss={false} w="100%">
-          <Route path="/paper" element={<Paper />} />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/legal" element={<Legal />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/documents" element={<Documents />} />
         <Route path="/code-of-conduct" element={<CodeOfConduct />} />
       </Routes>
       <Footer />
