@@ -1,23 +1,22 @@
 const Roadmap = [
   {
     title: "Q1",
-    text: "Men of the British Expeditionary Force (BEF) wade out to..",
+    text:
+      "Genesis of Monopole with the first partners and start of development, private fundraiser",
   },
   {
     title: "Q2",
-    text: "Men of the British Expeditionary Force (BEF) wade out to..",
+    text:
+      "Launchpad and ico, launch of the first investment pool and the app, major marketing campaign",
   },
   {
     title: "Q3",
-    text: "Men of the British Expeditionary Force (BEF) wade out to..",
+    text:
+      "Token listing, start of dao,launch of concierge services for investors, first burn and buyback",
   },
   {
     title: "Q4",
-    text: "Men of the British Expeditionary Force (BEF) wade out to..",
-  },
-  {
-    title: "Q1 2023",
-    text: "Men of the British Expeditionary Force (BEF) wade out to..",
+    text: "DeFi service launch for investment",
   },
 ];
 
